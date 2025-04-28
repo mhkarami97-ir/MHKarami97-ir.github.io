@@ -5,7 +5,6 @@ import { SanitizedExternalProject } from '../../interfaces/sanitized-config';
 
 const ExternalProjectCard = ({
   externalProjects,
-  header,
   loading,
   googleAnalyticId,
 }: {
@@ -131,15 +130,6 @@ const ExternalProjectCard = ({
             <div className="card compact bg-base-100 shadow bg-opacity-40">
               <div className="card-body rtl">
                 <div className="mx-3 flex items-center justify-between mb-2">
-                  <h5 className="card-title">
-                    {loading ? (
-                      skeleton({ widthCls: 'w-40', heightCls: 'h-8' })
-                    ) : (
-                      <span className="text-base-content opacity-70">
-                        {header}
-                      </span>
-                    )}
-                  </h5>
                 </div>
                 <div className="col-span-2">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
