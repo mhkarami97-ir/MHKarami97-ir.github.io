@@ -130,14 +130,6 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   link={`https://www.researchgate.net/profile/${social.researchGate}`}
                 />
               )}
-              {social?.x && (
-                <ListItem
-                  icon={<SiX />}
-                  title="X"
-                  value={social.x}
-                  link={`https://x.com/${social.x}`}
-                />
-              )}
               {social?.mastodon && (
                 <ListItem
                   icon={<FaMastodon />}
@@ -215,7 +207,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                       icon={<FaVideo />}
                       title="Aparat"
                       value={`@${social.aparat}`}
-                      link={`https://aparat.com/@${social.aparat}`}
+                      link={`https://aparat.com/${social.aparat}`}
                   />
               )}
               {social?.udemy && (
@@ -287,6 +279,14 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   value={social.phone}
                   link={`tel:${social.phone}`}
                 />
+              )}
+              {social?.x && (
+                  <ListItem
+                      icon={<SiX />}
+                      title="X"
+                      value={social.x}
+                      link={`https://x.com/${social.x}`}
+                  />
               )}
               {social?.email && (
                 <ListItem
