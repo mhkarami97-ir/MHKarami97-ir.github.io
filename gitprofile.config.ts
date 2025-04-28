@@ -24,7 +24,7 @@ const CONFIG = {
       },
     },
     external: {
-      header: 'وبسایت',
+      header: '',
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
@@ -196,12 +196,12 @@ const CONFIG = {
     defaultTheme: 'procyon',
     disableSwitch: true,
     respectPrefersColorScheme: true,
-    displayAvatarRing: false,
+    displayAvatarRing: true,
     themes: [
       'procyon',
     ],
     customTheme: {
-      primary: '#fc055b',
+      primary: '#6F48FF',
       secondary: '#6F48FF',
       accent: '#e8d03a',
       neutral: '#2A2730',

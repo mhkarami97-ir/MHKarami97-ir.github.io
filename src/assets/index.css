@@ -49,6 +49,10 @@ code {
     monospace;
 }
 
+.rtl {
+  direction: rtl;
+}
+
 .text-base-content-important {
   color: hsla(var(--bc) / var(--tw-text-opacity)) !important;
 }

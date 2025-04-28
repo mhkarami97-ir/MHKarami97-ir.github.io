@@ -177,25 +177,6 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
             renderSkeleton()
           ) : (
             <Fragment>
-              {profile.location && (
-                <ListItem
-                  icon={<MdLocationOn />}
-                  title="Based in:"
-                  value={profile.location}
-                />
-              )}
-              {profile.company && (
-                <OrganizationItem
-                  icon={<FaBuilding />}
-                  title="Organization:"
-                  value={profile.company}
-                  link={
-                    isCompanyMention(profile.company.trim())
-                      ? companyLink(profile.company.trim())
-                      : undefined
-                  }
-                />
-              )}
               <ListItem
                 icon={<AiFillGithub />}
                 title="GitHub:"
