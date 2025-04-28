@@ -150,7 +150,7 @@ interface Social {
   /**
    * Aparat
    */
-  Aparat?: string;
+  aparat?: string;
 
   /**
    * YouTube
