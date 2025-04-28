@@ -88,58 +88,6 @@ const ListItem: React.FC<{
     </div>
   );
 };
-
-const OrganizationItem: React.FC<{
-  icon: React.ReactNode;
-  title: React.ReactNode;
-  value: React.ReactNode | string;
-  link?: string;
-  skeleton?: boolean;
-}> = ({ icon, title, value, link, skeleton = false }) => {
-  const renderValue = () => {
-    if (typeof value === 'string') {
-      return value.split(' ').map((company) => {
-        company = company.trim();
-        if (!company) return null;
-
-        if (isCompanyMention(company)) {
-          return (
-            <a
-              href={companyLink(company)}
-              target="_blank"
-              rel="noreferrer"
-              key={company}
-            >
-              {company}
-            </a>
-          );
-        } else {
-          return <span key={company}>{company}</span>;
-        }
-      });
-    }
-    return value;
-  };
-
-  return (
-    <div className="flex justify-start py-2 px-1 items-center">
-      <div className="flex-grow font-medium gap-2 flex items-center my-1">
-        {icon} {title}
-      </div>
-      <div
-        className={`${
-          skeleton ? 'flex-grow' : ''
-        } text-sm font-normal text-right mr-2 ml-3 space-x-2 ${link ? 'truncate' : ''}`}
-        style={{
-          wordBreak: 'break-word',
-        }}
-      >
-        {renderValue()}
-      </div>
-    </div>
-  );
-};
-
 /**
  * Renders the details card component.
  *
