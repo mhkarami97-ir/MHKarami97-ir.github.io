@@ -148,6 +148,11 @@ interface Social {
   threads?: string;
 
   /**
+   * Aparat
+   */
+  Aparat?: string;
+
+  /**
    * YouTube
    */
   youtube?: string;
