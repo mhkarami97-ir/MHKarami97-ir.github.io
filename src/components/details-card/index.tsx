@@ -198,7 +198,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 <ListItem
                   icon={<FaYoutube />}
                   title="YouTube"
-                  value={`@${social.youtube}`}
+                  value={`${social.youtube}`}
                   link={`https://www.youtube.com/@${social.youtube}`}
                 />
               )}
@@ -206,7 +206,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   <ListItem
                       icon={<FaVideo />}
                       title="Aparat"
-                      value={`@${social.aparat}`}
+                      value={`${social.aparat}`}
                       link={`https://aparat.com/${social.aparat}`}
                   />
               )}
