@@ -136,6 +136,8 @@ const CONFIG = {
   social: {
     linkedin: 'mhkarami97',
     instagram: 'mhkarami97',
+    threads: 'mhkarami97',
+    x: 'mhkarami97',
     youtube: 'mhkarami97',
     aparat: 'mhkarami97',
     telegram: 'mhkarami_97',

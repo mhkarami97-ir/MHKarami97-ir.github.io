@@ -60,6 +60,7 @@ export interface SanitizedSocial {
   stackoverflow?: string;
   website?: string;
   skype?: string;
+  aparat?: string;
   telegram?: string;
   phone?: string;
   email?: string;

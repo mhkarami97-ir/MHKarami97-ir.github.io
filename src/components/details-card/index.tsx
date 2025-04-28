@@ -17,6 +17,7 @@ import {
   FaStackOverflow,
   FaTelegram,
   FaYoutube,
+  FaVideo,
 } from 'react-icons/fa';
 import { FaSquareThreads } from 'react-icons/fa6';
 import { RiMailFill, RiPhoneFill } from 'react-icons/ri';
@@ -117,14 +118,14 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
             <Fragment>
               <ListItem
                 icon={<AiFillGithub />}
-                title="GitHub:"
+                title="GitHub"
                 value={github.username}
                 link={`https://github.com/${github.username}`}
               />
               {social?.researchGate && (
                 <ListItem
                   icon={<SiResearchgate />}
-                  title="ResearchGate:"
+                  title="ResearchGate"
                   value={social.researchGate}
                   link={`https://www.researchgate.net/profile/${social.researchGate}`}
                 />
@@ -132,7 +133,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.x && (
                 <ListItem
                   icon={<SiX />}
-                  title="X:"
+                  title="X"
                   value={social.x}
                   link={`https://x.com/${social.x}`}
                 />
@@ -140,7 +141,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.mastodon && (
                 <ListItem
                   icon={<FaMastodon />}
-                  title="Mastodon:"
+                  title="Mastodon"
                   value={getFormattedMastodonValue(social.mastodon, false)}
                   link={getFormattedMastodonValue(social.mastodon, true)}
                 />
@@ -148,7 +149,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.linkedin && (
                 <ListItem
                   icon={<FaLinkedin />}
-                  title="LinkedIn:"
+                  title="LinkedIn"
                   value={social.linkedin}
                   link={`https://www.linkedin.com/in/${social.linkedin}`}
                 />
@@ -156,7 +157,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.dribbble && (
                 <ListItem
                   icon={<CgDribbble />}
-                  title="Dribbble:"
+                  title="Dribbble"
                   value={social.dribbble}
                   link={`https://dribbble.com/${social.dribbble}`}
                 />
@@ -164,7 +165,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.behance && (
                 <ListItem
                   icon={<FaBehanceSquare />}
-                  title="Behance:"
+                  title="Behance"
                   value={social.behance}
                   link={`https://www.behance.net/${social.behance}`}
                 />
@@ -172,7 +173,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.facebook && (
                 <ListItem
                   icon={<FaFacebook />}
-                  title="Facebook:"
+                  title="Facebook"
                   value={social.facebook}
                   link={`https://www.facebook.com/${social.facebook}`}
                 />
@@ -180,7 +181,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.instagram && (
                 <ListItem
                   icon={<AiFillInstagram />}
-                  title="Instagram:"
+                  title="Instagram"
                   value={social.instagram}
                   link={`https://www.instagram.com/${social.instagram}`}
                 />
@@ -188,7 +189,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.reddit && (
                 <ListItem
                   icon={<FaReddit />}
-                  title="Reddit:"
+                  title="Reddit"
                   value={social.reddit}
                   link={`https://www.reddit.com/user/${social.reddit}`}
                 />
@@ -196,7 +197,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.threads && (
                 <ListItem
                   icon={<FaSquareThreads />}
-                  title="Threads:"
+                  title="Threads"
                   value={social.threads}
                   link={`https://www.threads.net/@${social.threads.replace('@', '')}`}
                 />
@@ -204,15 +205,23 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.youtube && (
                 <ListItem
                   icon={<FaYoutube />}
-                  title="YouTube:"
+                  title="YouTube"
                   value={`@${social.youtube}`}
                   link={`https://www.youtube.com/@${social.youtube}`}
                 />
               )}
+              {social?.aparat && (
+                  <ListItem
+                      icon={<FaVideo />}
+                      title="Aparat"
+                      value={`@${social.aparat}`}
+                      link={`https://aparat.com/@${social.aparat}`}
+                  />
+              )}
               {social?.udemy && (
                 <ListItem
                   icon={<SiUdemy />}
-                  title="Udemy:"
+                  title="Udemy"
                   value={social.udemy}
                   link={`https://www.udemy.com/user/${social.udemy}`}
                 />
@@ -220,7 +229,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.medium && (
                 <ListItem
                   icon={<AiFillMediumSquare />}
-                  title="Medium:"
+                  title="Medium"
                   value={social.medium}
                   link={`https://medium.com/@${social.medium}`}
                 />
@@ -228,7 +237,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.dev && (
                 <ListItem
                   icon={<FaDev />}
-                  title="Dev:"
+                  title="Dev"
                   value={social.dev}
                   link={`https://dev.to/${social.dev}`}
                 />
@@ -236,7 +245,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.stackoverflow && (
                 <ListItem
                   icon={<FaStackOverflow />}
-                  title="Stack Overflow:"
+                  title="Stack Overflow"
                   value={social.stackoverflow.split('/').slice(-1)}
                   link={`https://stackoverflow.com/users/${social.stackoverflow}`}
                 />
@@ -244,7 +253,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.website && (
                 <ListItem
                   icon={<FaGlobe />}
-                  title="Website:"
+                  title="Website"
                   value={social.website
                     .replace('https://', '')
                     .replace('http://', '')}
@@ -274,7 +283,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.phone && (
                 <ListItem
                   icon={<RiPhoneFill />}
-                  title="Phone:"
+                  title="Phone"
                   value={social.phone}
                   link={`tel:${social.phone}`}
                 />
@@ -282,7 +291,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.email && (
                 <ListItem
                   icon={<RiMailFill />}
-                  title="Email:"
+                  title="Email"
                   value={social.email}
                   link={`mailto:${social.email}`}
                 />
