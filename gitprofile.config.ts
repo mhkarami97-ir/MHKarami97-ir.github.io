@@ -192,7 +192,7 @@ const CONFIG = {
     },
   ],
   googleAnalytics: {
-    id: 'G-DZM25ZLKRP',
+    id: 'G-2KGKGYQR60',
   },
   themeConfig: {
     defaultTheme: 'procyon',
