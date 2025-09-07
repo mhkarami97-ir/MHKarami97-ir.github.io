@@ -148,10 +148,12 @@ const CONFIG = {
       '',
   },
   skills: [
-    'C#',
-    'SQL',
+    '.NET / C#',
+    'SQL Server',
     'Angular',
-    'VueJs'
+    'VueJs / NuxtJs',
+    'Git',
+    'Leadership'
   ],
   experiences: [
     {
@@ -165,6 +167,13 @@ const CONFIG = {
       company: 'Asa Co',
       position: 'Backend Developer',
       from: '2020',
+      to: '2025',
+      companyLink: 'https://asax.ir',
+    },
+        {
+      company: 'Asa Co',
+      position: 'Team Lead',
+      from: '2025',
       to: 'Present',
       companyLink: 'https://asax.ir',
     },
