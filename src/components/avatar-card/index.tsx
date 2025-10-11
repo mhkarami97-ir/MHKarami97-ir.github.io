@@ -75,6 +75,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               ? skeleton({ widthCls: 'w-48', heightCls: 'h-5' })
               : profile.bio}
           </div>
+          <div class="mt-3 text-primary text-bold font-bold text-opacity-80 font-mono rounded-full ring ring-primary ring-offset-base-100 ring-offset-1"><a href="https://magic.mhkarami97.ir/">Magic Box</a></div>
         </div>
         {resumeFileUrl &&
           (loading ? (

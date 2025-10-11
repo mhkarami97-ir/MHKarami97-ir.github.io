@@ -126,11 +126,11 @@ const CONFIG = {
           link: 'https://music.mhkarami97.ir',
         },
                 {
-          title: 'جعبه جادو',
+          title: 'کلاس',
           description:
-              'جعبه جادو',
-          imageUrl: '/icons/19.png',
-          link: 'https://magic.mhkarami97.ir',
+              'کلاس درس',
+          imageUrl: '/icons/07.png',
+          link: 'https://learn.mhkarami97.ir',
         },
                 {
           title: 'دیکشنری',
