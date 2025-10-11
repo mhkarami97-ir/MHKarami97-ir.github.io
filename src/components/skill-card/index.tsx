@@ -39,7 +39,7 @@ const SkillCard = ({
               : skills.map((skill, index) => (
                   <div
                     key={index}
-                    className="text-xs inline-flex items-center leading-sm px-3 py-1 mt-2 text-base-content ring ring-primary rounded-full"
+                    className="text-xs inline-flex items-center leading-sm px-2 py-1 m-2 text-base-content ring ring-primary rounded-full"
                   >
                     {skill}
                   </div>
