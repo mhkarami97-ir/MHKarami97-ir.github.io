@@ -125,19 +125,33 @@ const CONFIG = {
           imageUrl: '/icons/15.png',
           link: 'https://music.mhkarami97.ir',
         },
-                {
+        {
           title: 'کلاس',
           description:
               'کلاس درس',
           imageUrl: '/icons/07.png',
           link: 'https://learn.mhkarami97.ir',
         },
-                {
+        {
           title: 'دیکشنری',
           description:
               'لغات کاربردی',
           imageUrl: '/icons/18.png',
           link: 'https://dictionary.mhkarami97.ir',
+        },
+        {
+          title: 'جعبه جادو',
+          description:
+              'جعبه جادو',
+          imageUrl: '/icons/19.png',
+          link: 'https://magic.mhkarami97.ir',
+        },
+        {
+          title: 'الگوریتم',
+          description:
+              'سوالات الگوریتمی',
+          imageUrl: '/icons/20.png',
+          link: 'https://algorithm.mhkarami97.ir',
         },
       ],
     },
