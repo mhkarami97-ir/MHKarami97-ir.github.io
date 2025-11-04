@@ -170,6 +170,7 @@ const CONFIG = {
     aparat: 'mhkarami97',
     telegram: 'mhkarami_97',
     email: 'mhkarami97@gmail.com',
+    leetCode: 'mhkarami97'
   },
   resume: {
     fileUrl:
