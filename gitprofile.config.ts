@@ -140,11 +140,11 @@ const CONFIG = {
           link: 'https://dictionary.mhkarami97.ir',
         },
         {
-          title: 'جعبه جادو',
+          title: 'جعبه ابزار',
           description:
-              'جعبه جادو',
-          imageUrl: '/icons/19.png',
-          link: 'https://magic.mhkarami97.ir',
+              'جعبه ابزار',
+          imageUrl: '/icons/21.png',
+          link: 'https://ai.mhkarami97.ir',
         },
         {
           title: 'الگوریتم',
