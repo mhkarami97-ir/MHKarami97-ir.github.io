@@ -21,13 +21,17 @@
   }
 }
 
-@font-face {
-  font-family: 'BYekan';
-  src: url('/fonts/BYekan.ttf') format("truetype"),
-    url('/fonts/BYekan.eot') format("eot"),
-    url('/fonts/BYekan.woff') format("woff");
-  font-style: normal;
-  font-weight: 400;
+@import url("/fonts/Vazirmatn-font-face.css");
+
+* {
+    font-family: Vazirmatn, Tahoma, serif !important;
+}
+
+body,
+html,
+button,
+input {
+    font-family: Vazirmatn, Tahoma, serif !important;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -37,9 +41,6 @@
 
 body {
   margin: 0;
-  font-family: 'BYekan', 'Tahoma', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
