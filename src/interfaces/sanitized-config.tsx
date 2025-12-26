@@ -62,6 +62,7 @@ export interface SanitizedSocial {
   skype?: string;
   aparat?: string;
   telegram?: string;
+  leetCode?: string;
   phone?: string;
   email?: string;
 }

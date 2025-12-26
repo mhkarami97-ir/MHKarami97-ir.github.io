@@ -211,6 +211,11 @@ interface Social {
    * Email
    */
   email?: string;
+
+   /**
+   * LeetCode
+   */
+  leetCode?: string;
 }
 
 interface Resume {

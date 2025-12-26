@@ -18,6 +18,7 @@ import {
   FaTelegram,
   FaYoutube,
   FaVideo,
+  FaCode
 } from 'react-icons/fa';
 import { FaSquareThreads } from 'react-icons/fa6';
 import { RiMailFill, RiPhoneFill } from 'react-icons/ri';
@@ -286,6 +287,14 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                       title="X"
                       value={social.x}
                       link={`https://x.com/${social.x}`}
+                  />
+              )}
+               {social?.leetCode && (
+                  <ListItem
+                      icon={<FaCode />}
+                      title="LeetCode"
+                      value={social.x}
+                      link={`https://leetcode.com/u/${social.leetCode}`}
                   />
               )}
               {social?.email && (
