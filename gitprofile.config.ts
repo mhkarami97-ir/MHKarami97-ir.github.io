@@ -153,6 +153,20 @@ const CONFIG = {
           imageUrl: '/icons/20.png',
           link: 'https://algorithm.mhkarami97.ir',
         },
+        {
+          title: 'لایف لیست',
+          description:
+              'لایف لیست',
+          imageUrl: '/icons/22.png',
+          link: 'https://list.mhkarami97.ir',
+        },
+        {
+          title: 'پرامپ',
+          description:
+              'لیست پرامپت',
+          imageUrl: '/icons/23.png',
+          link: 'https://prompt.mhkarami97.ir',
+        },
       ],
     },
   },
