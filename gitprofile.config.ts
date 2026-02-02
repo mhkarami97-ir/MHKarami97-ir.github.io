@@ -167,15 +167,13 @@ const CONFIG = {
           imageUrl: '/icons/23.png',
           link: 'https://prompt.mhkarami97.ir',
         },
-        ,
         {
           title: 'بازی',
           description:
               'بازی تحت وب',
           imageUrl: '/icons/25.png',
           link: 'https://game.mhkarami97.ir',
-        },
-        ,
+        },        
         {
           title: 'تاریخ',
           description:
