@@ -63,6 +63,7 @@ export interface SanitizedSocial {
   aparat?: string;
   telegram?: string;
   leetCode?: string;
+  cafebazaar?: string;
   phone?: string;
   email?: string;
 }

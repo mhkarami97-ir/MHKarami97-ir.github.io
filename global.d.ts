@@ -216,6 +216,11 @@ interface Social {
    * LeetCode
    */
   leetCode?: string;
+
+  /**
+   * Cafebazaar
+   */
+  cafebazaar?: string;
 }
 
 interface Resume {

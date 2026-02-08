@@ -20,7 +20,7 @@ import {
   FaVideo,
   FaCode
 } from 'react-icons/fa';
-import { FaSquareThreads } from 'react-icons/fa6';
+import { FaSquareThreads, FaBagShopping } from 'react-icons/fa6';
 import { RiMailFill, RiPhoneFill } from 'react-icons/ri';
 import { SiResearchgate, SiX, SiUdemy } from 'react-icons/si';
 import { Profile } from '../../interfaces/profile';
@@ -293,8 +293,16 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   <ListItem
                       icon={<FaCode />}
                       title="LeetCode"
-                      value={social.x}
+                      value={social.leetCode}
                       link={`https://leetcode.com/u/${social.leetCode}`}
+                  />
+              )}
+              {social?.cafebazaar && (
+                  <ListItem
+                      icon={<FaBagShopping />}
+                      title="CafeBazaar"
+                      value={social.cafebazaar}
+                      link={`https://cafebazaar.ir/developer/${social.cafebazaar}`}
                   />
               )}
               {social?.email && (
