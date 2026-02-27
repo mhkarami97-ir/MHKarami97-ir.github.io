@@ -181,6 +181,20 @@ const CONFIG = {
           imageUrl: '/icons/24.png',
           link: 'https://date.mhkarami97.ir',
         },
+        {
+          title: 'آموزش',
+          description:
+              'محتوای آموزشی',
+          imageUrl: '/icons/26.png',
+          link: 'https://teach.mhkarami97.ir',
+        },
+        {
+          title: 'جعبه جادویی',
+          description:
+              'جعبه جادو',
+          imageUrl: '/icons/19.png',
+          link: 'https://magic.mhkarami97.ir',
+        },
       ],
     },
   },
