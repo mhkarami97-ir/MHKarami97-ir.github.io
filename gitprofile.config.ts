@@ -195,6 +195,34 @@ const CONFIG = {
           imageUrl: '/icons/19.png',
           link: 'https://magic.mhkarami97.ir',
         },
+        {
+          title: 'اقتصاد',
+          description:
+              'اقتصاد به زبان ساده',
+          imageUrl: '/icons/29.png',
+          link: 'https://economy.mhkarami97.ir',
+        },
+        {
+          title: 'سیاست',
+          description:
+              'سیاست به زبان ساده',
+          imageUrl: '/icons/27.png',
+          link: 'https://politics.mhkarami97.ir',
+        },
+        {
+          title: 'علمی',
+          description:
+              'علم به زبان ساده',
+          imageUrl: '/icons/30.png',
+          link: 'https://science.mhkarami97.ir',
+        },
+        {
+          title: 'آدمیزاد',
+          description:
+              'مطالب حوزه انسانی',
+          imageUrl: '/icons/28.png',
+          link: 'https://person.mhkarami97.ir',
+        }
       ],
     },
   },
