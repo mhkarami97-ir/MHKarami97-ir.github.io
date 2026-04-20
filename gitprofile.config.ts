@@ -207,7 +207,7 @@ const CONFIG = {
           description:
               'سیاست به زبان ساده',
           imageUrl: '/icons/27.png',
-          link: 'https://politics.mhkarami97.ir',
+          link: 'https://politic.mhkarami97.ir',
         },
         {
           title: 'علمی',
@@ -217,7 +217,7 @@ const CONFIG = {
           link: 'https://science.mhkarami97.ir',
         },
         {
-          title: 'آدمیزاد',
+          title: 'روانشناسی',
           description:
               'مطالب حوزه انسانی',
           imageUrl: '/icons/28.png',
