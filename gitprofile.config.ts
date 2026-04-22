@@ -66,7 +66,7 @@ const CONFIG = {
           title: 'کلیپ',
           description:
               'کلیپ سفرهای رفته شده',
-          imageUrl: '/icons/06.png',
+          imageUrl: '/icons/31.png',
           link: 'https://trip.mhkarami97.ir',
         },
         {
