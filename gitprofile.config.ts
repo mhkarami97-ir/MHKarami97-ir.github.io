@@ -241,7 +241,15 @@ const CONFIG = {
     telegram: 'mhkarami_97',
     email: 'mhkarami97@gmail.com',
     leetCode: 'mhkarami97',
-    cafebazaar: 'mhkarami97'
+    cafebazaar: 'mhkarami97',
+    medium: 'mhkarami97',
+    dev: 'mhkarami97',
+    stackoverflow: 'mhkarami97'
+  },
+  website: {
+    travel: 'KaramTravel.ir',
+    tool: 'Zoorvan.ir',
+    shop: 'ShirdalMarket.ir'
   },
   resume: {
     fileUrl:

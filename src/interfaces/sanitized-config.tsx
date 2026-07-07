@@ -42,6 +42,12 @@ export interface SanitizedSEO {
   imageURL?: string;
 }
 
+export interface SanitizedWebsite {
+  travel?: string;
+  tool?: string;
+  shop?: string;
+}
+
 export interface SanitizedSocial {
   linkedin?: string;
   x?: string;
@@ -148,6 +154,7 @@ export interface SanitizedConfig {
   experiences: Array<SanitizedExperience>;
   educations: Array<SanitizedEducation>;
   certifications: Array<SanitizedCertification>;
+  website: Array<SanitizedWebsite>;
   publications: Array<SanitizedPublication>;
   googleAnalytics: SanitizedGoogleAnalytics;
   hotjar: SanitizedHotjar;
