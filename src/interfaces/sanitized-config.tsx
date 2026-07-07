@@ -148,13 +148,13 @@ export interface SanitizedConfig {
   github: SanitizedGithub;
   projects: SanitizedProjects;
   seo: SanitizedSEO;
+  website: SanitizedWebsite;
   social: SanitizedSocial;
   resume: SanitizedResume;
   skills: Array<string>;
   experiences: Array<SanitizedExperience>;
   educations: Array<SanitizedEducation>;
   certifications: Array<SanitizedCertification>;
-  website: Array<SanitizedWebsite>;
   publications: Array<SanitizedPublication>;
   googleAnalytics: SanitizedGoogleAnalytics;
   hotjar: SanitizedHotjar;

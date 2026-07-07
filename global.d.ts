@@ -106,6 +106,12 @@ interface SEO {
   imageURL?: string;
 }
 
+interface Website {
+  travel?: string;
+  tool?: string;
+  shop?: string;
+}
+
 interface Social {
   /**
    * LinkedIn
@@ -393,6 +399,7 @@ interface Config {
    * Social links
    */
   social?: Social;
+  website?: Website;
 
   /**
    * Skill list

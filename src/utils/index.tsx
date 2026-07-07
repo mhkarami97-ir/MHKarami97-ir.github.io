@@ -60,6 +60,11 @@ export const getSanitizedConfig = (
         description: config?.seo?.description,
         imageURL: config?.seo?.imageURL,
       },
+      website: {
+        travel: config?.website?.travel,
+        tool: config?.website?.tool,
+        shop: config?.website?.shop,
+      },
       social: {
         linkedin: config?.social?.linkedin,
         x: config?.social?.x,
