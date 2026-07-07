@@ -243,7 +243,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                         certifications={sanitizedConfig.certifications}
                       />
                     )}
-                    {sanitizedConfig.website.length !== 0 && (
+                    {sanitizedConfig.website != null && (
                       <WebSitesCard
                         profile={profile}
                         loading={loading}

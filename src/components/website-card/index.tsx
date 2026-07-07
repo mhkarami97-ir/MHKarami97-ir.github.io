@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import {
   FaCarSide,
   FaWrench,
-  FaBasketShopping
+  FaShoppingBag
 } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import {
@@ -100,7 +100,7 @@ const WebSitesCard = ({ profile, loading, website }: Props) => {
               )}
               {website?.shop && (
                 <ListItem
-                  icon={<FaBasketShopping />}
+                  icon={<FaShoppingBag />}
                   title="Shop"
                   value={website.shop}
                   link={`https://${website.shop}`}
