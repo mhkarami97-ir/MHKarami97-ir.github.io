@@ -199,7 +199,7 @@ const CONFIG = {
     },
   },
   apps: {
-    header: 'اپلیکیشن‌ها',
+    header: 'Applications',
     items: [
       {
         name: 'جعبه ابزار',
@@ -209,6 +209,11 @@ const CONFIG = {
       {
         name: 'بدن ساز',
         imageUrl: '/icons/app/02.png',
+        link: 'https://cafebazaar.ir/app/mhk.sport',
+      },
+      {
+        name: 'جعبه بازی',
+        imageUrl: '/icons/app/03.png',
         link: 'https://cafebazaar.ir/app/mhk.sport',
       },
     ],

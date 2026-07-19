@@ -37,10 +37,10 @@ const SkillCard = ({
             {loading
               ? renderSkeleton()
               : skills.map((skill, index) => (
-                  <div
-                    key={index}
-                    className="text-xs inline-flex items-center leading-sm px-2 py-1 m-2 text-base-content ring ring-primary rounded-full"
-                  >
+                    <div
+                      key={index}
+                      className="text-xs inline-flex items-center leading-sm px-2 py-1 m-2 text-base-content text-opacity-60 ring ring-base-content ring-opacity-20 rounded-full"
+                    >
                     {skill}
                   </div>
                 ))}
