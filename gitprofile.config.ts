@@ -274,6 +274,13 @@ const CONFIG = {
       company: 'Asa Co',
       position: 'Team Lead',
       from: '2025',
+      to: '2026',
+      companyLink: 'https://asax.ir',
+    },
+    {
+      company: 'Asa Co',
+      position: 'Senior Software Engineer',
+      from: '2026',
       to: 'Present',
       companyLink: 'https://asax.ir',
     },
