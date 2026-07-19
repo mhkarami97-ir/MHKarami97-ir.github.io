@@ -28,7 +28,7 @@ const SkillCard = ({
             {loading ? (
               skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
             ) : (
-              <span className="text-base-content opacity-70">Tech Stack</span>
+              <span className="text-base-content opacity-70">Skills</span>
             )}
           </h5>
         </div>
@@ -37,10 +37,10 @@ const SkillCard = ({
             {loading
               ? renderSkeleton()
               : skills.map((skill, index) => (
-                    <div
-                      key={index}
-                      className="text-xs inline-flex items-center leading-sm px-2 py-1 m-2 text-base-content text-opacity-60 ring ring-base-content ring-opacity-20 rounded-full"
-                    >
+                  <div
+                    key={index}
+                    className="text-xs inline-flex items-center leading-sm px-2 py-1 m-2 text-base-content text-opacity-60 ring ring-base-content ring-opacity-20 hover:ring-primary hover:ring-opacity-100 rounded-full transition-all duration-200"
+                  >
                     {skill}
                   </div>
                 ))}
