@@ -29,202 +29,189 @@ const CONFIG = {
       projects: [
         {
           title: 'آی ترفند',
-          description:
-              'ترفندهای کاربردی حوضه تکنولوژی',
+          description: 'ترفندهای کاربردی حوضه تکنولوژی',
           imageUrl: '/icons/09.png',
           link: 'https://tarfand.mhkarami97.ir',
         },
         {
           title: 'وبلاگ',
-          description:
-              'وبلاگ روزمرگی‌های برنامه‌نویسی',
+          description: 'وبلاگ روزمرگی‌های برنامه‌نویسی',
           imageUrl: '/icons/12.png',
           link: 'https://blog.mhkarami97.ir',
         },
         {
           title: 'کتابخانه',
-          description:
-              'کتاب‌های خوانده شده',
+          description: 'کتاب‌های خوانده شده',
           imageUrl: '/icons/03.png',
           link: 'https://book.mhkarami97.ir',
         },
         {
           title: 'فیلم‌خانه',
-          description:
-              'فیلم‌های دیده شده',
+          description: 'فیلم‌های دیده شده',
           imageUrl: '/icons/05.png',
           link: 'https://video.mhkarami97.ir',
         },
         {
           title: 'سفرنامه',
-          description:
-              'سفرهای رفته',
+          description: 'سفرهای رفته',
           imageUrl: '/icons/06.png',
           link: 'https://travel.mhkarami97.ir',
         },
         {
           title: 'کلیپ',
-          description:
-              'کلیپ سفرهای رفته شده',
+          description: 'کلیپ سفرهای رفته شده',
           imageUrl: '/icons/31.png',
           link: 'https://trip.mhkarami97.ir',
         },
         {
           title: 'شعر‌خانه',
-          description:
-              'شعرهای خوانده شده',
+          description: 'شعرهای خوانده شده',
           imageUrl: '/icons/11.png',
           link: 'https://poem.mhkarami97.ir',
         },
         {
           title: 'فوت‌و‌فن',
-          description:
-              'نکات کاربردی',
+          description: 'نکات کاربردی',
           imageUrl: '/icons/16.png',
           link: 'https://trick.mhkarami97.ir',
         },
         {
           title: 'جملات انگیزشی',
-          description:
-              'جملات انگیزشی بزرگان',
+          description: 'جملات انگیزشی بزرگان',
           imageUrl: '/icons/13.png',
           link: 'https://sentence.mhkarami97.ir',
         },
         {
           title: 'لینکدونی',
-          description:
-              'لینک سایت‌های کاربردی',
+          description: 'لینک سایت‌های کاربردی',
           imageUrl: '/icons/02.png',
           link: 'https://link.mhkarami97.ir',
         },
         {
           title: 'ایونت',
-          description:
-              'ایونت‌های طبیعت‌گردی',
+          description: 'ایونت‌های طبیعت‌گردی',
           imageUrl: '/icons/14.png',
           link: 'https://event.mhkarami97.ir',
         },
         {
           title: 'طبیعت‌گردی',
-          description:
-              'رزومه طبیعت‌گردی',
+          description: 'رزومه طبیعت‌گردی',
           imageUrl: '/icons/01.png',
           link: 'https://tour.mhkarami97.ir',
         },
         {
           title: 'تجربه',
-          description:
-              'تجربه',
+          description: 'تجربه',
           imageUrl: '/icons/17.png',
           link: 'https://experience.mhkarami97.ir',
         },
         {
           title: 'آهنگ‌خانه',
-          description:
-              'گلچین آهنگ‌ها',
+          description: 'گلچین آهنگ‌ها',
           imageUrl: '/icons/15.png',
           link: 'https://music.mhkarami97.ir',
         },
         {
           title: 'کلاس',
-          description:
-              'کلاس درس',
+          description: 'کلاس درس',
           imageUrl: '/icons/07.png',
           link: 'https://learn.mhkarami97.ir',
         },
         {
           title: 'دیکشنری',
-          description:
-              'لغات کاربردی',
+          description: 'لغات کاربردی',
           imageUrl: '/icons/18.png',
           link: 'https://dictionary.mhkarami97.ir',
         },
         {
           title: 'جعبه ابزار',
-          description:
-              'جعبه ابزار',
+          description: 'جعبه ابزار',
           imageUrl: '/icons/21.png',
           link: 'https://ai.mhkarami97.ir',
         },
         {
           title: 'الگوریتم',
-          description:
-              'سوالات الگوریتمی',
+          description: 'سوالات الگوریتمی',
           imageUrl: '/icons/20.png',
           link: 'https://algorithm.mhkarami97.ir',
         },
         {
           title: 'لایف لیست',
-          description:
-              'لایف لیست',
+          description: 'لایف لیست',
           imageUrl: '/icons/22.png',
           link: 'https://list.mhkarami97.ir',
         },
         {
           title: 'پرامپ',
-          description:
-              'لیست پرامپت',
+          description: 'لیست پرامپت',
           imageUrl: '/icons/23.png',
           link: 'https://prompt.mhkarami97.ir',
         },
         {
           title: 'بازی',
-          description:
-              'بازی تحت وب',
+          description: 'بازی تحت وب',
           imageUrl: '/icons/25.png',
           link: 'https://game.mhkarami97.ir',
-        },        
+        },
         {
           title: 'تاریخ',
-          description:
-              'اتفاقات تاریخی',
+          description: 'اتفاقات تاریخی',
           imageUrl: '/icons/24.png',
           link: 'https://date.mhkarami97.ir',
         },
         {
           title: 'آموزش',
-          description:
-              'محتوای آموزشی',
+          description: 'محتوای آموزشی',
           imageUrl: '/icons/26.png',
           link: 'https://teach.mhkarami97.ir',
         },
         {
           title: 'جعبه جادویی',
-          description:
-              'جعبه جادو',
+          description: 'جعبه جادو',
           imageUrl: '/icons/19.png',
           link: 'https://magic.mhkarami97.ir',
         },
         {
           title: 'اقتصاد',
-          description:
-              'اقتصاد به زبان ساده',
+          description: 'اقتصاد به زبان ساده',
           imageUrl: '/icons/29.png',
           link: 'https://economy.mhkarami97.ir',
         },
         {
           title: 'سیاست',
-          description:
-              'سیاست به زبان ساده',
+          description: 'سیاست به زبان ساده',
           imageUrl: '/icons/27.png',
           link: 'https://politic.mhkarami97.ir',
         },
         {
           title: 'علمی',
-          description:
-              'علم به زبان ساده',
+          description: 'علم به زبان ساده',
           imageUrl: '/icons/30.png',
           link: 'https://science.mhkarami97.ir',
         },
         {
           title: 'روانشناسی',
-          description:
-              'مطالب حوزه انسانی',
+          description: 'مطالب حوزه انسانی',
           imageUrl: '/icons/28.png',
           link: 'https://person.mhkarami97.ir',
-        }
+        },
       ],
     },
+  },
+  apps: {
+    header: 'اپلیکیشن‌ها',
+    items: [
+      {
+        name: 'جعبه ابزار',
+        imageUrl: '/icons/app/01.png',
+        link: 'https://cafebazaar.ir/app/mhk.webtools',
+      },
+      {
+        name: 'بدن ساز',
+        imageUrl: '/icons/app/02.png',
+        link: 'https://cafebazaar.ir/app/mhk.sport',
+      },
+    ],
   },
   seo: {
     title: 'محمد حسین کرمی',
@@ -244,16 +231,16 @@ const CONFIG = {
     cafebazaar: 'mhkarami97',
     medium: 'mhkarami97',
     dev: 'mhkarami97',
-    stackoverflow: 'mhkarami97'
+    stackoverflow: 'mhkarami97',
   },
   website: {
     travel: 'KaramTravel.ir',
     tool: 'Zoorvan.ir',
-    shop: 'ShirdalMarket.ir'
+    shop: 'ShirdalMarket.ir',
+    house: 'YarKhoone.ir',
   },
   resume: {
-    fileUrl:
-      '',
+    fileUrl: '',
   },
   skills: [
     '.NET / C#',
@@ -261,7 +248,7 @@ const CONFIG = {
     'Angular',
     'VueJs / NuxtJs',
     'Git',
-    'Leadership'
+    'Leadership',
   ],
   experiences: [
     {
@@ -278,7 +265,7 @@ const CONFIG = {
       to: '2025',
       companyLink: 'https://asax.ir',
     },
-        {
+    {
       company: 'Asa Co',
       position: 'Team Lead',
       from: '2025',
@@ -291,7 +278,7 @@ const CONFIG = {
       name: 'C#',
       body: 'LinkedIn Skill Assessment badge',
       year: '2022',
-      link: 'https://www.linkedin.com/in/mhkarami97/details/skills/'
+      link: 'https://www.linkedin.com/in/mhkarami97/details/skills/',
     },
   ],
   educations: [
@@ -316,9 +303,7 @@ const CONFIG = {
     disableSwitch: true,
     respectPrefersColorScheme: true,
     displayAvatarRing: true,
-    themes: [
-      'procyon',
-    ],
+    themes: ['procyon'],
     customTheme: {
       primary: '#6F48FF',
       secondary: '#6F48FF',

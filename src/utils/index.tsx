@@ -64,6 +64,7 @@ export const getSanitizedConfig = (
         travel: config?.website?.travel,
         tool: config?.website?.tool,
         shop: config?.website?.shop,
+        house: config?.website?.house,
       },
       social: {
         linkedin: config?.social?.linkedin,
@@ -158,6 +159,10 @@ export const getSanitizedConfig = (
       },
       footer: config?.footer,
       enablePWA: config?.enablePWA ?? true,
+      apps: {
+        header: config?.apps?.header || '',
+        items: config?.apps?.items || [],
+      },
     };
   } catch (error) {
     return {};

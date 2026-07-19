@@ -31,6 +31,17 @@ export interface SanitizedExternalProjects {
   projects: SanitizedExternalProject[];
 }
 
+export interface SanitizedAppItem {
+  name: string;
+  imageUrl: string;
+  link: string;
+}
+
+export interface SanitizedApps {
+  header: string;
+  items: SanitizedAppItem[];
+}
+
 export interface SanitizedProjects {
   github: SanitizedGitHubProjects;
   external: SanitizedExternalProjects;
@@ -46,6 +57,7 @@ export interface SanitizedWebsite {
   travel?: string;
   tool?: string;
   shop?: string;
+  house?: string;
 }
 
 export interface SanitizedSocial {
@@ -162,4 +174,5 @@ export interface SanitizedConfig {
   themeConfig: SanitizedThemeConfig;
   footer?: string;
   enablePWA: boolean;
+  apps: SanitizedApps;
 }

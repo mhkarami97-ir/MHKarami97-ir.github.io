@@ -31,6 +31,7 @@ import ExternalProjectCard from './external-project-card';
 import BlogCard from './blog-card';
 import Footer from './footer';
 import PublicationCard from './publication-card';
+import AppIconsCard from './app-icons-card';
 
 /**
  * Renders the GitProfile component.
@@ -249,7 +250,13 @@ const GitProfile = ({ config }: { config: Config }) => {
                         loading={loading}
                         website={sanitizedConfig.website}
                       />
-                    )}                  
+                    )}
+                    {sanitizedConfig.apps.items.length !== 0 && (
+                      <AppIconsCard
+                        loading={loading}
+                        apps={sanitizedConfig.apps}
+                      />
+                    )}
                   </div>
                 </div>
                 <div className="lg:col-span-2 col-span-1">

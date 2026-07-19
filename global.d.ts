@@ -89,6 +89,15 @@ interface Projects {
   external?: ExternalProjects;
 }
 
+interface Apps {
+  header?: string;
+  items?: {
+    name: string;
+    imageUrl: string;
+    link: string;
+  }[];
+}
+
 interface SEO {
   /**
    * Meta title
@@ -110,6 +119,7 @@ interface Website {
   travel?: string;
   tool?: string;
   shop?: string;
+  house?: string;
 }
 
 interface Social {
@@ -455,6 +465,11 @@ interface Config {
    * Custom footer
    */
   footer?: string;
+
+  /**
+   * Apps config
+   */
+  apps?: Apps;
 
   /**
    * Enable PWA
