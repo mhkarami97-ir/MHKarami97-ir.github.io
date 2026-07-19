@@ -75,7 +75,9 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               ? skeleton({ widthCls: 'w-48', heightCls: 'h-5' })
               : profile.bio}
           </div>
-          <div className="mt-3 text-primary text-bold font-bold text-opacity-80 font-mono rounded-full ring ring-primary ring-offset-base-100 ring-offset-1"><a href="https://magic.mhkarami97.ir/">Magic Box</a></div>
+          <div className="mt-3 text-bold font-bold text-opacity-80 font-mono text-base-content text-opacity-60 ring ring-base-content ring-opacity-20 hover:ring-primary hover:ring-opacity-100 rounded-full transition-all duration-200">
+            <a href="https://magic.mhkarami97.ir/">Magic Box</a>
+          </div>
         </div>
         {resumeFileUrl &&
           (loading ? (
