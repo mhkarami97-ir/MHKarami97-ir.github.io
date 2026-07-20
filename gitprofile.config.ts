@@ -192,6 +192,11 @@ const CONFIG = {
         imageUrl: '/icons/app/03.png',
         link: 'https://cafebazaar.ir/app/mhk.gamebox',
       },
+      {
+        name: 'تقویم شمسی',
+        imageUrl: '/icons/app/04.png',
+        link: 'https://cafebazaar.ir/app/mhk.calender',
+      },
     ],
   },
   seo: {
@@ -224,6 +229,7 @@ const CONFIG = {
     magicBox: 'magic.mhkarami97.ir',
     gameBox: 'game.mhkarami97.ir',
     toolBox: 'ai.mhkarami97.ir',
+    calender: 'calender.mhkarami97.ir',
   },
   resume: {
     fileUrl: '',

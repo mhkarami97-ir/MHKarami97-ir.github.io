@@ -126,6 +126,7 @@ interface Tool {
   magicBox?: string;
   gameBox?: string;
   toolBox?: string;
+  calender?: string;
 }
 
 interface Social {

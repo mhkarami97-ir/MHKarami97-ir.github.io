@@ -64,6 +64,7 @@ export interface SanitizedTool {
   magicBox?: string;
   gameBox?: string;
   toolBox?: string;
+  calender?: string;
 }
 
 export interface SanitizedSocial {

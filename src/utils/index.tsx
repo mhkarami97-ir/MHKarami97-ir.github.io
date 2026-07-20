@@ -70,6 +70,7 @@ export const getSanitizedConfig = (
         magicBox: config?.tool?.magicBox,
         gameBox: config?.tool?.gameBox,
         toolBox: config?.tool?.toolBox,
+        calender: config?.tool?.calender,
       },
       social: {
         linkedin: config?.social?.linkedin,
