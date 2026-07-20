@@ -106,12 +106,6 @@ const CONFIG = {
           link: 'https://experience.mhkarami97.ir',
         },
         {
-          title: 'آهنگ‌خانه',
-          description: 'گلچین آهنگ‌ها',
-          imageUrl: '/icons/15.png',
-          link: 'https://music.mhkarami97.ir',
-        },
-        {
           title: 'کلاس',
           description: 'کلاس درس',
           imageUrl: '/icons/07.png',
@@ -122,12 +116,6 @@ const CONFIG = {
           description: 'لغات کاربردی',
           imageUrl: '/icons/18.png',
           link: 'https://dictionary.mhkarami97.ir',
-        },
-        {
-          title: 'جعبه ابزار',
-          description: 'جعبه ابزار',
-          imageUrl: '/icons/21.png',
-          link: 'https://ai.mhkarami97.ir',
         },
         {
           title: 'الگوریتم',
@@ -148,12 +136,6 @@ const CONFIG = {
           link: 'https://prompt.mhkarami97.ir',
         },
         {
-          title: 'بازی',
-          description: 'بازی تحت وب',
-          imageUrl: '/icons/25.png',
-          link: 'https://game.mhkarami97.ir',
-        },
-        {
           title: 'تاریخ',
           description: 'اتفاقات تاریخی',
           imageUrl: '/icons/24.png',
@@ -164,12 +146,6 @@ const CONFIG = {
           description: 'محتوای آموزشی',
           imageUrl: '/icons/26.png',
           link: 'https://teach.mhkarami97.ir',
-        },
-        {
-          title: 'جعبه جادویی',
-          description: 'جعبه جادو',
-          imageUrl: '/icons/19.png',
-          link: 'https://magic.mhkarami97.ir',
         },
         {
           title: 'اقتصاد',
