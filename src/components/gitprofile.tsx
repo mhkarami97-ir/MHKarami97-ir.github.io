@@ -32,6 +32,7 @@ import BlogCard from './blog-card';
 import Footer from './footer';
 import PublicationCard from './publication-card';
 import AppIconsCard from './app-icons-card';
+import ToolsCard from './tool-card';
 
 /**
  * Renders the GitProfile component.
@@ -249,6 +250,13 @@ const GitProfile = ({ config }: { config: Config }) => {
                         profile={profile}
                         loading={loading}
                         website={sanitizedConfig.website}
+                      />
+                    )}
+                    {sanitizedConfig.tool != null && (
+                      <ToolsCard
+                        profile={profile}
+                        loading={loading}
+                        tool={sanitizedConfig.tool}
                       />
                     )}
                     {sanitizedConfig.apps.items.length !== 0 && (

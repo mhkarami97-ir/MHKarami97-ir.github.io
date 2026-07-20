@@ -122,6 +122,12 @@ interface Website {
   house?: string;
 }
 
+interface Tool {
+  magicBox?: string;
+  gameBox?: string;
+  toolBox?: string;
+}
+
 interface Social {
   /**
    * LinkedIn
@@ -409,7 +415,16 @@ interface Config {
    * Social links
    */
   social?: Social;
+
+  /**
+   * Websites
+   */
   website?: Website;
+
+  /**
+   * Websites
+   */
+  tool?: Tool;
 
   /**
    * Skill list

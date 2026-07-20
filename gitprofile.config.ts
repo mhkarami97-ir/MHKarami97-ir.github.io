@@ -214,7 +214,7 @@ const CONFIG = {
       {
         name: 'جعبه بازی',
         imageUrl: '/icons/app/03.png',
-        link: 'https://cafebazaar.ir/app/mhk.sport',
+        link: 'https://cafebazaar.ir/app/mhk.gamebox',
       },
     ],
   },
@@ -243,6 +243,11 @@ const CONFIG = {
     tool: 'Zoorvan.ir',
     shop: 'ShirdalMarket.ir',
     house: 'YarKhoone.ir',
+  },
+  tool: {
+    magicBox: 'magic.mhkarami97.ir',
+    gameBox: 'game.mhkarami97.ir',
+    toolBox: 'ai.mhkarami97.ir',
   },
   resume: {
     fileUrl: '',

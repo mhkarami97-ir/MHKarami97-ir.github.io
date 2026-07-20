@@ -69,9 +69,13 @@ const AppIconsCard = ({
       <div className="card shadow-lg compact bg-base-100">
         <div className="card-body">
           {apps.header && (
-            <h2 className="card-title text-base-content text-opacity-60 mb-2">
-              {apps.header}
-            </h2>
+            <div className="mx-3">
+              <h5 className="card-title">
+                <span className="text-base-content opacity-70">
+                  {apps.header}
+                </span>
+              </h5>
+            </div>
           )}
           <div className="flex flex-wrap justify-center gap-4 py-2">
             {loading ? renderSkeleton() : renderApps()}

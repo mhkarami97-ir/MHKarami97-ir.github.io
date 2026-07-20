@@ -1,13 +1,13 @@
 import { Fragment } from 'react';
-import { FaCarSide, FaWrench, FaShoppingBag, FaHome } from 'react-icons/fa';
+import { FaToolbox, FaGamepad, FaMagic } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
-import { SanitizedWebsite } from '../../interfaces/sanitized-config';
+import { SanitizedTool } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
 
 type Props = {
   profile: Profile | null;
   loading: boolean;
-  website: SanitizedWebsite;
+  tool: SanitizedTool;
 };
 
 const ListItem: React.FC<{
@@ -43,14 +43,14 @@ const ListItem: React.FC<{
   );
 };
 /**
- * Renders the website card component.
+ * Renders the tools card component.
  *
  * @param {Object} profile - The profile object.
  * @param {boolean} loading - Indicates whether the data is loading.
  * @param {Object} website - The website object.
  * @return {JSX.Element} The website card component.
  */
-const WebSitesCard = ({ profile, loading, website }: Props) => {
+const ToolsCard = ({ profile, loading, tool }: Props) => {
   const renderSkeleton = () => {
     const array = [];
     for (let index = 0; index < 4; index++) {
@@ -73,7 +73,7 @@ const WebSitesCard = ({ profile, loading, website }: Props) => {
       <div className="card-body">
         <div className="mx-3">
           <h5 className="card-title">
-            <span className="text-base-content opacity-70">Sites</span>
+            <span className="text-base-content opacity-70">Tools</span>
           </h5>
         </div>
         <div className="text-base-content text-opacity-60">
@@ -81,36 +81,28 @@ const WebSitesCard = ({ profile, loading, website }: Props) => {
             renderSkeleton()
           ) : (
             <Fragment>
-              {website?.travel && (
+              {tool?.magicBox && (
                 <ListItem
-                  icon={<FaCarSide />}
-                  title="Travel"
-                  value={website.travel}
-                  link={`https://${website.travel}`}
+                  icon={<FaMagic />}
+                  title="Magic Box"
+                  value={tool.magicBox}
+                  link={`https://${tool.magicBox}`}
                 />
               )}
-              {website?.tool && (
+              {tool?.gameBox && (
                 <ListItem
-                  icon={<FaWrench />}
-                  title="Tool"
-                  value={website.tool}
-                  link={`https://${website.tool}`}
+                  icon={<FaGamepad />}
+                  title="Game Box"
+                  value={tool.gameBox}
+                  link={`https://${tool.gameBox}`}
                 />
               )}
-              {website?.shop && (
+              {tool?.toolBox && (
                 <ListItem
-                  icon={<FaShoppingBag />}
-                  title="Shop"
-                  value={website.shop}
-                  link={`https://${website.shop}`}
-                />
-              )}
-              {website?.house && (
-                <ListItem
-                  icon={<FaHome />}
-                  title="House"
-                  value={website.house}
-                  link={`https://${website.house}`}
+                  icon={<FaToolbox />}
+                  title="Tool Box"
+                  value={tool.toolBox}
+                  link={`https://${tool.toolBox}`}
                 />
               )}
             </Fragment>
@@ -121,4 +113,4 @@ const WebSitesCard = ({ profile, loading, website }: Props) => {
   );
 };
 
-export default WebSitesCard;
+export default ToolsCard;

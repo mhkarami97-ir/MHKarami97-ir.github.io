@@ -60,6 +60,12 @@ export interface SanitizedWebsite {
   house?: string;
 }
 
+export interface SanitizedTool {
+  magicBox?: string;
+  gameBox?: string;
+  toolBox?: string;
+}
+
 export interface SanitizedSocial {
   linkedin?: string;
   x?: string;
@@ -161,6 +167,7 @@ export interface SanitizedConfig {
   projects: SanitizedProjects;
   seo: SanitizedSEO;
   website: SanitizedWebsite;
+  tool: SanitizedTool;
   social: SanitizedSocial;
   resume: SanitizedResume;
   skills: Array<string>;
