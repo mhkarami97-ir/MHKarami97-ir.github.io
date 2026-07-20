@@ -66,6 +66,11 @@ export const getSanitizedConfig = (
         shop: config?.website?.shop,
         house: config?.website?.house,
       },
+      tool: {
+        magicBox: config?.tool?.magicBox,
+        gameBox: config?.tool?.gameBox,
+        toolBox: config?.tool?.toolBox,
+      },
       social: {
         linkedin: config?.social?.linkedin,
         x: config?.social?.x,
