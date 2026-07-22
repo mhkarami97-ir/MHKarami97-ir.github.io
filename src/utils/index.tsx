@@ -62,7 +62,7 @@ export const getSanitizedConfig = (
       },
       website: {
         travel: config?.website?.travel,
-        tool: config?.website?.tool,
+        experience: config?.website?.experience,
         shop: config?.website?.shop,
         house: config?.website?.house,
       },

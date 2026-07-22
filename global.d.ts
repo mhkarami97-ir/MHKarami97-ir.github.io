@@ -117,7 +117,7 @@ interface SEO {
 
 interface Website {
   travel?: string;
-  tool?: string;
+  experience?: string;
   shop?: string;
   house?: string;
 }
