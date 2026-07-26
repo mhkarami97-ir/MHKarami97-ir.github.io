@@ -202,6 +202,11 @@ const CONFIG = {
                 imageUrl: '/icons/app/05.png',
                 link: 'https://cafebazaar.ir/app/mhk.zoorvan',
             },
+            {
+                name: 'مدیریت مالی ',
+                imageUrl: '/icons/app/06.png',
+                link: 'https://cafebazaar.ir/app/mhk.finance',
+            },
         ],
     },
     telegramBots: {
