@@ -58,7 +58,7 @@ const ListItem: React.FC<{
   skeleton?: boolean;
 }> = ({ icon, title, value, link, skeleton = false }) => {
   return (
-    <div className="flex justify-start py-2 px-1 items-center">
+    <div className="flex justify-start py-1 px-1 items-center">
       <div className="flex-grow font-medium gap-2 flex items-center my-1">
         {icon} {title}
       </div>
@@ -74,7 +74,7 @@ const ListItem: React.FC<{
           href={link}
           target="_blank"
           rel="noreferrer"
-          className="flex justify-start py-2 px-1 items-center"
+          className="flex justify-start py-1 px-1 items-center"
         >
           {value}
         </a>

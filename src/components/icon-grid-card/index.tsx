@@ -69,13 +69,6 @@ const IconGridCard = ({ header, items, loading }: Props) => {
         <div className="col-span-2">
           <div className="card compact bg-base-100 shadow bg-opacity-40">
             <div className="card-body rtl">
-              {header && (
-                <div className="mx-3 flex items-center justify-between mb-2">
-                  <h5 className="card-title">
-                    <span className="text-base-content opacity-70">{header}</span>
-                  </h5>
-                </div>
-              )}
               <div className="col-span-2">
                 <div className="flex flex-wrap justify-center gap-4 py-2">
                   {loading ? renderSkeleton() : renderItems()}
