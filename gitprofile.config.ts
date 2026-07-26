@@ -275,6 +275,8 @@ const CONFIG = {
         gameBox: 'game.mhkarami97.ir',
         toolBox: 'ai.mhkarami97.ir',
         calender: 'calender.mhkarami97.ir',
+        finance: 'finance.mhkarami97.ir',
+        sport: 'sport.mhkarami97.ir',
     },
     resume: {
         fileUrl: '',

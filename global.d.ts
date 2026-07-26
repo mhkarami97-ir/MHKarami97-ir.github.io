@@ -144,6 +144,8 @@ interface Tool {
   gameBox?: string;
   toolBox?: string;
   calender?: string;
+  finance?: string;
+  sport?: string;
 }
 
 interface Social {

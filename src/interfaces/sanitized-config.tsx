@@ -78,6 +78,8 @@ export interface SanitizedTool {
   gameBox?: string;
   toolBox?: string;
   calender?: string;
+  finance?: string;
+  sport?: string;
 }
 
 export interface SanitizedSocial {
