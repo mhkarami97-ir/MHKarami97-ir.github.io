@@ -196,7 +196,7 @@ const CONFIG = {
         name: 'تقویم شمسی',
         imageUrl: '/icons/app/04.png',
         link: 'https://cafebazaar.ir/app/mhk.calender',
-      },    
+      },
       {
         name: 'تجربه‌نامه ',
         imageUrl: '/icons/app/05.png',
