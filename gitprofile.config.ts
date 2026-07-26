@@ -239,7 +239,7 @@ const CONFIG = {
   resume: {
     fileUrl: '',
   },
-  skills: ['.NET/C#', 'SqlServer', 'Angular', 'VueJs/NuxtJs', 'Leadership'],
+  skills: ['.NET/C#', 'SQL', 'Angular', 'VueJs', 'Leadership'],
   experiences: [
     {
       company: 'FreeLancer',
