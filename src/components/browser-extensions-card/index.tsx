@@ -10,7 +10,6 @@ const BrowserExtensionsCard = ({
 }) => {
   return (
     <IconGridCard
-      header={browserExtensions.header}
       items={browserExtensions.items}
       loading={loading}
     />

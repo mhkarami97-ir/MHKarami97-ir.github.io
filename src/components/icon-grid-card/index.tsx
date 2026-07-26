@@ -8,12 +8,11 @@ type IconGridItem = {
 };
 
 type Props = {
-  header?: string;
   items: IconGridItem[];
   loading: boolean;
 };
 
-const IconGridCard = ({ header, items, loading }: Props) => {
+const IconGridCard = ({ items, loading }: Props) => {
   const renderSkeleton = () => {
     return Array.from({ length: 12 }, (_, index) => (
       <div className="flex flex-col items-center gap-2" key={index}>
