@@ -6,6 +6,7 @@ import colors from '../data/colors.json';
 import {
   SanitizedConfig,
   SanitizedHotjar,
+  SanitizedTelegramLinks,
   SanitizedThemeConfig,
 } from '../interfaces/sanitized-config';
 
@@ -23,10 +24,22 @@ type Colors = {
   [key: string]: { color: string | null; url: string };
 };
 
+export function normalizeTelegramIdentifier(value: string): string {
+  return value.trim().replace(/^@+/, '');
+}
+
 export const getSanitizedConfig = (
   config: Config,
 ): SanitizedConfig | Record<string, never> => {
   try {
+    const normalizeTelegramItems = (
+      items?: string[],
+    ): SanitizedTelegramLinks['items'] => {
+      return (items || [])
+        .map((item) => normalizeTelegramIdentifier(item))
+        .filter((item) => item.length > 0);
+    };
+
     return {
       github: {
         username: config.github.username,
@@ -71,6 +84,14 @@ export const getSanitizedConfig = (
         gameBox: config?.tool?.gameBox,
         toolBox: config?.tool?.toolBox,
         calender: config?.tool?.calender,
+      },
+      telegramBots: {
+        header: config?.telegramBots?.header || 'Telegram Bots',
+        items: normalizeTelegramItems(config?.telegramBots?.items),
+      },
+      telegramChannels: {
+        header: config?.telegramChannels?.header || 'Telegram Channels',
+        items: normalizeTelegramItems(config?.telegramChannels?.items),
       },
       social: {
         linkedin: config?.social?.linkedin,
@@ -168,6 +189,10 @@ export const getSanitizedConfig = (
       apps: {
         header: config?.apps?.header || '',
         items: config?.apps?.items || [],
+      },
+      browserExtensions: {
+        header: config?.browserExtensions?.header || 'Browser Extensions',
+        items: config?.browserExtensions?.items || [],
       },
     };
   } catch (error) {

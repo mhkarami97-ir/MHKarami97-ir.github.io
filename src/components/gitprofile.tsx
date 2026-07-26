@@ -32,6 +32,8 @@ import BlogCard from './blog-card';
 import Footer from './footer';
 import PublicationCard from './publication-card';
 import AppIconsCard from './app-icons-card';
+import BrowserExtensionsCard from './browser-extensions-card';
+import TelegramListCard from './telegram-list-card';
 import ToolsCard from './tool-card';
 
 /**
@@ -259,10 +261,30 @@ const GitProfile = ({ config }: { config: Config }) => {
                         tool={sanitizedConfig.tool}
                       />
                     )}
+                    {sanitizedConfig.telegramBots.items.length !== 0 && (
+                      <TelegramListCard
+                        header={sanitizedConfig.telegramBots.header}
+                        items={sanitizedConfig.telegramBots.items}
+                        loading={loading}
+                      />
+                    )}
+                    {sanitizedConfig.telegramChannels.items.length !== 0 && (
+                      <TelegramListCard
+                        header={sanitizedConfig.telegramChannels.header}
+                        items={sanitizedConfig.telegramChannels.items}
+                        loading={loading}
+                      />
+                    )}
                     {sanitizedConfig.apps.items.length !== 0 && (
                       <AppIconsCard
                         loading={loading}
                         apps={sanitizedConfig.apps}
+                      />
+                    )}
+                    {sanitizedConfig.browserExtensions.items.length !== 0 && (
+                      <BrowserExtensionsCard
+                        loading={loading}
+                        browserExtensions={sanitizedConfig.browserExtensions}
                       />
                     )}
                   </div>

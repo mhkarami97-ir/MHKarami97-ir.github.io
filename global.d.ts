@@ -98,6 +98,20 @@ interface Apps {
   }[];
 }
 
+interface TelegramLinks {
+  header?: string;
+  items?: string[];
+}
+
+interface BrowserExtensions {
+  header?: string;
+  items?: {
+    name: string;
+    imageUrl: string;
+    link: string;
+  }[];
+}
+
 interface SEO {
   /**
    * Meta title
@@ -486,6 +500,21 @@ interface Config {
    * Apps config
    */
   apps?: Apps;
+
+  /**
+   * Telegram bots config
+   */
+  telegramBots?: TelegramLinks;
+
+  /**
+   * Telegram channels config
+   */
+  telegramChannels?: TelegramLinks;
+
+  /**
+   * Browser extensions config
+   */
+  browserExtensions?: BrowserExtensions;
 
   /**
    * Enable PWA

@@ -42,6 +42,16 @@ export interface SanitizedApps {
   items: SanitizedAppItem[];
 }
 
+export interface SanitizedTelegramLinks {
+  header: string;
+  items: Array<string>;
+}
+
+export interface SanitizedBrowserExtensions {
+  header: string;
+  items: SanitizedAppItem[];
+}
+
 export interface SanitizedProjects {
   github: SanitizedGitHubProjects;
   external: SanitizedExternalProjects;
@@ -169,6 +179,8 @@ export interface SanitizedConfig {
   seo: SanitizedSEO;
   website: SanitizedWebsite;
   tool: SanitizedTool;
+  telegramBots: SanitizedTelegramLinks;
+  telegramChannels: SanitizedTelegramLinks;
   social: SanitizedSocial;
   resume: SanitizedResume;
   skills: Array<string>;
@@ -183,4 +195,5 @@ export interface SanitizedConfig {
   footer?: string;
   enablePWA: boolean;
   apps: SanitizedApps;
+  browserExtensions: SanitizedBrowserExtensions;
 }
