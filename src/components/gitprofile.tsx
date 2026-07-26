@@ -275,18 +275,6 @@ const GitProfile = ({ config }: { config: Config }) => {
                         loading={loading}
                       />
                     )}
-                    {sanitizedConfig.apps.items.length !== 0 && (
-                      <AppIconsCard
-                        loading={loading}
-                        apps={sanitizedConfig.apps}
-                      />
-                    )}
-                    {sanitizedConfig.browserExtensions.items.length !== 0 && (
-                      <BrowserExtensionsCard
-                        loading={loading}
-                        browserExtensions={sanitizedConfig.browserExtensions}
-                      />
-                    )}
                   </div>
                 </div>
                 <div className="lg:col-span-2 col-span-1">
@@ -323,6 +311,19 @@ const GitProfile = ({ config }: { config: Config }) => {
                         loading={loading}
                         googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
                         blog={sanitizedConfig.blog}
+                      />
+                    )}
+                    {sanitizedConfig.apps.items.length !== 0 && (
+                      <AppIconsCard
+                        loading={loading}
+                        apps={sanitizedConfig.apps}
+                      />
+                    )}
+                    {sanitizedConfig.browserExtensions.items.length !==
+                      0 && (
+                      <BrowserExtensionsCard
+                        loading={loading}
+                        browserExtensions={sanitizedConfig.browserExtensions}
                       />
                     )}
                   </div>
