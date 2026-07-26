@@ -233,19 +233,9 @@ const CONFIG = {
         header: 'Browser Extensions',
         items: [
             {
-                name: 'Reader Mode',
-                imageUrl: '/icons/21.png',
-                link: 'https://chromewebstore.google.com/',
-            },
-            {
-                name: 'Dark Mode',
-                imageUrl: '/icons/25.png',
-                link: 'https://addons.mozilla.org/',
-            },
-            {
-                name: 'Translator',
-                imageUrl: '/icons/19.png',
-                link: 'https://chromewebstore.google.com/',
+                name: 'New Tab',
+                imageUrl: '/icons/extension/01.png',
+                link: 'https://microsoftedge.microsoft.com/addons/detail/mdnmgigpikijbhjenbjknhcnldebobpa',
             },
         ],
     },
