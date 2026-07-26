@@ -89,12 +89,12 @@ const WebSitesCard = ({ profile, loading, website }: Props) => {
                   link={`https://${website.travel}`}
                 />
               )}
-              {website?.tool && (
+              {website?.experience && (
                 <ListItem
                   icon={<FaWrench />}
-                  title="Tool"
-                  value={website.tool}
-                  link={`https://${website.tool}`}
+                  title="Experience"
+                  value={website.experience}
+                  link={`https://${website.experience}`}
                 />
               )}
               {website?.shop && (

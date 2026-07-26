@@ -55,7 +55,7 @@ export interface SanitizedSEO {
 
 export interface SanitizedWebsite {
   travel?: string;
-  tool?: string;
+  experience?: string;
   shop?: string;
   house?: string;
 }

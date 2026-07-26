@@ -196,6 +196,11 @@ const CONFIG = {
         name: 'تقویم شمسی',
         imageUrl: '/icons/app/04.png',
         link: 'https://cafebazaar.ir/app/mhk.calender',
+      },    
+      {
+        name: 'تجربه‌نامه ',
+        imageUrl: '/icons/app/05.png',
+        link: 'https://cafebazaar.ir/app/mhk.zoorvan',
       },
     ],
   },
@@ -221,7 +226,7 @@ const CONFIG = {
   },
   website: {
     travel: 'KaramTravel.ir',
-    tool: 'Zoorvan.ir',
+    experience: 'Zoorvan.ir',
     shop: 'ShirdalMarket.ir',
     house: 'YarKhoone.ir',
   },
