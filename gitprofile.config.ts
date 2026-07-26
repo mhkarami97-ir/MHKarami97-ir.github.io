@@ -235,11 +235,10 @@ const CONFIG = {
     fileUrl: '',
   },
   skills: [
-    '.NET / C#',
-    'SQL Server',
+    '.NET/C#',
+    'SqlServer',
     'Angular',
-    'VueJs / NuxtJs',
-    'Git',
+    'VueJs/NuxtJs',
     'Leadership',
   ],
   experiences: [
