@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import LazyImage from '../lazy-image';
 import { skeleton } from '../../utils';
 
@@ -65,22 +64,28 @@ const IconGridCard = ({ header, items, loading }: Props) => {
   };
 
   return (
-    <Fragment>
-      <div className="card shadow-lg compact bg-base-100">
-        <div className="card-body">
-          {header && (
-            <div className="mx-3">
-              <h5 className="card-title">
-                <span className="text-base-content opacity-70">{header}</span>
-              </h5>
+    <div className="col-span-1 lg:col-span-2">
+      <div className="grid grid-cols-2 gap-6">
+        <div className="col-span-2">
+          <div className="card compact bg-base-100 shadow bg-opacity-40">
+            <div className="card-body rtl">
+              {header && (
+                <div className="mx-3 flex items-center justify-between mb-2">
+                  <h5 className="card-title">
+                    <span className="text-base-content opacity-70">{header}</span>
+                  </h5>
+                </div>
+              )}
+              <div className="col-span-2">
+                <div className="flex flex-wrap justify-center gap-4 py-2">
+                  {loading ? renderSkeleton() : renderItems()}
+                </div>
+              </div>
             </div>
-          )}
-          <div className="flex flex-wrap justify-center gap-4 py-2">
-            {loading ? renderSkeleton() : renderItems()}
           </div>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 };
 
