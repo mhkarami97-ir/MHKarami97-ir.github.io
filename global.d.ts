@@ -100,7 +100,10 @@ interface Apps {
 
 interface TelegramLinks {
   header?: string;
-  items?: string[];
+  items?: {
+    name: string;
+    id: string;
+  }[];
 }
 
 interface BrowserExtensions {

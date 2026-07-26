@@ -33,11 +33,14 @@ export const getSanitizedConfig = (
 ): SanitizedConfig | Record<string, never> => {
   try {
     const normalizeTelegramItems = (
-      items?: string[],
+      items?: { name: string; id: string }[],
     ): SanitizedTelegramLinks['items'] => {
       return (items || [])
-        .map((item) => normalizeTelegramIdentifier(item))
-        .filter((item) => item.length > 0);
+        .map((item) => ({
+          name: item.name.trim(),
+          id: normalizeTelegramIdentifier(item.id),
+        }))
+        .filter((item) => item.name.length > 0 && item.id.length > 0);
     };
 
     return {

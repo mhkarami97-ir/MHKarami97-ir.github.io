@@ -44,7 +44,10 @@ export interface SanitizedApps {
 
 export interface SanitizedTelegramLinks {
   header: string;
-  items: Array<string>;
+  items: Array<{
+    name: string;
+    id: string;
+  }>;
 }
 
 export interface SanitizedBrowserExtensions {

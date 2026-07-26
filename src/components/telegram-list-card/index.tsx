@@ -4,7 +4,10 @@ import { skeleton, normalizeTelegramIdentifier } from '../../utils';
 
 type Props = {
   header: string;
-  items: string[];
+  items: Array<{
+    name: string;
+    id: string;
+  }>;
   loading: boolean;
 };
 
@@ -56,13 +59,13 @@ const TelegramListCard = ({ header, items, loading }: Props) => {
 
   const renderItems = () => {
     return items.map((item, index) => {
-      const telegramId = normalizeTelegramIdentifier(item);
+      const telegramId = normalizeTelegramIdentifier(item.id);
 
       return (
         <ListItem
           key={`${telegramId}-${index}`}
           icon={<FaTelegram />}
-          title={`@${telegramId}`}
+          title={item.name}
           value={`@${telegramId}`}
           link={`https://t.me/${telegramId}`}
         />

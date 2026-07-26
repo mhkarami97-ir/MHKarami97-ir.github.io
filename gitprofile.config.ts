@@ -207,26 +207,26 @@ const CONFIG = {
     telegramBots: {
         header: 'Telegram Bots',
         items: [
-            '@what_my_price_bot',
-            '@my_persian_fortune_telling_bot',
-            '@my_english_persian_learner_bot',
-            '@my_persian_poem_bot',
-            '@my_persian_date_bot',
-            '@what_my_weather_bot',
-            '@my_unit_convert_bot',
-            '@my_font_changer_bot',
-            '@my_unknown_message_bot'
+            { name: 'قیمت لحظه‌ای طلا', id: 'what_my_price_bot' },
+            { name: 'طالع بینی', id: 'my_persian_fortune_telling_bot' },
+            { name: 'یادگیری زبان', id: 'my_english_persian_learner_bot' },
+            { name: 'شعر فارسی', id: 'my_persian_poem_bot' },
+            { name: 'تقویم شمسی', id: 'my_persian_date_bot' },
+            { name: 'آب و هوا', id: 'what_my_weather_bot' },
+            { name: 'مبدل واحد', id: 'my_unit_convert_bot' },
+            { name: 'تغییر فونت', id: 'my_font_changer_bot' },
+            { name: 'پیام ناشناس', id: 'my_unknown_message_bot' },
         ],
     },
     telegramChannels: {
         header: 'Telegram Channels',
         items: [
-            '@griphin_meme',
-            '@griphin_prompt',
-            '@griphin_proxy',
-            '@griphin_poem',
-            '@karam97_dev',
-            '@KaramTravel'
+            { name: 'میم خنده‌دار', id: 'griphin_meme' },
+            { name: 'پرامپ هوش مصنوعی', id: 'griphin_prompt' },
+            { name: 'پروکسی تلگرام', id: 'griphin_proxy' },
+            { name: 'شعر فارسی', id: 'griphin_poem' },
+            { name: 'اخبار تکنولوژی', id: 'karam97_dev' },
+            { name: 'سفرنامه', id: 'KaramTravel' },
         ],
     },
     browserExtensions: {
