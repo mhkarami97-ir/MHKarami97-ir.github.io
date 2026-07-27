@@ -208,7 +208,7 @@ const CONFIG = {
         link: 'https://cafebazaar.ir/app/mhk.finance',
       },
       {
-        name: 'یادآور و مدیریت کارها',
+        name: 'مدیریت کارها',
         imageUrl: '/icons/app/07.png',
         link: 'https://cafebazaar.ir/app/mhk.task',
       },
