@@ -198,14 +198,19 @@ const CONFIG = {
         link: 'https://cafebazaar.ir/app/mhk.calender',
       },
       {
-        name: 'تجربه‌نامه ',
+        name: 'تجربه‌نامه',
         imageUrl: '/icons/app/05.png',
         link: 'https://cafebazaar.ir/app/mhk.zoorvan',
       },
       {
-        name: 'مدیریت مالی ',
+        name: 'مدیریت مالی',
         imageUrl: '/icons/app/06.png',
         link: 'https://cafebazaar.ir/app/mhk.finance',
+      },
+      {
+        name: 'یادآور و مدیریت کارها',
+        imageUrl: '/icons/app/07.png',
+        link: 'https://cafebazaar.ir/app/mhk.task',
       },
     ],
   },
@@ -282,6 +287,7 @@ const CONFIG = {
     calender: 'calender.mhkarami97.ir',
     finance: 'finance.mhkarami97.ir',
     sport: 'sport.mhkarami97.ir',
+    task: 'task.mhkarami97.ir',
   },
   resume: {
     fileUrl: '',

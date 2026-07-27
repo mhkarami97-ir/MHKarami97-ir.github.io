@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { FaToolbox, FaGamepad, FaMagic, FaCalendarTimes, FaDollarSign, FaRunning } from 'react-icons/fa';
+import { FaToolbox, FaGamepad, FaMagic, FaCalendarTimes, FaDollarSign, FaRunning, FaTasks } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedTool } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
@@ -127,6 +127,14 @@ const ToolsCard = ({ profile, loading, tool }: Props) => {
                   title="Sport"
                   value={tool.sport}
                   link={`https://${tool.sport}`}
+                />
+              )}
+              {tool?.task && (
+                <ListItem
+                  icon={<FaTasks />}
+                  title="Task"
+                  value={tool.task}
+                  link={`https://${tool.task}`}
                 />
               )}
             </Fragment>

@@ -146,6 +146,7 @@ interface Tool {
   calender?: string;
   finance?: string;
   sport?: string;
+  task?: string;
 }
 
 interface Social {

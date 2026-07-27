@@ -80,6 +80,7 @@ export interface SanitizedTool {
   calender?: string;
   finance?: string;
   sport?: string;
+  task?: string;
 }
 
 export interface SanitizedSocial {
