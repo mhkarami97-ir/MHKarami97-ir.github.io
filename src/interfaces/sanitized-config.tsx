@@ -42,6 +42,11 @@ export interface SanitizedApps {
   items: SanitizedAppItem[];
 }
 
+export interface SanitizedGames {
+  header: string;
+  items: SanitizedAppItem[];
+}
+
 export interface SanitizedTelegramLinks {
   header: string;
   items: Array<{
@@ -202,5 +207,6 @@ export interface SanitizedConfig {
   footer?: string;
   enablePWA: boolean;
   apps: SanitizedApps;
+  games: SanitizedGames;
   browserExtensions: SanitizedBrowserExtensions;
 }

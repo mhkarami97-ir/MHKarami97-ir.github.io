@@ -98,6 +98,15 @@ interface Apps {
   }[];
 }
 
+interface Games {
+  header?: string;
+  items?: {
+    name: string;
+    imageUrl: string;
+    link: string;
+  }[];
+}
+
 interface TelegramLinks {
   header?: string;
   items?: {
@@ -256,7 +265,7 @@ interface Social {
    */
   email?: string;
 
-   /**
+  /**
    * LeetCode
    */
   leetCode?: string;
@@ -507,6 +516,11 @@ interface Config {
    * Apps config
    */
   apps?: Apps;
+
+  /**
+   * Games config
+   */
+  games?: Games;
 
   /**
    * Telegram bots config

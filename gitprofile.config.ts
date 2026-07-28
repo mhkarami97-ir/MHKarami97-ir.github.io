@@ -219,6 +219,21 @@ const CONFIG = {
       },
     ],
   },
+  games: {
+    header: 'Games',
+    items: [
+      {
+        name: 'جعبه بازی',
+        imageUrl: '/icons/app/01.png',
+        link: 'https://cafebazaar.ir/app/mhk.gamebox',
+      },
+      {
+        name: 'چیستا',
+        imageUrl: '/icons/app/02.png',
+        link: 'https://cafebazaar.ir/app/mhk.chista',
+      },
+    ],
+  },
   telegramBots: {
     header: 'Telegram Bots',
     items: [

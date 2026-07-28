@@ -197,6 +197,10 @@ export const getSanitizedConfig = (
         header: config?.apps?.header || '',
         items: config?.apps?.items || [],
       },
+      games: {
+        header: config?.games?.header || '',
+        items: config?.games?.items || [],
+      },
       browserExtensions: {
         header: config?.browserExtensions?.header || 'Browser Extensions',
         items: config?.browserExtensions?.items || [],

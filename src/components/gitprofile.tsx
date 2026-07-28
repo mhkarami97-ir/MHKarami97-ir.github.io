@@ -35,6 +35,7 @@ import AppIconsCard from './app-icons-card';
 import BrowserExtensionsCard from './browser-extensions-card';
 import TelegramListCard from './telegram-list-card';
 import ToolsCard from './tool-card';
+import GameIconsCard from './game-icons-card';
 
 /**
  * Renders the GitProfile component.
@@ -235,7 +236,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                         educations={sanitizedConfig.educations}
                       />
                     )}
-                     {sanitizedConfig.certifications.length !== 0 && (
+                    {sanitizedConfig.certifications.length !== 0 && (
                       <CertificationCard
                         loading={loading}
                         certifications={sanitizedConfig.certifications}
@@ -319,8 +320,13 @@ const GitProfile = ({ config }: { config: Config }) => {
                         apps={sanitizedConfig.apps}
                       />
                     )}
-                    {sanitizedConfig.browserExtensions.items.length !==
-                      0 && (
+                    {sanitizedConfig.games.items.length !== 0 && (
+                      <GameIconsCard
+                        loading={loading}
+                        games={sanitizedConfig.apps}
+                      />
+                    )}
+                    {sanitizedConfig.browserExtensions.items.length !== 0 && (
                       <BrowserExtensionsCard
                         loading={loading}
                         browserExtensions={sanitizedConfig.browserExtensions}
