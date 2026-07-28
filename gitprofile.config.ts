@@ -188,11 +188,6 @@ const CONFIG = {
         link: 'https://cafebazaar.ir/app/mhk.sport',
       },
       {
-        name: 'جعبه بازی',
-        imageUrl: '/icons/app/03.png',
-        link: 'https://cafebazaar.ir/app/mhk.gamebox',
-      },
-      {
         name: 'تقویم شمسی',
         imageUrl: '/icons/app/04.png',
         link: 'https://cafebazaar.ir/app/mhk.calender',
