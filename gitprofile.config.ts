@@ -213,7 +213,7 @@ const CONFIG = {
         link: 'https://cafebazaar.ir/app/mhk.task',
       },
       {
-        name: 'مدیریت کارها',
+        name: 'چاوشان',
         imageUrl: '/icons/app/08.png',
         link: 'https://cafebazaar.ir/app/mhk.chavooshan',
       },
