@@ -323,7 +323,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                     {sanitizedConfig.games.items.length !== 0 && (
                       <GameIconsCard
                         loading={loading}
-                        games={sanitizedConfig.apps}
+                        games={sanitizedConfig.games}
                       />
                     )}
                     {sanitizedConfig.browserExtensions.items.length !== 0 && (
