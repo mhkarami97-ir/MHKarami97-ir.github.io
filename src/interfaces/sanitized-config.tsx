@@ -71,6 +71,7 @@ export interface SanitizedWebsite {
   experience?: string;
   shop?: string;
   house?: string;
+  chavooshan?: string;
 }
 
 export interface SanitizedTool {
