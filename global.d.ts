@@ -143,6 +143,7 @@ interface SEO {
 
 interface Website {
   travel?: string;
+  tour?: string;
   experience?: string;
   shop?: string;
   house?: string;

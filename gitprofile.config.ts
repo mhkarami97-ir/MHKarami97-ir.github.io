@@ -94,10 +94,10 @@ const CONFIG = {
           link: 'https://event.mhkarami97.ir',
         },
         {
-          title: 'طبیعت‌گردی',
-          description: 'رزومه طبیعت‌گردی',
-          imageUrl: '/icons/01.png',
-          link: 'https://tour.mhkarami97.ir',
+          title: 'فیلم آموزشی',
+          description: 'فیلم آموزش',
+          imageUrl: '/icons/04.png',
+          link: 'https://film.mhkarami97.ir',
         },
         {
           title: 'تجربه',
@@ -296,6 +296,7 @@ const CONFIG = {
   },
   website: {
     travel: 'KaramTravel.ir',
+    tour: 'tour.mhkarami97.ir.ir',
     experience: 'Zoorvan.ir',
     shop: 'ShirdalMarket.ir',
     house: 'YarKhoone.ir',

@@ -73,6 +73,7 @@ export interface SanitizedSEO {
 
 export interface SanitizedWebsite {
   travel?: string;
+  tour?: string;
   experience?: string;
   shop?: string;
   house?: string;
