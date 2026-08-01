@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { FaCarSide, FaWrench, FaShoppingBag, FaHome, FaHatCowboySide } from 'react-icons/fa';
+import { FaCarSide, FaWrench, FaShoppingBag, FaHome, FaHatCowboySide, FaSortAmountUp } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedWebsite } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
@@ -119,6 +119,14 @@ const WebSitesCard = ({ profile, loading, website }: Props) => {
                   title="Chavooshan"
                   value={website.chavooshan}
                   link={`https://${website.chavooshan}`}
+                />
+              )}
+              {website?.zolfdota && (
+                <ListItem
+                  icon={<FaSortAmountUp />}
+                  title="Zolfdota"
+                  value={website.zolfdota}
+                  link={`https://${website.zolfdota}`}
                 />
               )}
             </Fragment>

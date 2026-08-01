@@ -212,6 +212,11 @@ const CONFIG = {
         imageUrl: '/icons/app/08.png',
         link: 'https://cafebazaar.ir/app/mhk.chavooshan',
       },
+      {
+        name: 'زلف دوتا',
+        imageUrl: '/icons/app/09.png',
+        link: 'https://cafebazaar.ir/app/mhk.zolfdota',
+      },
     ],
   },
   games: {
@@ -295,6 +300,7 @@ const CONFIG = {
     shop: 'ShirdalMarket.ir',
     house: 'YarKhoone.ir',
     chavooshan: 'Chavooshan.ir',
+    zolfdota: 'ZolfDota.ir',
   },
   tool: {
     magicBox: 'magic.mhkarami97.ir',

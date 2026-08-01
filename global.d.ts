@@ -147,6 +147,7 @@ interface Website {
   shop?: string;
   house?: string;
   chavooshan?: string;
+  zolfdota?: string;
 }
 
 interface Tool {
