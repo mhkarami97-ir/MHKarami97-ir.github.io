@@ -296,7 +296,7 @@ const CONFIG = {
   },
   website: {
     travel: 'KaramTravel.ir',
-    tour: 'tour.mhkarami97.ir.ir',
+    tour: 'tour.mhkarami97.ir',
     experience: 'Zoorvan.ir',
     shop: 'ShirdalMarket.ir',
     house: 'YarKhoone.ir',
