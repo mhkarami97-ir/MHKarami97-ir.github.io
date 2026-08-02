@@ -107,6 +107,15 @@ interface Games {
   }[];
 }
 
+interface Nuget {
+  header?: string;
+  items?: {
+    name: string;
+    imageUrl: string;
+    link: string;
+  }[];
+}
+
 interface TelegramLinks {
   header?: string;
   items?: {
@@ -523,6 +532,11 @@ interface Config {
    * Games config
    */
   games?: Games;
+
+  /**
+   * Nuget config
+   */
+  nuget?: Nuget;
 
   /**
    * Telegram bots config

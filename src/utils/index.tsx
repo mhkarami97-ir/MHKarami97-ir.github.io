@@ -203,6 +203,10 @@ export const getSanitizedConfig = (
         header: config?.games?.header || '',
         items: config?.games?.items || [],
       },
+      nuget: {
+        header: config?.nuget?.header || '',
+        items: config?.nuget?.items || [],
+      },
       browserExtensions: {
         header: config?.browserExtensions?.header || 'Browser Extensions',
         items: config?.browserExtensions?.items || [],

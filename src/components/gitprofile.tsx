@@ -33,6 +33,7 @@ import Footer from './footer';
 import PublicationCard from './publication-card';
 import AppIconsCard from './app-icons-card';
 import BrowserExtensionsCard from './browser-extensions-card';
+import NugetCard from './nuget-card';
 import TelegramListCard from './telegram-list-card';
 import ToolsCard from './tool-card';
 import GameIconsCard from './game-icons-card';
@@ -324,6 +325,12 @@ const GitProfile = ({ config }: { config: Config }) => {
                       <GameIconsCard
                         loading={loading}
                         games={sanitizedConfig.games}
+                      />
+                    )}
+                    {sanitizedConfig.nuget.items.length !== 0 && (
+                      <NugetCard
+                        loading={loading}
+                        nugets={sanitizedConfig.nuget}
                       />
                     )}
                     {sanitizedConfig.browserExtensions.items.length !== 0 && (

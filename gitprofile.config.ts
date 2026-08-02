@@ -234,6 +234,31 @@ const CONFIG = {
       },
     ],
   },
+  nuget: {
+    header: 'Nuget',
+    items: [
+      {
+        name: 'مدیریت آسان کش سیستم',
+        imageUrl: '/icons/nuget/04.png',
+        link: 'https://www.nuget.org/packages/EasyMultiCacheManager',
+      },
+      {
+        name: 'نرمالایز کننده متن فارسی',
+        imageUrl: '/icons/nuget/01.png',
+        link: 'https://www.nuget.org/packages/EasyPersianNormalizer',
+      },
+      {
+        name: 'استخر پول برای آبجکت‌ها',
+        imageUrl: '/icons/nuget/02.png',
+        link: 'https://www.nuget.org/packages/EasyPool',
+      },
+      {
+        name: 'پیاده‌سازی SkipList',
+        imageUrl: '/icons/nuget/03.png',
+        link: 'https://www.nuget.org/packages/SkipList',
+      },
+    ],
+  },
   telegramBots: {
     header: 'Telegram Bots',
     items: [
