@@ -238,7 +238,7 @@ const CONFIG = {
     header: 'Nuget',
     items: [
       {
-        name: 'مدیریت آسان کش سیستم',
+        name: 'مدیریت کش سیستم',
         imageUrl: '/icons/nuget/04.png',
         link: 'https://www.nuget.org/packages/EasyMultiCacheManager',
       },
