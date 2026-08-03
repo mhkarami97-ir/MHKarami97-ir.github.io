@@ -219,7 +219,7 @@ const CONFIG = {
       },
       {
         name: 'دور گردون',
-        imageUrl: '/icons/app/010.png',
+        imageUrl: '/icons/app/10.png',
         link: 'https://cafebazaar.ir/app/mhk.dorgardoon',
       },
     ],
