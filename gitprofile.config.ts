@@ -217,6 +217,11 @@ const CONFIG = {
         imageUrl: '/icons/app/09.png',
         link: 'https://cafebazaar.ir/app/mhk.zolfdota',
       },
+      {
+        name: 'دور گردون',
+        imageUrl: '/icons/app/010.png',
+        link: 'https://cafebazaar.ir/app/mhk.dorgardoon',
+      },
     ],
   },
   games: {
@@ -327,6 +332,7 @@ const CONFIG = {
     house: 'YarKhoone.ir',
     chavooshan: 'Chavooshan.ir',
     zolfdota: 'ZolfDota.ir',
+    DorGardoon: 'dorgardoon.ir',
   },
   tool: {
     magicBox: 'magic.mhkarami97.ir',

@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { FaCarSide, FaWrench, FaShoppingBag, FaHome, FaHatCowboySide, FaSortAmountUp } from 'react-icons/fa';
+import { FaCarSide, FaWrench, FaShoppingBag, FaHome, FaHatCowboySide, FaSortAmountUp, FaThumbtack } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedWebsite } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
@@ -135,6 +135,14 @@ const WebSitesCard = ({ profile, loading, website }: Props) => {
                   title="Zolfdota"
                   value={website.zolfdota}
                   link={`https://${website.zolfdota}`}
+                />
+              )}
+              {website?.dorgardoon && (
+                <ListItem
+                  icon={<FaThumbtack />}
+                  title="Dorgardoon"
+                  value={website.dorgardoon}
+                  link={`https://${website.dorgardoon}`}
                 />
               )}
             </Fragment>

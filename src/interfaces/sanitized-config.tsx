@@ -84,6 +84,7 @@ export interface SanitizedWebsite {
   house?: string;
   chavooshan?: string;
   zolfdota?: string;
+  dorgardoon?: string;
 }
 
 export interface SanitizedTool {
