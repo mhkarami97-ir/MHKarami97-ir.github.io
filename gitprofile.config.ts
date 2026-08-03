@@ -243,22 +243,22 @@ const CONFIG = {
     header: 'Nuget',
     items: [
       {
-        name: 'مدیریت کش سیستم',
+        name: 'EasyMultiCacheManager',
         imageUrl: '/icons/nuget/04.png',
         link: 'https://www.nuget.org/packages/EasyMultiCacheManager',
       },
       {
-        name: 'نرمالایز کننده متن فارسی',
+        name: 'EasyPersianNormalizer',
         imageUrl: '/icons/nuget/01.png',
         link: 'https://www.nuget.org/packages/EasyPersianNormalizer',
       },
       {
-        name: 'استخر پول برای آبجکت‌ها',
+        name: 'EasyPool',
         imageUrl: '/icons/nuget/02.png',
         link: 'https://www.nuget.org/packages/EasyPool',
       },
       {
-        name: 'پیاده‌سازی SkipList',
+        name: 'SkipList',
         imageUrl: '/icons/nuget/03.png',
         link: 'https://www.nuget.org/packages/SkipList',
       },
