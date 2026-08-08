@@ -159,6 +159,7 @@ interface Website {
   chavooshan?: string;
   zolfdota?: string;
   dorgardoon?: string;
+  molkrey?: string;
 }
 
 interface Tool {

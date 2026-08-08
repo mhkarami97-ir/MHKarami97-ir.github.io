@@ -227,6 +227,11 @@ const CONFIG = {
         imageUrl: '/icons/app/11.png',
         link: 'https://cafebazaar.ir/app/mhk.checklist',
       },
+      {
+        name: 'ملک ری',
+        imageUrl: '/icons/app/12.png',
+        link: 'https://cafebazaar.ir/app/mhk.molkrey',
+      },
     ],
   },
   games: {
@@ -337,7 +342,8 @@ const CONFIG = {
     house: 'YarKhoone.ir',
     chavooshan: 'Chavooshan.ir',
     zolfdota: 'ZolfDota.ir',
-    DorGardoon: 'dorgardoon.ir',
+    dorgardoon: 'dorgardoon.ir',
+    molkRey: 'molkrey.ir',
   },
   tool: {
     magicBox: 'magic.mhkarami97.ir',

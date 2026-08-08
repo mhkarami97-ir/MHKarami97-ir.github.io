@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { FaCarSide, FaWrench, FaShoppingBag, FaHome, FaHatCowboySide, FaSortAmountUp, FaThumbtack } from 'react-icons/fa';
+import { FaCarSide, FaWrench, FaShoppingBag, FaHome, FaHatCowboySide, FaSortAmountUp, FaThumbtack, FaMoneyBillWave } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedWebsite } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
@@ -132,7 +132,7 @@ const WebSitesCard = ({ profile, loading, website }: Props) => {
               {website?.zolfdota && (
                 <ListItem
                   icon={<FaSortAmountUp />}
-                  title="Zolfdota"
+                  title="ZolfDota"
                   value={website.zolfdota}
                   link={`https://${website.zolfdota}`}
                 />
@@ -140,9 +140,17 @@ const WebSitesCard = ({ profile, loading, website }: Props) => {
               {website?.dorgardoon && (
                 <ListItem
                   icon={<FaThumbtack />}
-                  title="Dorgardoon"
+                  title="DorGardoon"
                   value={website.dorgardoon}
                   link={`https://${website.dorgardoon}`}
+                />
+              )}
+              {website?.molkrey && (
+                <ListItem
+                  icon={<FaMoneyBillWave />}
+                  title="MolkRey"
+                  value={website.molkrey}
+                  link={`https://${website.molkrey}`}
                 />
               )}
             </Fragment>
