@@ -94,6 +94,7 @@ export const getSanitizedConfig = (
         finance: config?.tool?.finance,
         sport: config?.tool?.sport,
         task: config?.tool?.task,
+        checkList: config?.tool?.checkList,
       },
       telegramBots: {
         header: config?.telegramBots?.header || 'Telegram Bots',

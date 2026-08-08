@@ -95,6 +95,7 @@ export interface SanitizedTool {
   finance?: string;
   sport?: string;
   task?: string;
+  checkList?: string;
 }
 
 export interface SanitizedSocial {

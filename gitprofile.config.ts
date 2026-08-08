@@ -222,6 +222,11 @@ const CONFIG = {
         imageUrl: '/icons/app/10.png',
         link: 'https://cafebazaar.ir/app/mhk.dorgardoon',
       },
+      {
+        name: 'چک لیست',
+        imageUrl: '/icons/app/11.png',
+        link: 'https://cafebazaar.ir/app/mhk.checklist',
+      },
     ],
   },
   games: {
@@ -342,6 +347,7 @@ const CONFIG = {
     finance: 'finance.mhkarami97.ir',
     sport: 'sport.mhkarami97.ir',
     task: 'task.mhkarami97.ir',
+    checkList: 'checklist.mhkarami97.ir',
   },
   resume: {
     fileUrl: '',

@@ -169,6 +169,7 @@ interface Tool {
   finance?: string;
   sport?: string;
   task?: string;
+  checkList?: string;
 }
 
 interface Social {
