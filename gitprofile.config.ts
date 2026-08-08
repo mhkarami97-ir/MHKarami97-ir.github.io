@@ -342,8 +342,8 @@ const CONFIG = {
     house: 'YarKhoone.ir',
     chavooshan: 'Chavooshan.ir',
     zolfdota: 'ZolfDota.ir',
-    dorgardoon: 'dorgardoon.ir',
-    molkRey: 'molkrey.ir',
+    dorgardoon: 'DorGardoon.ir',
+    molkrey: 'MolkRey.ir',
   },
   tool: {
     magicBox: 'magic.mhkarami97.ir',
