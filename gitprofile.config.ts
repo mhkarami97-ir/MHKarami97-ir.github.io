@@ -232,6 +232,11 @@ const CONFIG = {
         imageUrl: '/icons/app/12.png',
         link: 'https://cafebazaar.ir/app/mhk.molkrey',
       },
+      {
+        name: 'زروان',
+        imageUrl: '/icons/app/13.png',
+        link: 'https://cafebazaar.ir/app/mhk.zoorvan',
+      },
     ],
   },
   games: {
