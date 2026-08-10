@@ -86,6 +86,7 @@ export const getSanitizedConfig = (
         zolfdota: config?.website?.zolfdota,
         dorgardoon: config?.website?.dorgardoon,
         molkrey: config?.website?.molkrey,
+        zamaanak: config?.website?.zamaanak,
       },
       tool: {
         magicBox: config?.tool?.magicBox,

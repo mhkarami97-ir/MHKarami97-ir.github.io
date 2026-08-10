@@ -237,6 +237,11 @@ const CONFIG = {
         imageUrl: '/icons/app/13.png',
         link: 'https://cafebazaar.ir/app/mhk.zoorvan',
       },
+      {
+        name: 'زمانک',
+        imageUrl: '/icons/app/14.png',
+        link: 'https://cafebazaar.ir/app/mhk.zamaanak',
+      },
     ],
   },
   games: {
@@ -349,6 +354,7 @@ const CONFIG = {
     zolfdota: 'ZolfDota.ir',
     dorgardoon: 'DorGardoon.ir',
     molkrey: 'MolkRey.ir',
+    zamaanak: 'Zamaanak.ir',
   },
   tool: {
     magicBox: 'magic.mhkarami97.ir',

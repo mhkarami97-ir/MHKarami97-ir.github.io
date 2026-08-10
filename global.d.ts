@@ -160,6 +160,7 @@ interface Website {
   zolfdota?: string;
   dorgardoon?: string;
   molkrey?: string;
+  zamaanak?: string;
 }
 
 interface Tool {

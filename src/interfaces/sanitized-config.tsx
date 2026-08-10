@@ -86,6 +86,7 @@ export interface SanitizedWebsite {
   zolfdota?: string;
   dorgardoon?: string;
   molkrey?: string;
+  zamaanak?: string;
 }
 
 export interface SanitizedTool {
