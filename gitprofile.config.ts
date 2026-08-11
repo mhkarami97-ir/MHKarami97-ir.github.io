@@ -322,6 +322,11 @@ const CONFIG = {
         imageUrl: '/icons/extension/02.png',
         link: 'https://microsoftedge.microsoft.com/addons/detail/font-changer-for-google-f/hhalocjgpdnjfoimnaaphihomijagcmo',
       },
+      {
+        name: 'Easy Translate',
+        imageUrl: '/icons/extension/03.png',
+        link: 'https://microsoftedge.microsoft.com/addons/detail/easy-translate',
+      },
     ],
   },
   seo: {
