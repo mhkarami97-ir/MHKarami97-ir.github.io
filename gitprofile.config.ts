@@ -325,7 +325,7 @@ const CONFIG = {
       {
         name: 'Easy Translate',
         imageUrl: '/icons/extension/03.png',
-        link: 'https://microsoftedge.microsoft.com/addons/detail/easy-translate',
+        link: 'https://microsoftedge.microsoft.com/addons/detail/easy-translate/njddckflieienddodhibkddobipgaghg',
       },
     ],
   },
