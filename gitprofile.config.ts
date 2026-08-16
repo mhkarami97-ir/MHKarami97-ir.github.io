@@ -242,6 +242,11 @@ const CONFIG = {
         imageUrl: '/icons/app/14.png',
         link: 'https://cafebazaar.ir/app/mhk.zamaanak',
       },
+      {
+        name: 'هنگام',
+        imageUrl: '/icons/app/15.png',
+        link: 'https://cafebazaar.ir/app/mhk.hengam',
+      },
     ],
   },
   games: {
@@ -306,7 +311,7 @@ const CONFIG = {
       { name: 'پروکسی تلگرام', id: 'griphin_proxy' },
       { name: 'شعر فارسی', id: 'griphin_poem' },
       { name: 'اخبار تکنولوژی', id: 'karam97_dev' },
-      { name: 'سفرنامه', id: 'KaramTravel' },
+      { name: 'سفرنامه', id: 'karamtravel' },
     ],
   },
   browserExtensions: {
@@ -360,6 +365,7 @@ const CONFIG = {
     dorgardoon: 'DorGardoon.ir',
     molkrey: 'MolkRey.ir',
     zamaanak: 'Zamaanak.ir',
+    hengam: 'Hengam.Zamaanak.ir',
   },
   tool: {
     magicBox: 'magic.mhkarami97.ir',

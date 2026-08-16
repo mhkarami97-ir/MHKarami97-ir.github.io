@@ -161,6 +161,7 @@ interface Website {
   dorgardoon?: string;
   molkrey?: string;
   zamaanak?: string;
+  hengam?: string;
 }
 
 interface Tool {

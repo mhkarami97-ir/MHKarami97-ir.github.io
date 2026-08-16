@@ -87,6 +87,7 @@ export const getSanitizedConfig = (
         dorgardoon: config?.website?.dorgardoon,
         molkrey: config?.website?.molkrey,
         zamaanak: config?.website?.zamaanak,
+        hengam: config?.website?.hengam,
       },
       tool: {
         magicBox: config?.tool?.magicBox,
