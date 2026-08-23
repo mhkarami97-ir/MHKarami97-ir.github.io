@@ -99,6 +99,7 @@ export interface SanitizedTool {
   sport?: string;
   task?: string;
   checkList?: string;
+  f1?: string;
 }
 
 export interface SanitizedSocial {

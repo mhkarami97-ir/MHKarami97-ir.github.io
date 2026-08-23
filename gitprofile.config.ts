@@ -376,6 +376,7 @@ const CONFIG = {
     sport: 'sport.mhkarami97.ir',
     task: 'task.mhkarami97.ir',
     checkList: 'checklist.mhkarami97.ir',
+    f1: 'f1.mhkarami97.ir',
   },
   resume: {
     fileUrl: '',

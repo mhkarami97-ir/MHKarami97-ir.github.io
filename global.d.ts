@@ -173,6 +173,7 @@ interface Tool {
   sport?: string;
   task?: string;
   checkList?: string;
+  f1?: string;
 }
 
 interface Social {
