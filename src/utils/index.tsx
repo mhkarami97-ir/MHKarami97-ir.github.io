@@ -217,6 +217,10 @@ export const getSanitizedConfig = (
         header: config?.browserExtensions?.header || 'Browser Extensions',
         items: config?.browserExtensions?.items || [],
       },
+      npm: {
+        header: config?.npm?.header || 'NPM',
+        items: config?.npm?.items || [],
+      },
     };
   } catch (error) {
     return {};

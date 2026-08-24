@@ -133,6 +133,15 @@ interface BrowserExtensions {
   }[];
 }
 
+interface Npm {
+  header?: string;
+  items?: {
+    name: string;
+    imageUrl: string;
+    link: string;
+  }[];
+}
+
 interface SEO {
   /**
    * Meta title
@@ -558,6 +567,11 @@ interface Config {
    * Browser extensions config
    */
   browserExtensions?: BrowserExtensions;
+
+  /**
+   * npm config
+   */
+  npm?: Npm;
 
   /**
    * Enable PWA

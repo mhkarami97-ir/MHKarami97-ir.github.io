@@ -65,6 +65,11 @@ export interface SanitizedBrowserExtensions {
   items: SanitizedAppItem[];
 }
 
+export interface SanitizedNpm {
+  header: string;
+  items: SanitizedAppItem[];
+}
+
 export interface SanitizedProjects {
   github: SanitizedGitHubProjects;
   external: SanitizedExternalProjects;
@@ -223,4 +228,5 @@ export interface SanitizedConfig {
   games: SanitizedGames;
   nuget: SanitizedNuget;
   browserExtensions: SanitizedBrowserExtensions;
+  npm: SanitizedNpm;
 }

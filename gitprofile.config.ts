@@ -334,6 +334,16 @@ const CONFIG = {
       },
     ],
   },
+  npm: {
+    header: 'NPM',
+    items: [
+      {
+        name: 'Persian normalizer',
+        imageUrl: '/icons/npm/01.png',
+        link: 'https://www.npmjs.com/package/easy-persian-text-normalizer',
+      },
+    ],
+  },
   seo: {
     title: 'محمد حسین کرمی',
     description: 'MHKarami, mhkarami97, mohammad hossein karami, cv, resume',
