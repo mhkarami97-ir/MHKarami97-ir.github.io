@@ -247,6 +247,16 @@ const CONFIG = {
         imageUrl: '/icons/app/15.png',
         link: 'https://cafebazaar.ir/app/mhk.hengam',
       },
+      {
+        name: 'فرمول یک',
+        imageUrl: '/icons/app/16.png',
+        link: 'https://cafebazaar.ir/app/mhk.f1',
+      },
+      {
+        name: 'شکسته',
+        imageUrl: '/icons/app/17.png',
+        link: 'https://cafebazaar.ir/app/mhk.shekaste',
+      },
     ],
   },
   games: {
@@ -387,6 +397,7 @@ const CONFIG = {
     task: 'task.mhkarami97.ir',
     checkList: 'checklist.mhkarami97.ir',
     f1: 'f1.mhkarami97.ir',
+    shekaste: 'shekaste.mhkarami97.ir',
   },
   resume: {
     fileUrl: '',

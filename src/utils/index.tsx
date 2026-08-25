@@ -99,6 +99,7 @@ export const getSanitizedConfig = (
         task: config?.tool?.task,
         checkList: config?.tool?.checkList,
         f1: config?.tool?.f1,
+        shekaste: config?.tool?.shekaste,
       },
       telegramBots: {
         header: config?.telegramBots?.header || 'Telegram Bots',
