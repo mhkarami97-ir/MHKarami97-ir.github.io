@@ -193,9 +193,9 @@ const CONFIG = {
         link: 'https://cafebazaar.ir/app/mhk.calender',
       },
       {
-        name: 'تجربه‌نامه',
+        name: 'شیردال مارکت',
         imageUrl: '/icons/app/05.png',
-        link: 'https://cafebazaar.ir/app/mhk.zoorvan',
+        link: 'https://cafebazaar.ir/app/mhk.shirdalmarket',
       },
       {
         name: 'مدیریت مالی',
