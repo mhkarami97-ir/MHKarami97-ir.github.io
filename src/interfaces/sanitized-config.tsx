@@ -106,6 +106,7 @@ export interface SanitizedTool {
   checkList?: string;
   f1?: string;
   shekaste?: string;
+  shortLink?: string;
 }
 
 export interface SanitizedSocial {

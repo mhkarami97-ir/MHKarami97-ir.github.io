@@ -184,6 +184,7 @@ interface Tool {
   checkList?: string;
   f1?: string;
   shekaste?: string;
+  shortLink?: string;
 }
 
 interface Social {

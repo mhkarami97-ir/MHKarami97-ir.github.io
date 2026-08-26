@@ -398,6 +398,7 @@ const CONFIG = {
     checkList: 'checklist.mhkarami97.ir',
     f1: 'f1.mhkarami97.ir',
     shekaste: 'shekaste.mhkarami97.ir',
+    shortLink: 's.mhkarami97.ir',
   },
   resume: {
     fileUrl: '',

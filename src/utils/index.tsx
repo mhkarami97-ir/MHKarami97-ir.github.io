@@ -100,6 +100,7 @@ export const getSanitizedConfig = (
         checkList: config?.tool?.checkList,
         f1: config?.tool?.f1,
         shekaste: config?.tool?.shekaste,
+        shortLink: config?.tool?.shortLink,
       },
       telegramBots: {
         header: config?.telegramBots?.header || 'Telegram Bots',
