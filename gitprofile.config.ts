@@ -355,8 +355,8 @@ const CONFIG = {
     ],
   },
   seo: {
-    title: 'محمد حسین کرمی',
-    description: 'MHKarami, mhkarami97, mohammad hossein karami, cv, resume',
+    title: 'محمد حسین کرمی | Mohammad Hossein Karami',
+    description: 'محمد حسین کرمی (Mohammad Hossein Karami) | برنامه‌نویس ارشد و تورلیدر',
     imageURL: 'https://mhkarami97.ir/favicon.png',
   },
   social: {
