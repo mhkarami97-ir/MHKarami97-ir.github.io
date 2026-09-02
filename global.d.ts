@@ -183,6 +183,7 @@ interface Tool {
   task?: string;
   checkList?: string;
   f1?: string;
+  motogp?: string;
   shekaste?: string;
   shortLink?: string;
 }

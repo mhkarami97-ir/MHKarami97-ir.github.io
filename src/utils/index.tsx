@@ -99,6 +99,7 @@ export const getSanitizedConfig = (
         task: config?.tool?.task,
         checkList: config?.tool?.checkList,
         f1: config?.tool?.f1,
+        motogp: config?.tool?.motogp,
         shekaste: config?.tool?.shekaste,
         shortLink: config?.tool?.shortLink,
       },

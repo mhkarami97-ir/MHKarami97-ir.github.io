@@ -397,6 +397,7 @@ const CONFIG = {
     task: 'task.mhkarami97.ir',
     checkList: 'checklist.mhkarami97.ir',
     f1: 'f1.mhkarami97.ir',
+    motogp: 'motogp.mhkarami97.ir',
     shekaste: 'shekaste.mhkarami97.ir',
     shortLink: 's.mhkarami97.ir',
   },

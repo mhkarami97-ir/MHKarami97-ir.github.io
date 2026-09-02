@@ -1,5 +1,18 @@
 import { Fragment } from 'react';
-import { FaToolbox, FaGamepad, FaMagic, FaCalendarTimes, FaDollarSign, FaRunning, FaTasks, FaCalendarCheck, FaCar, FaBookOpen, FaLink } from 'react-icons/fa';
+import {
+  FaToolbox,
+  FaGamepad,
+  FaMagic,
+  FaCalendarTimes,
+  FaDollarSign,
+  FaRunning,
+  FaTasks,
+  FaCalendarCheck,
+  FaCar,
+  FaBookOpen,
+  FaLink,
+  FaMotorcycle,
+} from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedTool } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
@@ -151,6 +164,14 @@ const ToolsCard = ({ profile, loading, tool }: Props) => {
                   title="F1"
                   value={tool.f1}
                   link={`https://${tool.f1}`}
+                />
+              )}
+              {tool?.motogp && (
+                <ListItem
+                  icon={<FaMotorcycle />}
+                  title="MotoGP"
+                  value={tool.motogp}
+                  link={`https://${tool.motogp}`}
                 />
               )}
               {tool?.shekaste && (
