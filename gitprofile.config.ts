@@ -253,9 +253,19 @@ const CONFIG = {
         link: 'https://cafebazaar.ir/app/mhk.f1',
       },
       {
+        name: 'موتو جی‌پی',
+        imageUrl: '/icons/app/18.png',
+        link: 'https://cafebazaar.ir/app/mhk.motogp',
+      },
+      {
         name: 'شکسته',
         imageUrl: '/icons/app/17.png',
         link: 'https://cafebazaar.ir/app/mhk.shekaste',
+      },
+      {
+        name: 'خرید',
+        imageUrl: '/icons/app/19.png',
+        link: 'https://cafebazaar.ir/app/mhk.buy',
       },
     ],
   },
@@ -400,6 +410,7 @@ const CONFIG = {
     motogp: 'motogp.mhkarami97.ir',
     shekaste: 'shekaste.mhkarami97.ir',
     shortLink: 's.mhkarami97.ir',
+    buy: 'buy.mhkarami97.ir',
   },
   resume: {
     fileUrl: '',

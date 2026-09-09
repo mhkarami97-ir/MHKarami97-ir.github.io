@@ -108,6 +108,7 @@ export interface SanitizedTool {
   motogp?: string;
   shekaste?: string;
   shortLink?: string;
+  buy?: string;
 }
 
 export interface SanitizedSocial {

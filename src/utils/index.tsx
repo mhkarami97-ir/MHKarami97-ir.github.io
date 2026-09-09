@@ -102,6 +102,7 @@ export const getSanitizedConfig = (
         motogp: config?.tool?.motogp,
         shekaste: config?.tool?.shekaste,
         shortLink: config?.tool?.shortLink,
+        buy: config?.tool?.buy,
       },
       telegramBots: {
         header: config?.telegramBots?.header || 'Telegram Bots',

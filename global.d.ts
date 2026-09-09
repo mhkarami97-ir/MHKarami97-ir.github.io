@@ -186,6 +186,7 @@ interface Tool {
   motogp?: string;
   shekaste?: string;
   shortLink?: string;
+  buy?: string;
 }
 
 interface Social {

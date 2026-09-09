@@ -12,6 +12,7 @@ import {
   FaBookOpen,
   FaLink,
   FaMotorcycle,
+  FaShopify
 } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedTool } from '../../interfaces/sanitized-config';
@@ -188,6 +189,14 @@ const ToolsCard = ({ profile, loading, tool }: Props) => {
                   title="ShortLink"
                   value={tool.shortLink}
                   link={`https://${tool.shortLink}`}
+                />
+              )}
+              {tool?.buy && (
+                <ListItem
+                  icon={<FaShopify />}
+                  title="Buy"
+                  value={tool.buy}
+                  link={`https://${tool.buy}`}
                 />
               )}
             </Fragment>
