@@ -14,6 +14,7 @@ import {
   FaMotorcycle,
   FaShopify,
   FaWrench,
+  FaBurn,
 } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedTool } from '../../interfaces/sanitized-config';
@@ -206,6 +207,14 @@ const ToolsCard = ({ profile, loading, tool }: Props) => {
                   title="Service"
                   value={tool.service}
                   link={`https://${tool.service}`}
+                />
+              )}
+              {tool?.period && (
+                <ListItem
+                  icon={<FaBurn />}
+                  title="Period"
+                  value={tool.period}
+                  link={`https://${tool.period}`}
                 />
               )}
             </Fragment>

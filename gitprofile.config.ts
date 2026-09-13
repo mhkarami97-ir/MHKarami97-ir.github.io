@@ -272,6 +272,11 @@ const CONFIG = {
         imageUrl: '/icons/app/20.png',
         link: 'https://cafebazaar.ir/app/mhk.service',
       },
+      {
+        name: 'ماهک',
+        imageUrl: '/icons/app/03.png',
+        link: 'https://cafebazaar.ir/app/mhk.period',
+      },
     ],
   },
   games: {

@@ -188,6 +188,7 @@ interface Tool {
   shortLink?: string;
   buy?: string;
   service?: string;
+  period?: string;
 }
 
 interface Social {

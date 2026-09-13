@@ -110,6 +110,7 @@ export interface SanitizedTool {
   shortLink?: string;
   buy?: string;
   service?: string;
+  period?: string;
 }
 
 export interface SanitizedSocial {
