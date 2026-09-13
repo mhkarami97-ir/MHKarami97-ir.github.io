@@ -422,6 +422,7 @@ const CONFIG = {
     shortLink: 's.mhkarami97.ir',
     buy: 'buy.mhkarami97.ir',
     service: 'service.mhkarami97.ir',
+    period: 'period.mhkarami97.ir',
   },
   resume: {
     fileUrl: '',
