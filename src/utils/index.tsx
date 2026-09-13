@@ -103,6 +103,7 @@ export const getSanitizedConfig = (
         shekaste: config?.tool?.shekaste,
         shortLink: config?.tool?.shortLink,
         buy: config?.tool?.buy,
+        service: config?.tool?.service,
       },
       telegramBots: {
         header: config?.telegramBots?.header || 'Telegram Bots',

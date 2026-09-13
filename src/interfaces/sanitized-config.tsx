@@ -109,6 +109,7 @@ export interface SanitizedTool {
   shekaste?: string;
   shortLink?: string;
   buy?: string;
+  service?: string;
 }
 
 export interface SanitizedSocial {

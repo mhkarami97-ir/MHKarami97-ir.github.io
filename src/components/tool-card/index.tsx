@@ -12,7 +12,8 @@ import {
   FaBookOpen,
   FaLink,
   FaMotorcycle,
-  FaShopify
+  FaShopify,
+  FaWrench,
 } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedTool } from '../../interfaces/sanitized-config';
@@ -197,6 +198,14 @@ const ToolsCard = ({ profile, loading, tool }: Props) => {
                   title="Buy"
                   value={tool.buy}
                   link={`https://${tool.buy}`}
+                />
+              )}
+              {tool?.service && (
+                <ListItem
+                  icon={<FaWrench />}
+                  title="Service"
+                  value={tool.service}
+                  link={`https://${tool.service}`}
                 />
               )}
             </Fragment>

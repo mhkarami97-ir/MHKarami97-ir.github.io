@@ -263,9 +263,14 @@ const CONFIG = {
         link: 'https://cafebazaar.ir/app/mhk.shekaste',
       },
       {
-        name: 'خرید',
+        name: 'خرید‌یار',
         imageUrl: '/icons/app/19.png',
         link: 'https://cafebazaar.ir/app/mhk.buy',
+      },
+      {
+        name: 'سرویس‌یار',
+        imageUrl: '/icons/app/20.png',
+        link: 'https://cafebazaar.ir/app/mhk.service',
       },
     ],
   },
@@ -411,6 +416,7 @@ const CONFIG = {
     shekaste: 'shekaste.mhkarami97.ir',
     shortLink: 's.mhkarami97.ir',
     buy: 'buy.mhkarami97.ir',
+    service: 'service.mhkarami97.ir',
   },
   resume: {
     fileUrl: '',

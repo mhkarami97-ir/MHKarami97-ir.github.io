@@ -187,6 +187,7 @@ interface Tool {
   shekaste?: string;
   shortLink?: string;
   buy?: string;
+  service?: string;
 }
 
 interface Social {
