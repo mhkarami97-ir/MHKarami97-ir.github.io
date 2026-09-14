@@ -70,6 +70,11 @@ export interface SanitizedNpm {
   items: SanitizedAppItem[];
 }
 
+export interface SanitizedJetbrains {
+  header: string;
+  items: SanitizedAppItem[];
+}
+
 export interface SanitizedProjects {
   github: SanitizedGitHubProjects;
   external: SanitizedExternalProjects;
@@ -236,4 +241,5 @@ export interface SanitizedConfig {
   nuget: SanitizedNuget;
   browserExtensions: SanitizedBrowserExtensions;
   npm: SanitizedNpm;
+  jetbrains: SanitizedJetbrains;
 }

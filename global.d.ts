@@ -142,6 +142,15 @@ interface Npm {
   }[];
 }
 
+interface Jetbrains {
+  header?: string;
+  items?: {
+    name: string;
+    imageUrl: string;
+    link: string;
+  }[];
+}
+
 interface SEO {
   /**
    * Meta title
@@ -574,6 +583,11 @@ interface Config {
    * Browser extensions config
    */
   browserExtensions?: BrowserExtensions;
+
+  /**
+   * Jetbrains extensions config
+   */
+  jetbrains?: Jetbrains;
 
   /**
    * npm config

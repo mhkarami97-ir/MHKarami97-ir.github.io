@@ -33,6 +33,7 @@ import Footer from './footer';
 import PublicationCard from './publication-card';
 import AppIconsCard from './app-icons-card';
 import BrowserExtensionsCard from './browser-extensions-card';
+import JetbrainsCard from './jetbrains-card';
 import NpmCard from './npm-card';
 import NugetCard from './nuget-card';
 import TelegramListCard from './telegram-list-card';
@@ -344,6 +345,12 @@ const GitProfile = ({ config }: { config: Config }) => {
                       <NpmCard
                         loading={loading}
                         npms={sanitizedConfig.npm}
+                      />
+                    )}
+                    {sanitizedConfig.jetbrains.items.length !== 0 && (
+                      <JetbrainsCard
+                        loading={loading}
+                        jetbrains={sanitizedConfig.jetbrains}
                       />
                     )}
                   </div>

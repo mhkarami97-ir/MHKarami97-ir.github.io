@@ -228,6 +228,10 @@ export const getSanitizedConfig = (
         header: config?.npm?.header || 'NPM',
         items: config?.npm?.items || [],
       },
+      jetbrains: {
+        header: config?.jetbrains?.header || 'Jetbrains',
+        items: config?.jetbrains?.items || [],
+      }
     };
   } catch (error) {
     return {};

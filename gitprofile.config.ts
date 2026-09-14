@@ -374,6 +374,16 @@ const CONFIG = {
       },
     ],
   },
+  jetbrains: {
+    header: 'Jetbrains',
+    items: [
+      {
+        name: 'Exception View',
+        imageUrl: '/icons/jetbrains/01.png',
+        link: 'https://plugins.jetbrains.com/plugin/34254-demystified-stack-trace-links',
+      },
+    ],
+  },
   seo: {
     title: 'محمد حسین کرمی | Mohammad Hossein Karami',
     description: 'محمد حسین کرمی (Mohammad Hossein Karami) | برنامه‌نویس ارشد و تورلیدر',
