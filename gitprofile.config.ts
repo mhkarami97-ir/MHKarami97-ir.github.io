@@ -423,6 +423,7 @@ const CONFIG = {
     buy: 'buy.mhkarami97.ir',
     service: 'service.mhkarami97.ir',
     period: 'period.mhkarami97.ir',
+    proxy: 'tel-proxy.vercel.app',
   },
   resume: {
     fileUrl: '',

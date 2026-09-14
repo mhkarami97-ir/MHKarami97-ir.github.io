@@ -189,6 +189,7 @@ interface Tool {
   buy?: string;
   service?: string;
   period?: string;
+  proxy?: string;
 }
 
 interface Social {
