@@ -17,6 +17,7 @@ import {
   FaBurn,
   FaTelegramPlane,
   FaPlane,
+  FaUniversity,
 } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedTool } from '../../interfaces/sanitized-config';
@@ -225,6 +226,14 @@ const ToolsCard = ({ profile, loading, tool }: Props) => {
                   title="Safar"
                   value={tool.safar}
                   link={`https://${tool.safar}`}
+                />
+              )}
+              {tool?.school && (
+                <ListItem
+                  icon={<FaUniversity />}
+                  title="School"
+                  value={tool.school}
+                  link={`https://${tool.school}`}
                 />
               )}
               {tool?.proxy && (

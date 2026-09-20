@@ -106,6 +106,7 @@ export const getSanitizedConfig = (
         service: config?.tool?.service,
         period: config?.tool?.period,
         safar: config?.tool?.safar,
+        school: config?.tool?.school,
         proxy: config?.tool?.proxy,
       },
       telegramBots: {

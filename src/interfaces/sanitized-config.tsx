@@ -117,6 +117,7 @@ export interface SanitizedTool {
   service?: string;
   period?: string;
   safar?: string;
+  school?: string;
   proxy?: string;
 }
 

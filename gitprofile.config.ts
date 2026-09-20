@@ -282,6 +282,11 @@ const CONFIG = {
         imageUrl: '/icons/app/21.png',
         link: 'https://cafebazaar.ir/app/mhk.safar',
       },
+      {
+        name: 'مدیر‌یار',
+        imageUrl: '/icons/app/22.png',
+        link: 'https://cafebazaar.ir/app/mhk.school',
+      },
     ],
   },
   games: {
@@ -439,6 +444,7 @@ const CONFIG = {
     service: 'service.mhkarami97.ir',
     period: 'period.mhkarami97.ir',
     safar: 'safar.mhkarami97.ir',
+    school: 'school.mhkarami97.ir',
     proxy: 'tel-proxy.vercel.app',
   },
   resume: {
