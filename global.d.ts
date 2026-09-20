@@ -198,6 +198,7 @@ interface Tool {
   buy?: string;
   service?: string;
   period?: string;
+  safar?: string;
   proxy?: string;
 }
 

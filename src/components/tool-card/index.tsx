@@ -16,6 +16,7 @@ import {
   FaWrench,
   FaBurn,
   FaTelegramPlane,
+  FaPlane,
 } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedTool } from '../../interfaces/sanitized-config';
@@ -216,6 +217,14 @@ const ToolsCard = ({ profile, loading, tool }: Props) => {
                   title="Period"
                   value={tool.period}
                   link={`https://${tool.period}`}
+                />
+              )}
+              {tool?.safar && (
+                <ListItem
+                  icon={<FaPlane />}
+                  title="Safar"
+                  value={tool.safar}
+                  link={`https://${tool.safar}`}
                 />
               )}
               {tool?.proxy && (
