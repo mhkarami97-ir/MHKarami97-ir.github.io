@@ -200,6 +200,7 @@ interface Tool {
   period?: string;
   safar?: string;
   school?: string;
+  nerkh?: string;
   proxy?: string;
 }
 

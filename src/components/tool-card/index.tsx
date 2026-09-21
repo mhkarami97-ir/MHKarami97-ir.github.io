@@ -18,6 +18,7 @@ import {
   FaTelegramPlane,
   FaPlane,
   FaUniversity,
+  FaAngleDoubleUp,
 } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedTool } from '../../interfaces/sanitized-config';
@@ -234,6 +235,14 @@ const ToolsCard = ({ profile, loading, tool }: Props) => {
                   title="School"
                   value={tool.school}
                   link={`https://${tool.school}`}
+                />
+              )}
+              {tool?.nerkh && (
+                <ListItem
+                  icon={<FaAngleDoubleUp />}
+                  title="Nerkh"
+                  value={tool.nerkh}
+                  link={`https://${tool.nerkh}`}
                 />
               )}
               {tool?.proxy && (

@@ -287,6 +287,11 @@ const CONFIG = {
         imageUrl: '/icons/app/22.png',
         link: 'https://cafebazaar.ir/app/mhk.school',
       },
+      {
+        name: 'نرخ',
+        imageUrl: '/icons/app/23.png',
+        link: 'https://cafebazaar.ir/app/mhk.nerkh',
+      },
     ],
   },
   games: {
@@ -445,6 +450,7 @@ const CONFIG = {
     period: 'period.mhkarami97.ir',
     safar: 'safar.mhkarami97.ir',
     school: 'school.mhkarami97.ir',
+    nerkh: 'nerkh.mhkarami97.ir',
     proxy: 'tel-proxy.vercel.app',
   },
   resume: {
