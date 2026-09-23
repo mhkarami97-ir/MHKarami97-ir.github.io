@@ -365,12 +365,12 @@ const CONFIG = {
       {
         name: 'New Tab',
         imageUrl: '/icons/extension/01.png',
-        link: 'https://microsoftedge.microsoft.com/addons/detail/%D8%AF%D8%A7%D8%B4%D8%A8%D9%88%D8%B1%D8%AF-%D9%81%D8%A7%D8%B1%D8%B3%DB%8C/mdnmgigpikijbhjenbjknhcnldebobpa',
+        link: 'https://microsoftedge.microsoft.com/addons/detail/my-persian-dashboard/mdnmgigpikijbhjenbjknhcnldebobpa',
       },
       {
         name: 'Font Changer',
         imageUrl: '/icons/extension/02.png',
-        link: 'https://microsoftedge.microsoft.com/addons/detail/font-changer-for-google-f/hhalocjgpdnjfoimnaaphihomijagcmo',
+        link: 'https://microsoftedge.microsoft.com/addons/detail/font-changer/hhalocjgpdnjfoimnaaphihomijagcmo',
       },
       {
         name: 'Easy Translate',
