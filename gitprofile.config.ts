@@ -377,6 +377,11 @@ const CONFIG = {
         imageUrl: '/icons/extension/03.png',
         link: 'https://microsoftedge.microsoft.com/addons/detail/easy-translate/njddckflieienddodhibkddobipgaghg',
       },
+      {
+        name: 'Ai Meet',
+        imageUrl: '/icons/extension/04.png',
+        link: 'https://microsoftedge.microsoft.com/addons/detail/ai-meet',
+      },
     ],
   },
   npm: {
