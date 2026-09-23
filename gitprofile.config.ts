@@ -380,7 +380,7 @@ const CONFIG = {
       {
         name: 'Ai Meet',
         imageUrl: '/icons/extension/04.png',
-        link: 'https://microsoftedge.microsoft.com/addons/detail/ai-meet',
+        link: 'https://microsoftedge.microsoft.com/addons/detail/ai-meet/pefpckmlepnddenamifpbcandndglloj',
       },
     ],
   },
