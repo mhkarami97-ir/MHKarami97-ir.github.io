@@ -515,7 +515,7 @@ const CONFIG = {
     },
   ],
   googleAnalytics: {
-    id: 'G-2KGKGYQR60',
+    id: '',
   },
   themeConfig: {
     defaultTheme: 'procyon',
