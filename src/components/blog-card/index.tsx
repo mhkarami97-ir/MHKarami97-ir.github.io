@@ -39,7 +39,7 @@ const BlogCard = ({
     for (let index = 0; index < blog.limit; index++) {
       array.push(
         <div className="card shadow-lg compact bg-base-100" key={index}>
-          <div className="p-8 h-full w-full">
+          <div className="p-3 h-full w-full">
             <div className="flex items-center flex-col md:flex-row">
               <div className="avatar mb-5 md:mb-0">
                 <div className="w-24 h-24 mask mask-squircle">
@@ -114,7 +114,7 @@ const BlogCard = ({
             window?.open(article.link, '_blank');
           }}
         >
-          <div className="p-8 h-full w-full">
+          <div className="p-3 h-full w-full">
             <div className="flex items-center flex-col md:flex-row">
               <div className="avatar mb-5 md:mb-0 opacity-90">
                 <div className="w-24 h-24 mask mask-squircle">

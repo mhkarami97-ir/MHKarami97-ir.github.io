@@ -14,7 +14,7 @@ const PublicationCard = ({
     for (let index = 0; index < publications.length; index++) {
       array.push(
         <div className="card shadow-lg compact bg-base-100" key={index}>
-          <div className="p-8 h-full w-full">
+          <div className="p-3 h-full w-full">
             <div className="flex items-center flex-col">
               <div className="w-full">
                 <div className="px-4">
@@ -82,7 +82,7 @@ const PublicationCard = ({
         target="_blank"
         rel="noreferrer"
       >
-        <div className="p-8 h-full w-full">
+        <div className="p-3 h-full w-full">
           <div className="flex items-center flex-col">
             <div className="w-full">
               <div className="px-4">
