@@ -456,6 +456,7 @@ const CONFIG = {
     safar: 'safar.mhkarami97.ir',
     school: 'school.mhkarami97.ir',
     nerkh: 'nerkh.mhkarami97.ir',
+    ai: 'ai-tools.mhkarami97.ir',
     proxy: 'tel-proxy.vercel.app',
   },
   resume: {
