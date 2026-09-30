@@ -56,6 +56,10 @@ const GitProfile = ({ config }: { config: Config }) => {
   const [profile, setProfile] = useState<Profile | null>(null);
   const [githubProjects, setGithubProjects] = useState<GithubProject[]>([]);
 
+  const HALF_WIDTH_GRID =
+    'grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch ' +
+    'lg:[&>*:last-child:nth-child(odd)]:col-span-2';
+
   const getGithubProjects = useCallback(
     async (publicRepoCount: number): Promise<GithubProject[]> => {
       if (sanitizedConfig.projects.github.mode === 'automatic') {
@@ -329,27 +333,29 @@ const GitProfile = ({ config }: { config: Config }) => {
                         games={sanitizedConfig.games}
                       />
                     )}
-                    {sanitizedConfig.nuget.items.length !== 0 && (
-                      <NugetCard
-                        loading={loading}
-                        nugets={sanitizedConfig.nuget}
-                      />
-                    )}
-                    {sanitizedConfig.browserExtensions.items.length !== 0 && (
-                      <BrowserExtensionsCard
-                        loading={loading}
-                        browserExtensions={sanitizedConfig.browserExtensions}
-                      />
-                    )}
-                    {sanitizedConfig.npm.items.length !== 0 && (
-                      <NpmCard loading={loading} npms={sanitizedConfig.npm} />
-                    )}
-                    {sanitizedConfig.jetbrains.items.length !== 0 && (
-                      <JetbrainsCard
-                        loading={loading}
-                        jetbrains={sanitizedConfig.jetbrains}
-                      />
-                    )}
+                    <div className={HALF_WIDTH_GRID}>
+                      {sanitizedConfig.nuget.items.length !== 0 && (
+                        <NugetCard
+                          loading={loading}
+                          nugets={sanitizedConfig.nuget}
+                        />
+                      )}
+                      {sanitizedConfig.browserExtensions.items.length !== 0 && (
+                        <BrowserExtensionsCard
+                          loading={loading}
+                          browserExtensions={sanitizedConfig.browserExtensions}
+                        />
+                      )}
+                      {sanitizedConfig.npm.items.length !== 0 && (
+                        <NpmCard loading={loading} npms={sanitizedConfig.npm} />
+                      )}
+                      {sanitizedConfig.jetbrains.items.length !== 0 && (
+                        <JetbrainsCard
+                          loading={loading}
+                          jetbrains={sanitizedConfig.jetbrains}
+                        />
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>

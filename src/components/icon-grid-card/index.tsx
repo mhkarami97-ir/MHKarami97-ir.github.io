@@ -10,17 +10,11 @@ type IconGridItem = {
 type Props = {
   items: IconGridItem[];
   loading: boolean;
-  halfWidth?: boolean;
 };
 
 const SKELETON_COUNT = 12;
 
-const SPAN_CLASSES = {
-  full: 'col-span-1 lg:col-span-2',
-  half: 'col-span-1',
-} as const;
-
-const IconGridCard = ({ items, loading, halfWidth = false }: Props) => {
+const IconGridCard = ({ items, loading }: Props) => {
   const renderSkeleton = () =>
     Array.from({ length: SKELETON_COUNT }, (_, index) => (
       <div className="flex flex-col items-center gap-2" key={index}>
@@ -58,7 +52,7 @@ const IconGridCard = ({ items, loading, halfWidth = false }: Props) => {
     ));
 
   return (
-    <div className={SPAN_CLASSES[halfWidth ? 'half' : 'full']}>
+    <div className="min-w-0 h-full">
       <div className="card compact bg-base-100 shadow bg-opacity-40 h-full">
         <div className="card-body rtl">
           <div className="flex flex-wrap justify-center gap-4 py-2">

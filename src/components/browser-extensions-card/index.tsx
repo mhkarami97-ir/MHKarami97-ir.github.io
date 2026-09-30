@@ -8,9 +8,7 @@ const BrowserExtensionsCard = ({
   browserExtensions: SanitizedBrowserExtensions;
   loading: boolean;
 }) => {
-  return (
-    <IconGridCard items={browserExtensions.items} loading={loading} halfWidth />
-  );
+  return <IconGridCard items={browserExtensions.items} loading={loading} />;
 };
 
 export default BrowserExtensionsCard;

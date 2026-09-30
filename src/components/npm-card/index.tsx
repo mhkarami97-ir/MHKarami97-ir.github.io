@@ -8,7 +8,7 @@ const NpmCard = ({
   npms: SanitizedNpm;
   loading: boolean;
 }) => {
-  return <IconGridCard items={npms.items} loading={loading} halfWidth />;
+  return <IconGridCard items={npms.items} loading={loading} />;
 };
 
 export default NpmCard;
