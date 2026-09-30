@@ -38,7 +38,6 @@ import NpmCard from './npm-card';
 import NugetCard from './nuget-card';
 import TelegramListCard from './telegram-list-card';
 import ToolsCard from './tool-card';
-import GameIconsCard from './game-icons-card';
 
 /**
  * Renders the GitProfile component.
