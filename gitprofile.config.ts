@@ -504,14 +504,6 @@ const CONFIG = {
       companyLink: 'https://asax.ir',
     },
   ],
-  certifications: [
-    {
-      name: 'C#',
-      body: 'LinkedIn Skill Assessment badge',
-      year: '2022',
-      link: 'https://www.linkedin.com/in/mhkarami97/details/skills/',
-    },
-  ],
   educations: [
     {
       institution: 'Computer Engineer',
