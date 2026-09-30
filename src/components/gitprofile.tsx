@@ -57,7 +57,7 @@ const GitProfile = ({ config }: { config: Config }) => {
 
   const HALF_WIDTH_GRID =
     'grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch ' +
-    'lg:[&>*:last-child:nth-child(odd)]:col-span-2';
+    'lg:[&>*:first-child:nth-last-child(odd)]:col-span-2';
 
   const getGithubProjects = useCallback(
     async (publicRepoCount: number): Promise<GithubProject[]> => {
