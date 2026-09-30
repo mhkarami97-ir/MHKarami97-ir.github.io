@@ -10,39 +10,35 @@ type IconGridItem = {
 type Props = {
   items: IconGridItem[];
   loading: boolean;
+  halfWidth?: boolean;
 };
 
-const IconGridCard = ({ items, loading }: Props) => {
-  const renderSkeleton = () => {
-    return Array.from({ length: 12 }, (_, index) => (
+const SKELETON_COUNT = 12;
+
+const SPAN_CLASSES = {
+  full: 'col-span-1 lg:col-span-2',
+  half: 'col-span-1',
+} as const;
+
+const IconGridCard = ({ items, loading, halfWidth = false }: Props) => {
+  const renderSkeleton = () =>
+    Array.from({ length: SKELETON_COUNT }, (_, index) => (
       <div className="flex flex-col items-center gap-2" key={index}>
         <div className="w-16 h-16 rounded-full overflow-hidden">
-          {skeleton({
-            widthCls: 'w-full',
-            heightCls: 'h-full',
-            shape: '',
-          })}
+          {skeleton({ widthCls: 'w-full', heightCls: 'h-full', shape: '' })}
         </div>
-        <div>
-          {skeleton({
-            widthCls: 'w-14',
-            heightCls: 'h-3',
-          })}
-        </div>
+        {skeleton({ widthCls: 'w-14', heightCls: 'h-3' })}
       </div>
     ));
-  };
 
-  const renderItems = () => {
-    return items.map((item, index) => (
+  const renderItems = () =>
+    items.map((item, index) => (
       <a
         className="flex flex-col items-center gap-2 group cursor-pointer"
         key={`${item.link}-${index}`}
         href={item.link}
-        onClick={(e) => {
-          e.preventDefault();
-          window?.open(item.link, '_blank');
-        }}
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <div className="w-16 h-16 rounded-full overflow-hidden shadow-md ring-2 ring-base-300 ring-offset-2 ring-offset-base-100 group-hover:ring-primary group-hover:shadow-lg transition-all duration-300 group-hover:scale-110">
           <LazyImage
@@ -60,20 +56,13 @@ const IconGridCard = ({ items, loading }: Props) => {
         </span>
       </a>
     ));
-  };
 
   return (
-    <div className="col-span-1 lg:col-span-2">
-      <div className="grid grid-cols-2 gap-6">
-        <div className="col-span-2">
-          <div className="card compact bg-base-100 shadow bg-opacity-40">
-            <div className="card-body rtl">
-              <div className="col-span-2">
-                <div className="flex flex-wrap justify-center gap-4 py-2">
-                  {loading ? renderSkeleton() : renderItems()}
-                </div>
-              </div>
-            </div>
+    <div className={SPAN_CLASSES[halfWidth ? 'half' : 'full']}>
+      <div className="card compact bg-base-100 shadow bg-opacity-40 h-full">
+        <div className="card-body rtl">
+          <div className="flex flex-wrap justify-center gap-4 py-2">
+            {loading ? renderSkeleton() : renderItems()}
           </div>
         </div>
       </div>

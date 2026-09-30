@@ -9,10 +9,7 @@ const BrowserExtensionsCard = ({
   loading: boolean;
 }) => {
   return (
-    <IconGridCard
-      items={browserExtensions.items}
-      loading={loading}
-    />
+    <IconGridCard items={browserExtensions.items} loading={loading} halfWidth />
   );
 };
 

@@ -7,7 +7,7 @@ const NugetCard = ({
   nugets: SanitizedGames;
   loading: boolean;
 }) => {
-  return <IconGridCard items={nugets.items} loading={loading} />;
+  return <IconGridCard items={nugets.items} loading={loading} halfWidth />;
 };
 
 export default NugetCard;

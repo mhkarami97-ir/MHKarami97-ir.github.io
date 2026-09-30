@@ -342,10 +342,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                       />
                     )}
                     {sanitizedConfig.npm.items.length !== 0 && (
-                      <NpmCard
-                        loading={loading}
-                        npms={sanitizedConfig.npm}
-                      />
+                      <NpmCard loading={loading} npms={sanitizedConfig.npm} />
                     )}
                     {sanitizedConfig.jetbrains.items.length !== 0 && (
                       <JetbrainsCard

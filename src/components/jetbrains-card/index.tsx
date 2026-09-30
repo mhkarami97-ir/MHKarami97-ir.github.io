@@ -8,12 +8,7 @@ const JetbrainsCard = ({
   jetbrains: SanitizedJetbrains;
   loading: boolean;
 }) => {
-  return (
-    <IconGridCard
-      items={jetbrains.items}
-      loading={loading}
-    />
-  );
+  return <IconGridCard items={jetbrains.items} loading={loading} halfWidth />;
 };
 
 export default JetbrainsCard;
