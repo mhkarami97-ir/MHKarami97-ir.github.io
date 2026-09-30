@@ -320,13 +320,13 @@ const GitProfile = ({ config }: { config: Config }) => {
                         blog={sanitizedConfig.blog}
                       />
                     )}
-                    {sanitizedConfig.apps.items.length !== 0 && (
-                      <AppIconsCard
-                        loading={loading}
-                        apps={sanitizedConfig.apps}
-                      />
-                    )}
                     <div className={HALF_WIDTH_GRID}>
+                      {sanitizedConfig.apps.items.length !== 0 && (
+                        <AppIconsCard
+                          loading={loading}
+                          apps={sanitizedConfig.apps}
+                        />
+                      )}
                       {sanitizedConfig.nuget.items.length !== 0 && (
                         <NugetCard
                           loading={loading}
