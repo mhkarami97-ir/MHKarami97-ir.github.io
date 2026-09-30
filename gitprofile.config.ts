@@ -292,6 +292,16 @@ const CONFIG = {
         imageUrl: '/icons/app/23.png',
         link: 'https://cafebazaar.ir/app/mhk.nerkh',
       },
+      {
+        name: 'جعبه بازی',
+        imageUrl: '/icons/game/01.png',
+        link: 'https://cafebazaar.ir/app/mhk.gamebox',
+      },
+      {
+        name: 'چیستا',
+        imageUrl: '/icons/game/02.png',
+        link: 'https://cafebazaar.ir/app/mhk.chista',
+      },
     ],
   },
   games: {
@@ -406,7 +416,8 @@ const CONFIG = {
   },
   seo: {
     title: 'محمد حسین کرمی | Mohammad Hossein Karami',
-    description: 'محمد حسین کرمی (Mohammad Hossein Karami) | برنامه‌نویس ارشد و تورلیدر',
+    description:
+      'محمد حسین کرمی (Mohammad Hossein Karami) | برنامه‌نویس ارشد و تورلیدر',
     imageURL: 'https://mhkarami97.ir/favicon.png',
   },
   social: {

@@ -327,12 +327,6 @@ const GitProfile = ({ config }: { config: Config }) => {
                         apps={sanitizedConfig.apps}
                       />
                     )}
-                    {sanitizedConfig.games.items.length !== 0 && (
-                      <GameIconsCard
-                        loading={loading}
-                        games={sanitizedConfig.games}
-                      />
-                    )}
                     <div className={HALF_WIDTH_GRID}>
                       {sanitizedConfig.nuget.items.length !== 0 && (
                         <NugetCard
