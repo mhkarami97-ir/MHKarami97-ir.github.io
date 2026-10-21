@@ -201,6 +201,7 @@ interface Tool {
   safar?: string;
   school?: string;
   nerkh?: string;
+  health?: string;
   ai?: string;
   proxy?: string;
 }

@@ -20,6 +20,7 @@ import {
   FaUniversity,
   FaAngleDoubleUp,
   FaTools,
+  FaHospitalSymbol,
 } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedTool } from '../../interfaces/sanitized-config';
@@ -244,6 +245,14 @@ const ToolsCard = ({ profile, loading, tool }: Props) => {
                   title="Nerkh"
                   value={tool.nerkh}
                   link={`https://${tool.nerkh}`}
+                />
+              )}
+              {tool?.health && (
+                <ListItem
+                  icon={<FaHospitalSymbol />}
+                  title="Health"
+                  value={tool.health}
+                  link={`https://${tool.health}`}
                 />
               )}
               {tool?.ai && (
