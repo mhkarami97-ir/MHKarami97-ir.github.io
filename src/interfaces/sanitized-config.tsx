@@ -120,6 +120,7 @@ export interface SanitizedTool {
   school?: string;
   nerkh?: string;
   health?: string;
+  weather?: string;
   ai?: string;
   proxy?: string;
 }

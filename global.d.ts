@@ -202,6 +202,7 @@ interface Tool {
   school?: string;
   nerkh?: string;
   health?: string;
+  weather?: string;
   ai?: string;
   proxy?: string;
 }
