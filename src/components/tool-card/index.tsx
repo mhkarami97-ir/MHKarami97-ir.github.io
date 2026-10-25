@@ -22,6 +22,7 @@ import {
   FaTools,
   FaHospitalSymbol,
   FaCloud,
+  FaLanguage,
 } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedTool } from '../../interfaces/sanitized-config';
@@ -262,6 +263,14 @@ const ToolsCard = ({ profile, loading, tool }: Props) => {
                   title="Weather"
                   value={tool.weather}
                   link={`https://${tool.weather}`}
+                />
+              )}
+              {tool?.english && (
+                <ListItem
+                  icon={<FaLanguage />}
+                  title="english"
+                  value={tool.english}
+                  link={`https://${tool.english}`}
                 />
               )}
               {tool?.ai && (

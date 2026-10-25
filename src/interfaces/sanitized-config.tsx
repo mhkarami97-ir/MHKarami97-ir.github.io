@@ -121,6 +121,7 @@ export interface SanitizedTool {
   nerkh?: string;
   health?: string;
   weather?: string;
+  english?: string;
   ai?: string;
   proxy?: string;
 }

@@ -303,6 +303,11 @@ const CONFIG = {
         link: 'https://cafebazaar.ir/app/mhk.weather',
       },
       {
+        name: 'زبان انگلیسی',
+        imageUrl: '/icons/app/26.png',
+        link: 'https://cafebazaar.ir/app/mhk.english',
+      },
+      {
         name: 'جعبه بازی',
         imageUrl: '/icons/game/01.png',
         link: 'https://cafebazaar.ir/app/mhk.gamebox',
@@ -479,6 +484,7 @@ const CONFIG = {
     nerkh: 'nerkh.mhkarami97.ir',
     health: 'health.mhkarami97.ir',
     weather: 'weather.mhkarami97.ir',
+    english: 'english.mhkarami97.ir',
     ai: 'ai-tools.mhkarami97.ir',
     proxy: 'tel-proxy.vercel.app',
   },

@@ -110,6 +110,7 @@ export const getSanitizedConfig = (
         nerkh: config?.tool?.nerkh,
         health: config?.tool?.health,
         weather: config?.tool?.weather,
+        english: config?.tool?.english,
         ai: config?.tool?.ai,
         proxy: config?.tool?.proxy,
       },
