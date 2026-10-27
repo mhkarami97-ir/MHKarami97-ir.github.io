@@ -101,6 +101,7 @@ export const getSanitizedConfig = (
         f1: config?.tool?.f1,
         motogp: config?.tool?.motogp,
         shekaste: config?.tool?.shekaste,
+        ghazal: config?.tool?.ghazal,
         shortLink: config?.tool?.shortLink,
         buy: config?.tool?.buy,
         service: config?.tool?.service,

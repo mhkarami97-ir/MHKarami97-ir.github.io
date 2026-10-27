@@ -24,6 +24,7 @@ import {
   FaCloud,
   FaLanguage,
   FaPenNib,
+  FaBookReader,
 } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedTool } from '../../interfaces/sanitized-config';
@@ -192,6 +193,14 @@ const ToolsCard = ({ profile, loading, tool }: Props) => {
                   title="Shekaste"
                   value={tool.shekaste}
                   link={`https://${tool.shekaste}`}
+                />
+              )}
+              {tool?.ghazal && (
+                <ListItem
+                  icon={<FaBookReader />}
+                  title="ghazal"
+                  value={tool.ghazal}
+                  link={`https://${tool.ghazal}`}
                 />
               )}
               {tool?.shortLink && (

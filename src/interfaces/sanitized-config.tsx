@@ -112,6 +112,7 @@ export interface SanitizedTool {
   f1?: string;
   motogp?: string;
   shekaste?: string;
+  ghazal?: string;
   shortLink?: string;
   buy?: string;
   service?: string;

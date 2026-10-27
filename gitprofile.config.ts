@@ -318,6 +318,11 @@ const CONFIG = {
         link: 'https://cafebazaar.ir/app/mhk.ai.tools',
       },
       {
+        name: 'غزل',
+        imageUrl: '/icons/app/29.png',
+        link: 'https://cafebazaar.ir/app/mhk.ghazal',
+      },
+      {
         name: 'جعبه بازی',
         imageUrl: '/icons/game/01.png',
         link: 'https://cafebazaar.ir/app/mhk.gamebox',
@@ -485,6 +490,7 @@ const CONFIG = {
     f1: 'f1.mhkarami97.ir',
     motogp: 'motogp.mhkarami97.ir',
     shekaste: 'shekaste.mhkarami97.ir',
+    ghazal: 'ghazal.mhkarami97.ir',
     shortLink: 's.mhkarami97.ir',
     buy: 'buy.mhkarami97.ir',
     service: 'service.mhkarami97.ir',
