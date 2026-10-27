@@ -313,6 +313,11 @@ const CONFIG = {
         link: 'https://cafebazaar.ir/app/mhk.memory',
       },
       {
+        name: 'هوش‌مصنوعی',
+        imageUrl: '/icons/app/28.png',
+        link: 'https://cafebazaar.ir/app/mhk.ai.tools',
+      },
+      {
         name: 'جعبه بازی',
         imageUrl: '/icons/game/01.png',
         link: 'https://cafebazaar.ir/app/mhk.gamebox',
