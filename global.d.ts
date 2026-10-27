@@ -204,6 +204,7 @@ interface Tool {
   health?: string;
   weather?: string;
   english?: string;
+  memory?: string;
   ai?: string;
   proxy?: string;
 }

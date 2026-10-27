@@ -23,6 +23,7 @@ import {
   FaHospitalSymbol,
   FaCloud,
   FaLanguage,
+  FaPenNib,
 } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedTool } from '../../interfaces/sanitized-config';
@@ -271,6 +272,14 @@ const ToolsCard = ({ profile, loading, tool }: Props) => {
                   title="english"
                   value={tool.english}
                   link={`https://${tool.english}`}
+                />
+              )}
+              {tool?.memory && (
+                <ListItem
+                  icon={<FaPenNib />}
+                  title="memory"
+                  value={tool.memory}
+                  link={`https://${tool.memory}`}
                 />
               )}
               {tool?.ai && (

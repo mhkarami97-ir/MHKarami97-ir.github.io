@@ -111,6 +111,7 @@ export const getSanitizedConfig = (
         health: config?.tool?.health,
         weather: config?.tool?.weather,
         english: config?.tool?.english,
+        memory: config?.tool?.memory,
         ai: config?.tool?.ai,
         proxy: config?.tool?.proxy,
       },
