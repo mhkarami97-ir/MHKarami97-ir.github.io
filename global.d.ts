@@ -206,6 +206,8 @@ interface Tool {
   weather?: string;
   english?: string;
   memory?: string;
+  habit?: string;
+  movie?: string;
   ai?: string;
   proxy?: string;
 }

@@ -25,6 +25,8 @@ import {
   FaLanguage,
   FaPenNib,
   FaBookReader,
+  FaVideo,
+  FaTasks,
 } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedTool } from '../../interfaces/sanitized-config';
@@ -289,6 +291,22 @@ const ToolsCard = ({ profile, loading, tool }: Props) => {
                   title="memory"
                   value={tool.memory}
                   link={`https://${tool.memory}`}
+                />
+              )}
+              {tool?.habit && (
+                <ListItem
+                  icon={<FaTasks />}
+                  title="habit"
+                  value={tool.habit}
+                  link={`https://${tool.habit}`}
+                />
+              )}
+              {tool?.movie && (
+                <ListItem
+                  icon={<FaVideo />}
+                  title="movie"
+                  value={tool.movie}
+                  link={`https://${tool.movie}`}
                 />
               )}
               {tool?.ai && (

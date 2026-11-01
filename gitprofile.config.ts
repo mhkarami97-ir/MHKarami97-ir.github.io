@@ -323,6 +323,16 @@ const CONFIG = {
         link: 'https://cafebazaar.ir/app/mhk.ghazal',
       },
       {
+        name: 'سینما',
+        imageUrl: '/icons/app/30.png',
+        link: 'https://cafebazaar.ir/app/mhk.movie',
+      },
+      {
+        name: 'کاوش',
+        imageUrl: '/icons/app/31.png',
+        link: 'https://cafebazaar.ir/app/mhk.habit',
+      },
+      {
         name: 'جعبه بازی',
         imageUrl: '/icons/game/01.png',
         link: 'https://cafebazaar.ir/app/mhk.gamebox',
@@ -502,6 +512,8 @@ const CONFIG = {
     weather: 'weather.mhkarami97.ir',
     english: 'english.mhkarami97.ir',
     memory: 'memory.mhkarami97.ir',
+    habit: 'habit.mhkarami97.ir',
+    movie: 'movie-db.mhkarami97.ir',
     ai: 'ai-tools.mhkarami97.ir',
     proxy: 'tel-proxy.vercel.app',
   },
