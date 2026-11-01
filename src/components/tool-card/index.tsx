@@ -26,7 +26,6 @@ import {
   FaPenNib,
   FaBookReader,
   FaVideo,
-  FaTasks,
 } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedTool } from '../../interfaces/sanitized-config';
