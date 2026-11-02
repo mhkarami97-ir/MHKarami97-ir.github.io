@@ -129,8 +129,7 @@ const ExternalProjectCard = ({
           <div className="col-span-2">
             <div className="card compact bg-base-100 shadow bg-opacity-40">
               <div className="card-body rtl">
-                <div className="mx-3 flex items-center justify-between mb-2">
-                </div>
+                <div className="mx-3 flex items-center justify-between mb-2"></div>
                 <div className="col-span-2">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {loading ? renderSkeleton() : renderExternalProjects()}

@@ -18,7 +18,7 @@ import {
   FaTelegram,
   FaYoutube,
   FaVideo,
-  FaCode
+  FaCode,
 } from 'react-icons/fa';
 import { FaSquareThreads, FaBagShopping } from 'react-icons/fa6';
 import { RiMailFill, RiPhoneFill } from 'react-icons/ri';
@@ -204,12 +204,12 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 />
               )}
               {social?.aparat && (
-                  <ListItem
-                      icon={<FaVideo />}
-                      title="Aparat"
-                      value={`${social.aparat}`}
-                      link={`https://aparat.com/${social.aparat}`}
-                  />
+                <ListItem
+                  icon={<FaVideo />}
+                  title="Aparat"
+                  value={`${social.aparat}`}
+                  link={`https://aparat.com/${social.aparat}`}
+                />
               )}
               {social?.udemy && (
                 <ListItem
@@ -282,28 +282,28 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                 />
               )}
               {social?.x && (
-                  <ListItem
-                      icon={<SiX />}
-                      title="X"
-                      value={social.x}
-                      link={`https://x.com/${social.x}`}
-                  />
+                <ListItem
+                  icon={<SiX />}
+                  title="X"
+                  value={social.x}
+                  link={`https://x.com/${social.x}`}
+                />
               )}
-               {social?.leetCode && (
-                  <ListItem
-                      icon={<FaCode />}
-                      title="LeetCode"
-                      value={social.leetCode}
-                      link={`https://leetcode.com/u/${social.leetCode}`}
-                  />
+              {social?.leetCode && (
+                <ListItem
+                  icon={<FaCode />}
+                  title="LeetCode"
+                  value={social.leetCode}
+                  link={`https://leetcode.com/u/${social.leetCode}`}
+                />
               )}
               {social?.cafebazaar && (
-                  <ListItem
-                      icon={<FaBagShopping />}
-                      title="CafeBazaar"
-                      value={social.cafebazaar}
-                      link={`https://cafebazaar.ir/developer/${social.cafebazaar}`}
-                  />
+                <ListItem
+                  icon={<FaBagShopping />}
+                  title="CafeBazaar"
+                  value={social.cafebazaar}
+                  link={`https://cafebazaar.ir/developer/${social.cafebazaar}`}
+                />
               )}
               {social?.email && (
                 <ListItem
