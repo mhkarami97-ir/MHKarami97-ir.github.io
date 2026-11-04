@@ -180,6 +180,7 @@ interface Website {
   molkrey?: string;
   zamaanak?: string;
   hengam?: string;
+  crm?: string;
 }
 
 interface Tool {

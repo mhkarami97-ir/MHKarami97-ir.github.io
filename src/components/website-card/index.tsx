@@ -10,6 +10,7 @@ import {
   FaMoneyBillWave,
   FaBusinessTime,
   FaUserClock,
+  FaChessBishop,
 } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
 import { SanitizedWebsite } from '../../interfaces/sanitized-config';
@@ -178,6 +179,14 @@ const WebSitesCard = ({ profile, loading, website }: Props) => {
                   title="Hengam"
                   value={website.hengam}
                   link={`https://${website.hengam}`}
+                />
+              )}
+              {website?.crm && (
+                <ListItem
+                  icon={<FaChessBishop />}
+                  title="crm"
+                  value={website.crm}
+                  link={`https://${website.crm}`}
                 />
               )}
             </Fragment>

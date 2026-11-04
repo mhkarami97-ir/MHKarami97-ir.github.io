@@ -98,6 +98,7 @@ export interface SanitizedWebsite {
   molkrey?: string;
   zamaanak?: string;
   hengam?: string;
+  crm?: string;
 }
 
 export interface SanitizedTool {

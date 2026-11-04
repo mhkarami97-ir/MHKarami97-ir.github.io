@@ -492,6 +492,7 @@ const CONFIG = {
     molkrey: 'MolkRey.ir',
     zamaanak: 'Zamaanak.ir',
     hengam: 'Hengam.Zamaanak.ir',
+    crm: 'Crm.Zamaanak.ir',
   },
   tool: {
     magicBox: 'magic.mhkarami97.ir',
