@@ -452,6 +452,11 @@ const CONFIG = {
         imageUrl: '/icons/jetbrains/01.png',
         link: 'https://plugins.jetbrains.com/plugin/34254-demystified-stack-trace-links',
       },
+      {
+        name: 'KeyFlip',
+        imageUrl: '/icons/jetbrains/02.png',
+        link: 'https://github.com/MHKarami97/KeyFlip/releases',
+      },
     ],
   },
   seo: {
