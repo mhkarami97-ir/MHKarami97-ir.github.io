@@ -333,6 +333,11 @@ const CONFIG = {
         link: 'https://cafebazaar.ir/app/mhk.habit',
       },
       {
+        name: 'پیوند',
+        imageUrl: '/icons/app/32.png',
+        link: 'https://cafebazaar.ir/app/crm.zamaanak',
+      },
+      {
         name: 'جعبه بازی',
         imageUrl: '/icons/game/01.png',
         link: 'https://cafebazaar.ir/app/mhk.gamebox',
