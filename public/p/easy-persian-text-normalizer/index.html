@@ -139,14 +139,33 @@
         width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;
         border-radius: 50%; flex-shrink: 0; margin-top: 2px;
       }
+      .window-controls { display: flex; align-items: center; gap: 6px; }
+      .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+      .dot-red { background: #ff5f56; }
+      .dot-yellow { background: #ffbd2e; }
+      .dot-green { background: #27c93f; }
+      .preview-box {
+        background: radial-gradient(circle at center, rgba(111,72,255,0.05) 0%, rgba(0,0,0,0.02) 100%), #f8f9fd;
+        border: 1px solid var(--border); border-radius: 20px;
+        padding: 24px; display: flex; justify-content: center; align-items: center;
+        min-height: 360px; margin-bottom: 18px; overflow: hidden;
+      }
+      .main-preview-img {
+        max-height: 480px; max-width: 100%; border-radius: 16px;
+        box-shadow: 0 16px 36px -10px rgba(0,0,0,0.15); object-fit: contain;
+        transition: transform 0.4s ease;
+      }
+      .main-preview-img:hover { transform: scale(1.02); }
       .screenshots-scroll {
-        display: flex; gap: 16px; overflow-x: auto; padding: 12px 0;
+        display: flex; gap: 14px; overflow-x: auto; padding: 10px 0;
         justify-content: center; align-items: center; flex-wrap: wrap;
       }
       .screenshot-img {
-        max-height: 440px; width: auto; border-radius: 18px; border: 1px solid var(--border);
-        box-shadow: 0 6px 16px rgba(0,0,0,0.06); object-contain;
+        max-height: 140px; width: auto; border-radius: 14px; border: 2px solid var(--border);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05); object-fit: cover;
+        transition: transform 0.2s, border-color 0.2s;
       }
+      .screenshot-img:hover { transform: scale(1.05); border-color: var(--primary); }
       .description-body { font-size: 15px; color: #444; line-height: 1.9; }
       .description-body p { margin-bottom: 16px; text-align: justify; }
       .desc-list {
@@ -200,19 +219,26 @@
         </article>
 
         
-      <section class="section-card">
+      <section class="section-card screenshot-section">
         <div class="section-header">
-          <h2 class="section-title">تصاویر محیط برنامه</h2>
+          <div class="window-controls">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <h2 class="section-title">تصاویر و پیش‌نمایش محیط برنامه</h2>
           <span class="badge-count">1 تصویر</span>
         </div>
-        <div class="screenshots-scroll">
-          <img src="https://raw.githubusercontent.com/mhkarami97/easy-npm-persian-normalizer/main/assets/logo.jpg" alt="Persian normalizer - تصویر 1" class="screenshot-img" loading="lazy" />
+        <div class="preview-box">
+          <img src="https://raw.githubusercontent.com/mhkarami97/easy-npm-persian-normalizer/main/assets/logo.jpg" alt="Persian normalizer - تصویر اصلی" class="main-preview-img" loading="eager" />
         </div>
+        
       </section>
         
       <section class="section-card">
         <div class="section-header">
           <h2 class="section-title">ویژگی‌ها و قابلیت‌های کلیدی</h2>
+          <span class="badge-count">4 ویژگی</span>
         </div>
         <div class="features-grid">
           <div class="feature-item"><span class="check">✓</span><span>اصلاح و یکدست‌سازی حروف ی و ک عربی به فارسی و حذف اعراب و تشدیدهای ناخواسته</span></div><div class="feature-item"><span class="check">✓</span><span>استانداردسازی نیم‌فاصله‌ها، کشیدگی حروف (تطویل) و کاراکترهای نامرئی یونیکد</span></div><div class="feature-item"><span class="check">✓</span><span>تبدیل و نگاشت دوطرفه ارقام انگلیسی، عربی و فارسی با سرعت و دقت بسیار بالا</span></div><div class="feature-item"><span class="check">✓</span><span>پکیج فوق‌العاده سبک، بدون وابستگی، کامپایل‌شده برای ESM و CJS با تایپ‌های TypeScript</span></div>
