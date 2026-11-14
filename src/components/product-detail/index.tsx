@@ -420,9 +420,6 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
                 <div className="flex items-center justify-between">
                   <h2 className="text-lg sm:text-xl font-bold text-base-content flex items-center gap-2">
                     <span>تصاویر محیط برنامه</span>
-                    <span className="badge badge-sm badge-neutral">
-                      {screenshots.length} تصویر
-                    </span>
                   </h2>
                   {screenshots.length > 1 && (
                     <div className="flex items-center gap-2">
