@@ -1614,7 +1614,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'آی ترفند',
     title: 'آی ترفند',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'Tarfand',
     fullDescription:
       'آی ترفند - ترفندهای کاربردی حوضه تکنولوژی. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -1638,7 +1638,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'وبلاگ',
     title: 'وبلاگ',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'Tech blog',
     fullDescription:
       'وبلاگ - وبلاگ روزمرگی‌های برنامه‌نویسی. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -1660,7 +1660,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'کتابخانه',
     title: 'کتابخانه',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'Library',
     fullDescription:
       'کتابخانه - کتاب‌های خوانده شده. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -1682,7 +1682,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'فیلم‌خانه',
     title: 'فیلم‌خانه',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'Video',
     fullDescription:
       'فیلم‌خانه - فیلم‌های دیده شده. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -1706,7 +1706,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'سفرنامه',
     title: 'سفرنامه',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'Travel',
     fullDescription:
       'سفرنامه - سفرهای رفته. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -1730,7 +1730,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'کلیپ',
     title: 'خانه | کلیپ سفرها',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'کلیپ سفرنامه‌ها',
     fullDescription:
       'کلیپ - کلیپ سفرهای رفته شده. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -1752,7 +1752,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'شعر‌خانه',
     title: 'شعر‌خانه',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'شعرهای خوانده شده',
     fullDescription:
       'شعر‌خانه - شعرهای خوانده شده. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -1774,7 +1774,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'فوت‌و‌فن',
     title: 'فوت و فن',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'Trick',
     fullDescription:
       'فوت‌و‌فن - نکات کاربردی. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -1798,7 +1798,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'جملات انگیزشی',
     title: 'جملات انگیزشی',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'جملات انگیزشی بزرگان',
     fullDescription:
       'جملات انگیزشی - جملات انگیزشی بزرگان. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -1820,7 +1820,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'لینکدونی',
     title: 'لینک',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'Link',
     fullDescription:
       'لینکدونی - لینک سایت‌های کاربردی. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -1842,7 +1842,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'ایونت',
     title: 'خانه | karam Travel',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'Karam Travel',
     fullDescription:
       'ایونت - ایونت‌های طبیعت‌گردی. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -1864,7 +1864,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'فیلم آموزشی',
     title: 'فیلم آموزشی',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'Learn by video',
     fullDescription:
       'فیلم آموزشی - فیلم آموزش. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -1886,7 +1886,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'تجربه',
     title: 'تجربه',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'Experience',
     fullDescription:
       'تجربه - تجربه. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -1910,7 +1910,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'کلاس',
     title: 'آموزش',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'Learn',
     fullDescription:
       'کلاس - کلاس درس. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -1934,7 +1934,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'دیکشنری',
     title: 'دیکشنری',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'لغات کاربردی',
     fullDescription:
       'دیکشنری - لغات کاربردی. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -1956,7 +1956,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'الگوریتم',
     title: 'Home | Algorithm',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'Solve Algorithms',
     fullDescription:
       'الگوریتم - سوالات الگوریتمی. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -1978,7 +1978,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'لایف لیست',
     title: 'لیست',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'Life List',
     fullDescription:
       'لایف لیست - لایف لیست. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -2000,7 +2000,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'پرامپ',
     title: 'پرامپ',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'Prompt List',
     fullDescription:
       'پرامپ - لیست پرامپت. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -2024,7 +2024,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'تاریخ',
     title: 'تاریخ',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'Date',
     fullDescription:
       'تاریخ - اتفاقات تاریخی. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -2046,7 +2046,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'آموزش',
     title: 'آموزش',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'Teach',
     fullDescription:
       'آموزش - محتوای آموزشی. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -2070,7 +2070,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'اقتصاد',
     title: 'اقتصاد',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'اقتصاد به زبان ساده',
     fullDescription:
       'اقتصاد - اقتصاد به زبان ساده. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -2094,7 +2094,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'سیاست',
     title: 'سیاست',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'سیاست به زبان ساده',
     fullDescription:
       'سیاست - سیاست به زبان ساده. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -2116,7 +2116,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'علمی',
     title: 'علمی',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'علم به زبان ساده',
     fullDescription:
       'علمی - علم به زبان ساده. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
@@ -2140,7 +2140,7 @@ export const PRODUCTS: ProductConfig[] = [
     type: 'website',
     name: 'روانشناسی',
     title: 'آدمیزاد',
-    category: 'وب‌سایت و ابزار آنلاین',
+    category: 'وب‌سایت',
     shortDescription: 'انسان شناسی',
     fullDescription:
       'روانشناسی - مطالب حوزه انسانی. این سامانه به صورت اختصاصی برای ارائه خدمات و محتوای باکیفیت طراحی و پیاده‌سازی شده است.',
