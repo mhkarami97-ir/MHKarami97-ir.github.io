@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import { ReactNode } from 'react';
 import { SanitizedExperience } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
 
@@ -8,16 +8,16 @@ const ListItem = ({
   company,
   companyLink,
 }: {
-  time: React.ReactNode;
-  position?: React.ReactNode;
-  company?: React.ReactNode;
+  time: ReactNode;
+  position?: ReactNode;
+  company?: ReactNode;
   companyLink?: string;
 }) => (
   <li className="mb-5 ml-4">
     <div
-      className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
-      style={{ left: '-4.5px' }}
-    ></div>
+          className="absolute w-2 h-2 bg-primary rounded-full border border-primary mt-1.5"
+          style={{ left: '-4.5px' }}
+        ></div>
     <div className="my-0.5 text-xs">{time}</div>
     <h3 className="font-semibold">{position}</h3>
     <div className="mb-4 font-normal">
@@ -28,23 +28,17 @@ const ListItem = ({
   </li>
 );
 
-const ExperienceCard = ({
-  experiences,
-  loading,
-}: {
+const ExperienceCard = ({ experiences, loading }: {
   experiences: SanitizedExperience[];
   loading: boolean;
 }) => {
   const renderSkeleton = () => {
-    const array = [];
-    for (let index = 0; index < 2; index++) {
+    var array = [];
+    for (var index = 0; index < 2; index++) {
       array.push(
         <ListItem
           key={index}
-          time={skeleton({
-            widthCls: 'w-5/12',
-            heightCls: 'h-4',
-          })}
+          time={skeleton({ widthCls: 'w-5/12', heightCls: 'h-4' })}
           position={skeleton({
             widthCls: 'w-6/12',
             heightCls: 'h-4',
@@ -54,9 +48,9 @@ const ExperienceCard = ({
         />,
       );
     }
-
     return array;
   };
+
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="card-body">
@@ -71,25 +65,17 @@ const ExperienceCard = ({
         </div>
         <div className="text-base-content text-opacity-60">
           <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
-            {loading ? (
-              renderSkeleton()
-            ) : (
-              <Fragment>
-                {experiences.map((experience, index) => (
-                  <ListItem
-                    key={index}
-                    time={`${experience.from} - ${experience.to}`}
-                    position={experience.position}
-                    company={experience.company}
-                    companyLink={
-                      experience.companyLink
-                        ? experience.companyLink
-                        : undefined
-                    }
-                  />
-                ))}
-              </Fragment>
-            )}
+            {loading ? renderSkeleton() : experiences.map((experience, index) => (
+              <ListItem
+                key={index}
+                time={`${experience.from} - ${experience.to}`}
+                position={experience.position}
+                company={experience.company}
+                companyLink={
+                  experience.companyLink ? experience.companyLink : undefined
+                }
+              />
+            ))}
           </ol>
         </div>
       </div>

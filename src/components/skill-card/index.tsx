@@ -8,15 +8,14 @@ const SkillCard = ({
   skills: string[];
 }) => {
   const renderSkeleton = () => {
-    const array = [];
-    for (let index = 0; index < 12; index++) {
+    var array = [];
+    for (var index = 0; index < 12; index++) {
       array.push(
         <div key={index}>
           {skeleton({ widthCls: 'w-16', heightCls: 'h-4', className: 'm-1' })}
         </div>,
       );
     }
-
     return array;
   };
 
@@ -39,7 +38,7 @@ const SkillCard = ({
               : skills.map((skill, index) => (
                   <div
                     key={index}
-                    className="text-xs inline-flex items-center leading-sm px-2 py-1 m-2 text-base-content text-opacity-60 ring ring-base-content ring-opacity-20 hover:ring-primary hover:ring-opacity-100 rounded-full transition-all duration-200"
+                    className="text-xs inline-flex items-center leading-sm px-2 py-1 m-2 text-base-content text-opacity-60 ring ring-primary ring-opacity-60 hover:ring-opacity-100 rounded-full transition-all duration-200"
                   >
                     {skill}
                   </div>

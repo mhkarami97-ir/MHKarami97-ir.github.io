@@ -329,18 +329,6 @@ const GitProfile = ({ config }: { config: Config }) => {
                           apps={sanitizedConfig.apps}
                         />
                       )}
-                      {sanitizedConfig.games.items.length !== 0 && (
-                        <GameIconsCard
-                          loading={loading}
-                          games={sanitizedConfig.games}
-                        />
-                      )}
-                      {sanitizedConfig.software.items.length !== 0 && (
-                        <SoftwareCard
-                          loading={loading}
-                          software={sanitizedConfig.software}
-                        />
-                      )}
                       {sanitizedConfig.nuget.items.length !== 0 && (
                         <NugetCard
                           loading={loading}
@@ -353,6 +341,18 @@ const GitProfile = ({ config }: { config: Config }) => {
                           browserExtensions={sanitizedConfig.browserExtensions}
                         />
                       )}
+                      {sanitizedConfig.games.items.length !== 0 && (
+                        <GameIconsCard
+                          loading={loading}
+                          games={sanitizedConfig.games}
+                        />
+                      )}
+                      {sanitizedConfig.software.items.length !== 0 && (
+                        <SoftwareCard
+                          loading={loading}
+                          software={sanitizedConfig.software}
+                        />
+                      )}                      
                       {sanitizedConfig.npm.items.length !== 0 && (
                         <NpmCard loading={loading} npms={sanitizedConfig.npm} />
                       )}

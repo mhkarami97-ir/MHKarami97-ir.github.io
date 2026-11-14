@@ -1,4 +1,4 @@
-import React from 'react';
+import { ReactNode } from 'react';
 import { SanitizedEducation } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
 
@@ -7,38 +7,32 @@ const ListItem = ({
   degree,
   institution,
 }: {
-  time: React.ReactNode;
-  degree?: React.ReactNode;
-  institution?: React.ReactNode;
+  time: ReactNode;
+  degree?: ReactNode;
+  institution?: ReactNode;
 }) => (
   <li className="mb-5 ml-4">
     <div
-      className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
-      style={{ left: '-4.5px' }}
-    ></div>
+          className="absolute w-2 h-2 bg-primary rounded-full border border-primary mt-1.5"
+          style={{ left: '-4.5px' }}
+        ></div>
     <div className="my-0.5 text-xs">{time}</div>
     <h3 className="font-semibold">{degree}</h3>
     <div className="mb-4 font-normal">{institution}</div>
   </li>
 );
 
-const EducationCard = ({
-  loading,
-  educations,
-}: {
-  loading: boolean;
+const EducationCard = ({ educations, loading }: {
   educations: SanitizedEducation[];
+  loading: boolean;
 }) => {
   const renderSkeleton = () => {
-    const array = [];
-    for (let index = 0; index < 2; index++) {
+    var array = [];
+    for (var index = 0; index < 2; index++) {
       array.push(
         <ListItem
           key={index}
-          time={skeleton({
-            widthCls: 'w-5/12',
-            heightCls: 'h-4',
-          })}
+          time={skeleton({ widthCls: 'w-5/12', heightCls: 'h-4' })}
           degree={skeleton({
             widthCls: 'w-6/12',
             heightCls: 'h-4',
@@ -48,7 +42,6 @@ const EducationCard = ({
         />,
       );
     }
-
     return array;
   };
 
@@ -66,20 +59,14 @@ const EducationCard = ({
         </div>
         <div className="text-base-content text-opacity-60">
           <ol className="relative border-l border-base-300 border-opacity-30 my-2 mx-4">
-            {loading ? (
-              renderSkeleton()
-            ) : (
-              <>
-                {educations.map((item, index) => (
-                  <ListItem
-                    key={index}
-                    time={`${item.from} - ${item.to}`}
-                    degree={item.degree}
-                    institution={item.institution}
-                  />
-                ))}
-              </>
-            )}
+            {loading ? renderSkeleton() : educations.map((item, index) => (
+              <ListItem
+                key={index}
+                time={`${item.from} - ${item.to}`}
+                degree={item.degree}
+                institution={item.institution}
+              />
+            ))}
           </ol>
         </div>
       </div>
