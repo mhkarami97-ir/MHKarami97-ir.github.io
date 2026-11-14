@@ -455,7 +455,6 @@ for (const p of products) {
             <div class="badges-row">
               <span class="badge">${escapedCategory}</span>
               ${p.type === 'app' ? '<span class="badge">PWA / وب‌اپلیکیشن</span>' : ''}
-              <span class="badge badge-free">رایگان</span>
             </div>
             <h1>${escapedTitle}</h1>
             <p class="short-desc">${metaDesc}</p>

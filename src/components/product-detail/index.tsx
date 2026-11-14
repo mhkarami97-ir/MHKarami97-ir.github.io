@@ -346,12 +346,9 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
                     </span>
                     {product.type === 'app' && (
                       <span className="badge badge-secondary badge-outline px-3 py-1">
-                        PWA / وب‌اپلیکیشن پیش‌رونده
+                        وب‌اپلیکیشن
                       </span>
                     )}
-                    <span className="badge badge-ghost px-2.5 py-1 text-xs text-base-content/70">
-                      رایگان
-                    </span>
                   </div>
 
                   <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-base-content tracking-tight leading-snug">
@@ -439,19 +436,6 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
                           </a>
                         );
                       })()}
-
-                    {/* Share Button */}
-                    <button
-                      type="button"
-                      onClick={handleShare}
-                      className="btn btn-outline rounded-2xl gap-2 border-base-300 hover:bg-base-200 hover:border-base-content/20 text-base-content px-4 py-2.5 h-auto"
-                      title="اشتراک‌گذاری این صفحه"
-                    >
-                      <FaShareAlt className="w-4 h-4 text-primary" />
-                      <span className="text-sm font-medium">
-                        {copied ? 'لینک کپی شد!' : 'اشتراک‌گذاری'}
-                      </span>
-                    </button>
                   </div>
                 </div>
               </div>
@@ -579,20 +563,8 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
                   <span className="w-8 h-8 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
                     <FaInfoCircle className="w-4 h-4" />
                   </span>
-                  <span>درباره و معرفی کامل {product.name}</span>
+                  <span>درباره {product.name}</span>
                 </h2>
-
-                <div className="flex items-center gap-2 text-xs text-base-content/60">
-                  <span className="inline-flex items-center gap-1">
-                    <FaShieldAlt className="w-3 h-3 text-success" />
-                    تضمین اصالت و امنیت
-                  </span>
-                  <span>•</span>
-                  <span className="inline-flex items-center gap-1">
-                    <FaUserCheck className="w-3 h-3 text-info" />
-                    محمد حسین کرمی
-                  </span>
-                </div>
               </div>
 
               {/* Enhanced Typography & Spacing */}
@@ -648,31 +620,6 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
                     );
                   })}
               </div>
-
-              {/* Highlights bar */}
-              <div className="p-4 rounded-2xl bg-base-200/50 border border-base-300/80 flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm text-base-content/70">
-                <div className="flex items-center gap-2">
-                  <span className="font-semibold text-base-content">
-                    دسته‌بندی:
-                  </span>
-                  <span>{product.category}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="font-semibold text-base-content">مجوز:</span>
-                  <span>کاملاً رایگان برای عموم کاربران</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="font-semibold text-base-content">
-                    توسعه‌دهنده:
-                  </span>
-                  <a
-                    href="https://mhkarami97.ir"
-                    className="text-primary hover:underline font-bold"
-                  >
-                    محمد حسین کرمی
-                  </a>
-                </div>
-              </div>
             </section>
           )}
 
@@ -681,7 +628,7 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
             <section className="card bg-base-100 shadow-xl border border-base-300 rounded-3xl p-6 sm:p-8 space-y-5">
               <div className="flex items-center justify-between border-b border-base-300/60 pb-4">
                 <h2 className="text-xl sm:text-2xl font-bold text-base-content">
-                  سایر محصولات و پروژه‌های مرتبط
+                  سایر پروژه‌ها
                 </h2>
                 <a
                   href="/"
