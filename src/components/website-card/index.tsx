@@ -15,11 +15,34 @@ import {
 import { Profile } from '../../interfaces/profile';
 import { SanitizedWebsite } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
+import { getProductById } from '../../data/products';
 
 type Props = {
   profile: Profile | null;
   loading: boolean;
   website: SanitizedWebsite;
+};
+
+const resolveLink = (val?: string) => {
+  if (!val) return '';
+  if (
+    val.startsWith('/') ||
+    val.startsWith('http://') ||
+    val.startsWith('https://')
+  ) {
+    return val;
+  }
+  return `https://${val}`;
+};
+
+const resolveDisplay = (val?: string) => {
+  if (!val) return '';
+  if (val.startsWith('/p/')) {
+    const slug = val.replace('/p/', '');
+    const product = getProductById(slug);
+    return product ? product.name : slug;
+  }
+  return val.replace(/^https?:\/\//, '');
 };
 
 const ListItem: React.FC<{
@@ -29,39 +52,53 @@ const ListItem: React.FC<{
   link?: string;
   skeleton?: boolean;
 }> = ({ icon, title, value, link, skeleton = false }) => {
+  const isInternal = link?.startsWith('/');
+
+  if (link && !skeleton) {
+    return (
+      <a
+        href={link}
+        target={isInternal ? undefined : '_blank'}
+        rel={isInternal ? undefined : 'noreferrer'}
+        className="flex justify-between items-center py-1.5 px-2 rounded-xl hover:bg-base-200/60 transition-colors group cursor-pointer"
+      >
+        <div className="flex-grow font-medium gap-2 flex items-center text-base-content group-hover:text-primary transition-colors">
+          <span className="text-primary group-hover:scale-110 transition-transform">
+            {icon}
+          </span>
+          <span>{title}</span>
+        </div>
+        <div
+          className="text-sm font-normal text-right mr-2 ml-3 truncate opacity-70 group-hover:opacity-100 group-hover:text-primary transition-colors"
+          style={{
+            wordBreak: 'break-word',
+          }}
+        >
+          {value}
+        </div>
+      </a>
+    );
+  }
+
   return (
-    <div className="flex justify-start py-1 px-1 items-center">
-      <div className="flex-grow font-medium gap-2 flex items-center my-1">
+    <div className="flex justify-between items-center py-1.5 px-2">
+      <div className="flex-grow font-medium gap-2 flex items-center">
         {icon} {title}
       </div>
       <div
         className={`${
           skeleton ? 'flex-grow' : ''
-        } text-sm font-normal text-right mr-2 ml-3 ${link ? 'truncate' : ''}`}
+        } text-sm font-normal text-right mr-2 ml-3`}
         style={{
           wordBreak: 'break-word',
         }}
       >
-        <a
-          href={link}
-          target="_blank"
-          rel="noreferrer"
-          className="flex justify-start py-1 px-1 items-center"
-        >
-          {value}
-        </a>
+        {value}
       </div>
     </div>
   );
 };
-/**
- * Renders the website card component.
- *
- * @param {Object} profile - The profile object.
- * @param {boolean} loading - Indicates whether the data is loading.
- * @param {Object} website - The website object.
- * @return {JSX.Element} The website card component.
- */
+
 const WebSitesCard = ({ profile, loading, website }: Props) => {
   const renderSkeleton = () => {
     const array = [];
@@ -76,7 +113,6 @@ const WebSitesCard = ({ profile, loading, website }: Props) => {
         />,
       );
     }
-
     return array;
   };
 
@@ -97,96 +133,96 @@ const WebSitesCard = ({ profile, loading, website }: Props) => {
                 <ListItem
                   icon={<FaCarSide />}
                   title="Travel"
-                  value={website.travel}
-                  link={`https://${website.travel}`}
+                  value={resolveDisplay(website.travel)}
+                  link={resolveLink(website.travel)}
                 />
               )}
               {website?.tour && (
                 <ListItem
                   icon={<FaCarSide />}
                   title="Tour"
-                  value={website.tour}
-                  link={`https://${website.tour}`}
+                  value={resolveDisplay(website.tour)}
+                  link={resolveLink(website.tour)}
                 />
               )}
               {website?.experience && (
                 <ListItem
                   icon={<FaWrench />}
                   title="Experience"
-                  value={website.experience}
-                  link={`https://${website.experience}`}
+                  value={resolveDisplay(website.experience)}
+                  link={resolveLink(website.experience)}
                 />
               )}
               {website?.shop && (
                 <ListItem
                   icon={<FaShoppingBag />}
                   title="Shop"
-                  value={website.shop}
-                  link={`https://${website.shop}`}
+                  value={resolveDisplay(website.shop)}
+                  link={resolveLink(website.shop)}
                 />
               )}
               {website?.house && (
                 <ListItem
                   icon={<FaHome />}
                   title="House"
-                  value={website.house}
-                  link={`https://${website.house}`}
+                  value={resolveDisplay(website.house)}
+                  link={resolveLink(website.house)}
                 />
               )}
               {website?.chavooshan && (
                 <ListItem
                   icon={<FaHatCowboySide />}
                   title="Chavooshan"
-                  value={website.chavooshan}
-                  link={`https://${website.chavooshan}`}
+                  value={resolveDisplay(website.chavooshan)}
+                  link={resolveLink(website.chavooshan)}
                 />
               )}
               {website?.zolfdota && (
                 <ListItem
                   icon={<FaSortAmountUp />}
                   title="ZolfDota"
-                  value={website.zolfdota}
-                  link={`https://${website.zolfdota}`}
+                  value={resolveDisplay(website.zolfdota)}
+                  link={resolveLink(website.zolfdota)}
                 />
               )}
               {website?.dorgardoon && (
                 <ListItem
                   icon={<FaThumbtack />}
                   title="DorGardoon"
-                  value={website.dorgardoon}
-                  link={`https://${website.dorgardoon}`}
+                  value={resolveDisplay(website.dorgardoon)}
+                  link={resolveLink(website.dorgardoon)}
                 />
               )}
               {website?.molkrey && (
                 <ListItem
                   icon={<FaMoneyBillWave />}
                   title="MolkRey"
-                  value={website.molkrey}
-                  link={`https://${website.molkrey}`}
+                  value={resolveDisplay(website.molkrey)}
+                  link={resolveLink(website.molkrey)}
                 />
               )}
               {website?.zamaanak && (
                 <ListItem
                   icon={<FaBusinessTime />}
                   title="Zamaanak"
-                  value={website.zamaanak}
-                  link={`https://${website.zamaanak}`}
+                  value={resolveDisplay(website.zamaanak)}
+                  link={resolveLink(website.zamaanak)}
                 />
               )}
               {website?.hengam && (
                 <ListItem
                   icon={<FaUserClock />}
                   title="Hengam"
-                  value={website.hengam}
-                  link={`https://${website.hengam}`}
+                  value={resolveDisplay(website.hengam)}
+                  link={resolveLink(website.hengam)}
                 />
               )}
               {website?.crm && (
                 <ListItem
                   icon={<FaChessBishop />}
                   title="crm"
-                  value={website.crm}
-                  link={`https://${website.crm}`}
+                  value={resolveDisplay(website.crm)}
+                  link={resolveLink(website.crm)}
                 />
               )}
             </Fragment>

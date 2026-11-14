@@ -482,19 +482,34 @@ export const PRODUCTS: ProductConfig[] = [
   {
     id: 'mhk.motogp',
     type: 'app',
-    name: 'موتو جی‌پی',
-    title: 'موتو جی‌پی',
+    name: 'موتوجی پی | تقویم و نتایج موتورسواری',
+    title: 'موتوجی پی | تقویم و نتایج موتورسواری MotoGP',
     category: 'اپلیکیشن و PWA',
-    shortDescription: '',
-    fullDescription: '',
-    features: [],
+    shortDescription:
+      'تقویم مسابقات، نتایج زنده، جدول امتیازات راکبان و تیم های گرندپری موتورسواری',
+    fullDescription:
+      'ریسینگ‌گرید یک اپلیکیشن رایگان برای دنبال‌کردن فصل جاری مسابقات گرندپری موتورسواری (MotoGP) به زبان فارسی است.\n\nویژگی‌ها:\n\n- شمارش معکوس تا مسابقه‌ی بعدی با تاریخ و زمان دقیق\n\n- تقویم کامل فصل با وضعیت برگزار شده / پیش‌رو\n\n- جدول امتیازات راکبان و تیم‌ها با رنگ اختصاصی هر تیم\n\n- نتایج کامل هر مسابقه و گرید شروع\n\n- حالت تیره و روشن\n\n- رابط کاربری کاملاً راست‌به‌چپ و فارسی',
+    features: [
+      'شمارش معکوس تا مسابقه‌ی بعدی با تاریخ و زمان دقیق',
+      'تقویم کامل فصل با وضعیت برگزار شده / پیش‌رو',
+      'جدول امتیازات راکبان و تیم‌ها با رنگ اختصاصی هر تیم',
+      'نتایج کامل هر مسابقه و گرید شروع',
+      'حالت تیره و روشن',
+      'رابط کاربری کاملاً راست‌به‌چپ و فارسی',
+    ],
     icon: '/icons/app/18.png',
-    screenshots: [],
+    screenshots: [
+      '/screenshots/mhk.motogp/1.jpg',
+      '/screenshots/mhk.motogp/2.jpg',
+      '/screenshots/mhk.motogp/3.jpg',
+      '/screenshots/mhk.motogp/4.jpg',
+      '/screenshots/mhk.motogp/5.jpg',
+    ],
     links: {
-      android: 'https://cafebazaar.ir/app/mhk.motogp',
+      android: 'https://cafebazaar.ir/app/mhk.MotoGP',
       ios: 'https://motogp.mhkarami97.ir',
     },
-    tags: ['اپلیکیشن', 'PWA', 'اندروید', 'کافه بازار', 'موتو جی‌پی'],
+    tags: ['اپلیکیشن', 'PWA', 'اندروید', 'کافه بازار', 'موتو جی‌پی', 'MotoGP'],
   },
   {
     id: 'mhk.shekaste',
