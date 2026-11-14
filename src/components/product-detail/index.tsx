@@ -4,7 +4,6 @@ import {
   FaAndroid,
   FaApple,
   FaExternalLinkAlt,
-  FaShareAlt,
   FaArrowRight,
   FaCheckCircle,
   FaChevronRight,
@@ -38,7 +37,6 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
   const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
   const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
-  const [copied, setCopied] = useState<boolean>(false);
 
   const screenshots = product?.screenshots || [];
   const hasScreenshots = screenshots.length > 0;
@@ -108,29 +106,6 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
       </HelmetProvider>
     );
   }
-
-  const handleShare = async () => {
-    const url = window.location.href;
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: product.title,
-          text: product.shortDescription,
-          url,
-        });
-        return;
-      } catch (err) {
-        // user cancelled or share failed, fallback to copy
-      }
-    }
-    try {
-      await navigator.clipboard.writeText(url);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2500);
-    } catch (err) {
-      console.error(err);
-    }
-  };
 
   const handleNavProduct = (id: string, e: React.MouseEvent) => {
     if (onNavigateProduct) {
@@ -477,19 +452,6 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
                           </a>
                         );
                       })()}
-
-                    {/* Share Button */}
-                    <button
-                      type="button"
-                      onClick={handleShare}
-                      className="btn btn-outline rounded-2xl gap-2 border-base-300 hover:bg-base-200 hover:border-base-content/20 text-base-content px-4 py-2.5 h-auto"
-                      title="اشتراک‌گذاری این صفحه"
-                    >
-                      <FaShareAlt className="w-4 h-4 text-primary" />
-                      <span className="text-sm font-medium">
-                        {copied ? 'لینک کپی شد!' : 'اشتراک‌گذاری'}
-                      </span>
-                    </button>
                   </div>
                 </div>
               </div>
@@ -500,20 +462,10 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
               {/* Window Header */}
               <div className="flex items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  {/* macOS Window Control Dots */}
-                  <div className="flex items-center gap-1.5 px-1">
-                    <span className="w-3 h-3 rounded-full bg-[#ff5f56] shadow-sm inline-block" />
-                    <span className="w-3 h-3 rounded-full bg-[#ffbd2e] shadow-sm inline-block" />
-                    <span className="w-3 h-3 rounded-full bg-[#27c93f] shadow-sm inline-block" />
-                  </div>
                   <h2 className="text-base sm:text-lg font-bold text-base-content flex items-center gap-2">
                     <FaImages className="w-4 h-4 text-primary" />
-                    <span>تصاویر و پیش‌نمایش محیط برنامه</span>
-                    {hasScreenshots && (
-                      <span className="badge badge-sm badge-neutral font-mono">
-                        {screenshots.length} تصویر
-                      </span>
-                    )}
+                    <span>تصاویر برنامه</span>
+                    {hasScreenshots}
                   </h2>
                 </div>
 
