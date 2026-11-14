@@ -75,6 +75,11 @@ export interface SanitizedJetbrains {
   items: SanitizedAppItem[];
 }
 
+export interface SanitizedSoftware {
+  header: string;
+  items: SanitizedAppItem[];
+}
+
 export interface SanitizedProjects {
   github: SanitizedGitHubProjects;
   external: SanitizedExternalProjects;
@@ -86,49 +91,21 @@ export interface SanitizedSEO {
   imageURL?: string;
 }
 
+export type LinkItemValue =
+  | string
+  | {
+      link: string;
+      title?: string;
+      name?: string;
+      icon?: string;
+    };
+
 export interface SanitizedWebsite {
-  travel?: string;
-  tour?: string;
-  experience?: string;
-  shop?: string;
-  house?: string;
-  chavooshan?: string;
-  zolfdota?: string;
-  dorgardoon?: string;
-  molkrey?: string;
-  zamaanak?: string;
-  hengam?: string;
-  crm?: string;
+  [key: string]: LinkItemValue | undefined;
 }
 
 export interface SanitizedTool {
-  magicBox?: string;
-  gameBox?: string;
-  toolBox?: string;
-  calender?: string;
-  finance?: string;
-  sport?: string;
-  task?: string;
-  checkList?: string;
-  f1?: string;
-  motogp?: string;
-  shekaste?: string;
-  ghazal?: string;
-  shortLink?: string;
-  buy?: string;
-  service?: string;
-  period?: string;
-  safar?: string;
-  school?: string;
-  nerkh?: string;
-  health?: string;
-  weather?: string;
-  english?: string;
-  memory?: string;
-  habit?: string;
-  movie?: string;
-  ai?: string;
-  proxy?: string;
+  [key: string]: LinkItemValue | undefined;
 }
 
 export interface SanitizedSocial {
@@ -250,6 +227,7 @@ export interface SanitizedConfig {
   enablePWA: boolean;
   apps: SanitizedApps;
   games: SanitizedGames;
+  software: SanitizedSoftware;
   nuget: SanitizedNuget;
   browserExtensions: SanitizedBrowserExtensions;
   npm: SanitizedNpm;

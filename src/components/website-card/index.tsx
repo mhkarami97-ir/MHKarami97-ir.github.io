@@ -11,9 +11,15 @@ import {
   FaBusinessTime,
   FaUserClock,
   FaChessBishop,
+  FaGlobe,
+  FaBookOpen,
+  FaVideo,
 } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
-import { SanitizedWebsite } from '../../interfaces/sanitized-config';
+import {
+  SanitizedWebsite,
+  LinkItemValue,
+} from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
 import { getProductById } from '../../data/products';
 
@@ -45,6 +51,43 @@ const resolveDisplay = (val?: string) => {
   return val.replace(/^https?:\/\//, '');
 };
 
+const ICON_MAP: Record<string, React.ReactNode> = {
+  travel: <FaCarSide />,
+  tour: <FaCarSide />,
+  experience: <FaWrench />,
+  shop: <FaShoppingBag />,
+  house: <FaHome />,
+  chavooshan: <FaHatCowboySide />,
+  zolfdota: <FaSortAmountUp />,
+  dorgardoon: <FaThumbtack />,
+  molkrey: <FaMoneyBillWave />,
+  zamaanak: <FaBusinessTime />,
+  hengam: <FaUserClock />,
+  crm: <FaChessBishop />,
+  blog: <FaBookOpen />,
+  video: <FaVideo />,
+};
+
+const TITLE_MAP: Record<string, string> = {
+  travel: 'Travel',
+  tour: 'Tour',
+  experience: 'Experience',
+  shop: 'Shop',
+  house: 'House',
+  chavooshan: 'Chavooshan',
+  zolfdota: 'ZolfDota',
+  dorgardoon: 'DorGardoon',
+  molkrey: 'MolkRey',
+  zamaanak: 'Zamaanak',
+  hengam: 'Hengam',
+  crm: 'CRM',
+};
+
+const humanizeKey = (key: string): string => {
+  const spaced = key.replace(/([a-z])([A-Z])/g, '$1 $2');
+  return spaced.charAt(0).toUpperCase() + spaced.slice(1);
+};
+
 const ListItem: React.FC<{
   icon: React.ReactNode;
   title: React.ReactNode;
@@ -63,7 +106,7 @@ const ListItem: React.FC<{
         className="flex justify-between items-center py-1.5 px-2 rounded-xl hover:bg-base-200/60 transition-colors group cursor-pointer"
       >
         <div className="flex-grow font-medium gap-2 flex items-center text-base-content group-hover:text-primary transition-colors">
-          <span className="text-primary group-hover:scale-110 transition-transform">
+          <span className="text-primary group-hover:scale-110 transition-transform flex items-center justify-center">
             {icon}
           </span>
           <span>{title}</span>
@@ -116,6 +159,65 @@ const WebSitesCard = ({ profile, loading, website }: Props) => {
     return array;
   };
 
+  const resolveItem = (key: string, itemVal: LinkItemValue | undefined) => {
+    if (!itemVal) return null;
+    const link = typeof itemVal === 'string' ? itemVal : itemVal.link;
+    if (!link) return null;
+
+    const customTitle =
+      typeof itemVal === 'object' ? itemVal.title || itemVal.name : undefined;
+    const customIcon = typeof itemVal === 'object' ? itemVal.icon : undefined;
+
+    let product = null;
+    if (link.startsWith('/p/')) {
+      const slug = link.replace('/p/', '');
+      product = getProductById(slug);
+    }
+
+    const title =
+      customTitle ||
+      TITLE_MAP[key.toLowerCase()] ||
+      (product ? product.name : humanizeKey(key));
+
+    const value = product ? product.name : resolveDisplay(link);
+
+    let iconNode: React.ReactNode = null;
+    if (customIcon) {
+      if (customIcon.startsWith('/') || customIcon.startsWith('http')) {
+        iconNode = (
+          <img
+            src={customIcon}
+            alt={title}
+            className="w-4 h-4 object-contain rounded-sm"
+          />
+        );
+      }
+    }
+    if (!iconNode && ICON_MAP[key.toLowerCase()]) {
+      iconNode = ICON_MAP[key.toLowerCase()];
+    }
+    if (!iconNode && product?.icon) {
+      iconNode = (
+        <img
+          src={product.icon}
+          alt={title}
+          className="w-4 h-4 object-contain rounded-sm"
+        />
+      );
+    }
+    if (!iconNode) {
+      iconNode = <FaGlobe />;
+    }
+
+    return {
+      key,
+      title,
+      value,
+      link: resolveLink(link),
+      icon: iconNode,
+    };
+  };
+
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="card-body">
@@ -129,102 +231,20 @@ const WebSitesCard = ({ profile, loading, website }: Props) => {
             renderSkeleton()
           ) : (
             <Fragment>
-              {website?.travel && (
-                <ListItem
-                  icon={<FaCarSide />}
-                  title="Travel"
-                  value={resolveDisplay(website.travel)}
-                  link={resolveLink(website.travel)}
-                />
-              )}
-              {website?.tour && (
-                <ListItem
-                  icon={<FaCarSide />}
-                  title="Tour"
-                  value={resolveDisplay(website.tour)}
-                  link={resolveLink(website.tour)}
-                />
-              )}
-              {website?.experience && (
-                <ListItem
-                  icon={<FaWrench />}
-                  title="Experience"
-                  value={resolveDisplay(website.experience)}
-                  link={resolveLink(website.experience)}
-                />
-              )}
-              {website?.shop && (
-                <ListItem
-                  icon={<FaShoppingBag />}
-                  title="Shop"
-                  value={resolveDisplay(website.shop)}
-                  link={resolveLink(website.shop)}
-                />
-              )}
-              {website?.house && (
-                <ListItem
-                  icon={<FaHome />}
-                  title="House"
-                  value={resolveDisplay(website.house)}
-                  link={resolveLink(website.house)}
-                />
-              )}
-              {website?.chavooshan && (
-                <ListItem
-                  icon={<FaHatCowboySide />}
-                  title="Chavooshan"
-                  value={resolveDisplay(website.chavooshan)}
-                  link={resolveLink(website.chavooshan)}
-                />
-              )}
-              {website?.zolfdota && (
-                <ListItem
-                  icon={<FaSortAmountUp />}
-                  title="ZolfDota"
-                  value={resolveDisplay(website.zolfdota)}
-                  link={resolveLink(website.zolfdota)}
-                />
-              )}
-              {website?.dorgardoon && (
-                <ListItem
-                  icon={<FaThumbtack />}
-                  title="DorGardoon"
-                  value={resolveDisplay(website.dorgardoon)}
-                  link={resolveLink(website.dorgardoon)}
-                />
-              )}
-              {website?.molkrey && (
-                <ListItem
-                  icon={<FaMoneyBillWave />}
-                  title="MolkRey"
-                  value={resolveDisplay(website.molkrey)}
-                  link={resolveLink(website.molkrey)}
-                />
-              )}
-              {website?.zamaanak && (
-                <ListItem
-                  icon={<FaBusinessTime />}
-                  title="Zamaanak"
-                  value={resolveDisplay(website.zamaanak)}
-                  link={resolveLink(website.zamaanak)}
-                />
-              )}
-              {website?.hengam && (
-                <ListItem
-                  icon={<FaUserClock />}
-                  title="Hengam"
-                  value={resolveDisplay(website.hengam)}
-                  link={resolveLink(website.hengam)}
-                />
-              )}
-              {website?.crm && (
-                <ListItem
-                  icon={<FaChessBishop />}
-                  title="crm"
-                  value={resolveDisplay(website.crm)}
-                  link={resolveLink(website.crm)}
-                />
-              )}
+              {website &&
+                Object.entries(website).map(([key, val]) => {
+                  const item = resolveItem(key, val);
+                  if (!item) return null;
+                  return (
+                    <ListItem
+                      key={item.key}
+                      icon={item.icon}
+                      title={item.title}
+                      value={item.value}
+                      link={item.link}
+                    />
+                  );
+                })}
             </Fragment>
           )}
         </div>

@@ -337,16 +337,6 @@ const CONFIG = {
         imageUrl: '/icons/app/32.png',
         link: '/p/crm.zamaanak',
       },
-      {
-        name: 'جعبه بازی',
-        imageUrl: '/icons/game/01.png',
-        link: '/p/mhk.gamebox',
-      },
-      {
-        name: 'چیستا',
-        imageUrl: '/icons/game/02.png',
-        link: '/p/mhk.chista',
-      },
     ],
   },
   games: {
@@ -457,10 +447,20 @@ const CONFIG = {
         imageUrl: '/icons/jetbrains/01.png',
         link: '/p/demystified-stack-trace-links',
       },
+    ],
+  },
+  software: {
+    header: 'Software',
+    items: [
       {
         name: 'KeyFlip',
-        imageUrl: '/icons/jetbrains/02.png',
+        imageUrl: '/icons/software/01.png',
         link: '/p/KeyFlip',
+      },
+      {
+        name: 'Radpa',
+        imageUrl: '/icons/software/02.png',
+        link: '/p/Radpa',
       },
     ],
   },

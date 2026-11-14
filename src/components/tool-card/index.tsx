@@ -28,7 +28,10 @@ import {
   FaVideo,
 } from 'react-icons/fa';
 import { Profile } from '../../interfaces/profile';
-import { SanitizedTool } from '../../interfaces/sanitized-config';
+import {
+  SanitizedTool,
+  LinkItemValue,
+} from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
 import { getProductById } from '../../data/products';
 
@@ -60,6 +63,71 @@ const resolveDisplay = (val?: string) => {
   return val.replace(/^https?:\/\//, '');
 };
 
+const ICON_MAP: Record<string, React.ReactNode> = {
+  magicbox: <FaMagic />,
+  gamebox: <FaGamepad />,
+  toolbox: <FaToolbox />,
+  calender: <FaCalendarTimes />,
+  finance: <FaDollarSign />,
+  sport: <FaRunning />,
+  task: <FaTasks />,
+  checklist: <FaCalendarCheck />,
+  f1: <FaCar />,
+  motogp: <FaMotorcycle />,
+  shekaste: <FaBookOpen />,
+  ghazal: <FaBookReader />,
+  shortlink: <FaLink />,
+  buy: <FaShopify />,
+  service: <FaWrench />,
+  period: <FaBurn />,
+  safar: <FaPlane />,
+  school: <FaUniversity />,
+  nerkh: <FaAngleDoubleUp />,
+  health: <FaHospitalSymbol />,
+  weather: <FaCloud />,
+  english: <FaLanguage />,
+  memory: <FaPenNib />,
+  habit: <FaTasks />,
+  movie: <FaVideo />,
+  ai: <FaTools />,
+  proxy: <FaTelegramPlane />,
+};
+
+const TITLE_MAP: Record<string, string> = {
+  magicbox: 'Magic Box',
+  gamebox: 'Game Box',
+  toolbox: 'Tool Box',
+  calender: 'Calender',
+  finance: 'Finance',
+  sport: 'Sport',
+  task: 'Task',
+  checklist: 'CheckList',
+  f1: 'F1',
+  motogp: 'MotoGP',
+  shekaste: 'Shekaste',
+  ghazal: 'ghazal',
+  shortlink: 'ShortLink',
+  buy: 'Buy',
+  service: 'Service',
+  period: 'Period',
+  safar: 'Safar',
+  school: 'School',
+  nerkh: 'Nerkh',
+  health: 'Health',
+  weather: 'Weather',
+  english: 'english',
+  memory: 'memory',
+  habit: 'habit',
+  movie: 'movie',
+  ai: 'AI',
+  proxy: 'Proxy',
+};
+
+const humanizeKey = (key: string): string => {
+  const spaced = key.replace(/([a-z])([A-Z])/g, '$1 $2');
+  return spaced.charAt(0).toUpperCase() + spaced.slice(1);
+};
+
 const ListItem: React.FC<{
   icon: React.ReactNode;
   title: React.ReactNode;
@@ -78,7 +146,7 @@ const ListItem: React.FC<{
         className="flex justify-between items-center py-1.5 px-2 rounded-xl hover:bg-base-200/60 transition-colors group cursor-pointer"
       >
         <div className="flex-grow font-medium gap-2 flex items-center text-base-content group-hover:text-primary transition-colors">
-          <span className="text-primary group-hover:scale-110 transition-transform">
+          <span className="text-primary group-hover:scale-110 transition-transform flex items-center justify-center">
             {icon}
           </span>
           <span>{title}</span>
@@ -131,6 +199,65 @@ const ToolsCard = ({ profile, loading, tool }: Props) => {
     return array;
   };
 
+  const resolveItem = (key: string, itemVal: LinkItemValue | undefined) => {
+    if (!itemVal) return null;
+    const link = typeof itemVal === 'string' ? itemVal : itemVal.link;
+    if (!link) return null;
+
+    const customTitle =
+      typeof itemVal === 'object' ? itemVal.title || itemVal.name : undefined;
+    const customIcon = typeof itemVal === 'object' ? itemVal.icon : undefined;
+
+    let product = null;
+    if (link.startsWith('/p/')) {
+      const slug = link.replace('/p/', '');
+      product = getProductById(slug);
+    }
+
+    const title =
+      customTitle ||
+      TITLE_MAP[key.toLowerCase()] ||
+      (product ? product.name : humanizeKey(key));
+
+    const value = product ? product.name : resolveDisplay(link);
+
+    let iconNode: React.ReactNode = null;
+    if (customIcon) {
+      if (customIcon.startsWith('/') || customIcon.startsWith('http')) {
+        iconNode = (
+          <img
+            src={customIcon}
+            alt={title}
+            className="w-4 h-4 object-contain rounded-sm"
+          />
+        );
+      }
+    }
+    if (!iconNode && ICON_MAP[key.toLowerCase()]) {
+      iconNode = ICON_MAP[key.toLowerCase()];
+    }
+    if (!iconNode && product?.icon) {
+      iconNode = (
+        <img
+          src={product.icon}
+          alt={title}
+          className="w-4 h-4 object-contain rounded-sm"
+        />
+      );
+    }
+    if (!iconNode) {
+      iconNode = <FaTools />;
+    }
+
+    return {
+      key,
+      title,
+      value,
+      link: resolveLink(link),
+      icon: iconNode,
+    };
+  };
+
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="card-body">
@@ -144,222 +271,20 @@ const ToolsCard = ({ profile, loading, tool }: Props) => {
             renderSkeleton()
           ) : (
             <Fragment>
-              {tool?.magicBox && (
-                <ListItem
-                  icon={<FaMagic />}
-                  title="Magic Box"
-                  value={resolveDisplay(tool.magicBox)}
-                  link={resolveLink(tool.magicBox)}
-                />
-              )}
-              {tool?.gameBox && (
-                <ListItem
-                  icon={<FaGamepad />}
-                  title="Game Box"
-                  value={resolveDisplay(tool.gameBox)}
-                  link={resolveLink(tool.gameBox)}
-                />
-              )}
-              {tool?.toolBox && (
-                <ListItem
-                  icon={<FaToolbox />}
-                  title="Tool Box"
-                  value={resolveDisplay(tool.toolBox)}
-                  link={resolveLink(tool.toolBox)}
-                />
-              )}
-              {tool?.calender && (
-                <ListItem
-                  icon={<FaCalendarTimes />}
-                  title="Calender"
-                  value={resolveDisplay(tool.calender)}
-                  link={resolveLink(tool.calender)}
-                />
-              )}
-              {tool?.finance && (
-                <ListItem
-                  icon={<FaDollarSign />}
-                  title="Finance"
-                  value={resolveDisplay(tool.finance)}
-                  link={resolveLink(tool.finance)}
-                />
-              )}
-              {tool?.sport && (
-                <ListItem
-                  icon={<FaRunning />}
-                  title="Sport"
-                  value={resolveDisplay(tool.sport)}
-                  link={resolveLink(tool.sport)}
-                />
-              )}
-              {tool?.task && (
-                <ListItem
-                  icon={<FaTasks />}
-                  title="Task"
-                  value={resolveDisplay(tool.task)}
-                  link={resolveLink(tool.task)}
-                />
-              )}
-              {tool?.checkList && (
-                <ListItem
-                  icon={<FaCalendarCheck />}
-                  title="CheckList"
-                  value={resolveDisplay(tool.checkList)}
-                  link={resolveLink(tool.checkList)}
-                />
-              )}
-              {tool?.f1 && (
-                <ListItem
-                  icon={<FaCar />}
-                  title="F1"
-                  value={resolveDisplay(tool.f1)}
-                  link={resolveLink(tool.f1)}
-                />
-              )}
-              {tool?.motogp && (
-                <ListItem
-                  icon={<FaMotorcycle />}
-                  title="MotoGP"
-                  value={resolveDisplay(tool.motogp)}
-                  link={resolveLink(tool.motogp)}
-                />
-              )}
-              {tool?.shekaste && (
-                <ListItem
-                  icon={<FaBookOpen />}
-                  title="Shekaste"
-                  value={resolveDisplay(tool.shekaste)}
-                  link={resolveLink(tool.shekaste)}
-                />
-              )}
-              {tool?.ghazal && (
-                <ListItem
-                  icon={<FaBookReader />}
-                  title="ghazal"
-                  value={resolveDisplay(tool.ghazal)}
-                  link={resolveLink(tool.ghazal)}
-                />
-              )}
-              {tool?.shortLink && (
-                <ListItem
-                  icon={<FaLink />}
-                  title="ShortLink"
-                  value={resolveDisplay(tool.shortLink)}
-                  link={resolveLink(tool.shortLink)}
-                />
-              )}
-              {tool?.buy && (
-                <ListItem
-                  icon={<FaShopify />}
-                  title="Buy"
-                  value={resolveDisplay(tool.buy)}
-                  link={resolveLink(tool.buy)}
-                />
-              )}
-              {tool?.service && (
-                <ListItem
-                  icon={<FaWrench />}
-                  title="Service"
-                  value={resolveDisplay(tool.service)}
-                  link={resolveLink(tool.service)}
-                />
-              )}
-              {tool?.period && (
-                <ListItem
-                  icon={<FaBurn />}
-                  title="Period"
-                  value={resolveDisplay(tool.period)}
-                  link={resolveLink(tool.period)}
-                />
-              )}
-              {tool?.safar && (
-                <ListItem
-                  icon={<FaPlane />}
-                  title="Safar"
-                  value={resolveDisplay(tool.safar)}
-                  link={resolveLink(tool.safar)}
-                />
-              )}
-              {tool?.school && (
-                <ListItem
-                  icon={<FaUniversity />}
-                  title="School"
-                  value={resolveDisplay(tool.school)}
-                  link={resolveLink(tool.school)}
-                />
-              )}
-              {tool?.nerkh && (
-                <ListItem
-                  icon={<FaAngleDoubleUp />}
-                  title="Nerkh"
-                  value={resolveDisplay(tool.nerkh)}
-                  link={resolveLink(tool.nerkh)}
-                />
-              )}
-              {tool?.health && (
-                <ListItem
-                  icon={<FaHospitalSymbol />}
-                  title="Health"
-                  value={resolveDisplay(tool.health)}
-                  link={resolveLink(tool.health)}
-                />
-              )}
-              {tool?.weather && (
-                <ListItem
-                  icon={<FaCloud />}
-                  title="Weather"
-                  value={resolveDisplay(tool.weather)}
-                  link={resolveLink(tool.weather)}
-                />
-              )}
-              {tool?.english && (
-                <ListItem
-                  icon={<FaLanguage />}
-                  title="english"
-                  value={resolveDisplay(tool.english)}
-                  link={resolveLink(tool.english)}
-                />
-              )}
-              {tool?.memory && (
-                <ListItem
-                  icon={<FaPenNib />}
-                  title="memory"
-                  value={resolveDisplay(tool.memory)}
-                  link={resolveLink(tool.memory)}
-                />
-              )}
-              {tool?.habit && (
-                <ListItem
-                  icon={<FaTasks />}
-                  title="habit"
-                  value={resolveDisplay(tool.habit)}
-                  link={resolveLink(tool.habit)}
-                />
-              )}
-              {tool?.movie && (
-                <ListItem
-                  icon={<FaVideo />}
-                  title="movie"
-                  value={resolveDisplay(tool.movie)}
-                  link={resolveLink(tool.movie)}
-                />
-              )}
-              {tool?.ai && (
-                <ListItem
-                  icon={<FaTools />}
-                  title="AI"
-                  value={resolveDisplay(tool.ai)}
-                  link={resolveLink(tool.ai)}
-                />
-              )}
-              {tool?.proxy && (
-                <ListItem
-                  icon={<FaTelegramPlane />}
-                  title="Proxy"
-                  value={resolveDisplay(tool.proxy)}
-                  link={resolveLink(tool.proxy)}
-                />
-              )}
+              {tool &&
+                Object.entries(tool).map(([key, val]) => {
+                  const item = resolveItem(key, val);
+                  if (!item) return null;
+                  return (
+                    <ListItem
+                      key={item.key}
+                      icon={item.icon}
+                      title={item.title}
+                      value={item.value}
+                      link={item.link}
+                    />
+                  );
+                })}
             </Fragment>
           )}
         </div>

@@ -38,6 +38,8 @@ import NpmCard from './npm-card';
 import NugetCard from './nuget-card';
 import TelegramListCard from './telegram-list-card';
 import ToolsCard from './tool-card';
+import GameIconsCard from './game-icons-card';
+import SoftwareCard from './software-card';
 
 /**
  * Renders the GitProfile component.
@@ -325,6 +327,18 @@ const GitProfile = ({ config }: { config: Config }) => {
                         <AppIconsCard
                           loading={loading}
                           apps={sanitizedConfig.apps}
+                        />
+                      )}
+                      {sanitizedConfig.games.items.length !== 0 && (
+                        <GameIconsCard
+                          loading={loading}
+                          games={sanitizedConfig.games}
+                        />
+                      )}
+                      {sanitizedConfig.software.items.length !== 0 && (
+                        <SoftwareCard
+                          loading={loading}
+                          software={sanitizedConfig.software}
                         />
                       )}
                       {sanitizedConfig.nuget.items.length !== 0 && (

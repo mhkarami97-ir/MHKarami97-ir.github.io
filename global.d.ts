@@ -151,6 +151,15 @@ interface Jetbrains {
   }[];
 }
 
+interface Software {
+  header?: string;
+  items?: {
+    name: string;
+    imageUrl: string;
+    link: string;
+  }[];
+}
+
 interface SEO {
   /**
    * Meta title
@@ -168,49 +177,26 @@ interface SEO {
   imageURL?: string;
 }
 
+interface WebsiteItem {
+  link: string;
+  title?: string;
+  name?: string;
+  icon?: string;
+}
+
 interface Website {
-  travel?: string;
-  tour?: string;
-  experience?: string;
-  shop?: string;
-  house?: string;
-  chavooshan?: string;
-  zolfdota?: string;
-  dorgardoon?: string;
-  molkrey?: string;
-  zamaanak?: string;
-  hengam?: string;
-  crm?: string;
+  [key: string]: string | WebsiteItem | undefined;
+}
+
+interface ToolItem {
+  link: string;
+  title?: string;
+  name?: string;
+  icon?: string;
 }
 
 interface Tool {
-  magicBox?: string;
-  gameBox?: string;
-  toolBox?: string;
-  calender?: string;
-  finance?: string;
-  sport?: string;
-  task?: string;
-  checkList?: string;
-  f1?: string;
-  motogp?: string;
-  shekaste?: string;
-  ghazal?: string;
-  shortLink?: string;
-  buy?: string;
-  service?: string;
-  period?: string;
-  safar?: string;
-  school?: string;
-  nerkh?: string;
-  health?: string;
-  weather?: string;
-  english?: string;
-  memory?: string;
-  habit?: string;
-  movie?: string;
-  ai?: string;
-  proxy?: string;
+  [key: string]: string | ToolItem | undefined;
 }
 
 interface Social {
@@ -600,6 +586,11 @@ interface Config {
    * Jetbrains extensions config
    */
   jetbrains?: Jetbrains;
+
+  /**
+   * Software config
+   */
+  software?: Software;
 
   /**
    * npm config
