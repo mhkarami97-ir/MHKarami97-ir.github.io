@@ -12,8 +12,14 @@ import {
   FaGlobe,
   FaTelegram,
   FaPuzzlePiece,
-  FaCube,
+  FaWindows,
+  FaNpm,
+  FaInfoCircle,
+  FaCheck,
+  FaShieldAlt,
+  FaUserCheck,
 } from 'react-icons/fa';
+import { SiJetbrains, SiNuget } from 'react-icons/si';
 import { ProductConfig, PRODUCTS, getProductById } from '../../data/products';
 import LazyImage from '../lazy-image';
 import { skeleton } from '../../utils';
@@ -106,6 +112,94 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
     }
   };
 
+  // Helper to determine accurate action button title, subtitle and icon
+  const getActionInfo = (p: ProductConfig) => {
+    const direct = p.links?.direct || '';
+    const cat = p.category || '';
+    const type = p.type;
+
+    if (cat.includes('JetBrains') || direct.includes('jetbrains.com')) {
+      return {
+        label: 'دریافت از JetBrains Marketplace',
+        sublabel: 'افزونه رسمی محیط توسعه Rider و IntelliJ',
+        icon: <SiJetbrains className="w-5 h-5 text-amber-400" />,
+        btnClass: 'btn-neutral text-white',
+      };
+    }
+
+    if (
+      cat.includes('ویندوز') ||
+      (direct.includes('github.com') && direct.includes('/releases'))
+    ) {
+      return {
+        label: 'دانلود مستقیم برای ویندوز',
+        sublabel: 'نسخه رسمی ویندوز (GitHub Releases)',
+        icon: <FaWindows className="w-5 h-5 text-sky-400" />,
+        btnClass: 'btn-primary text-white',
+      };
+    }
+
+    if (cat.includes('NuGet') || direct.includes('nuget.org')) {
+      return {
+        label: 'مشاهده در مخزن NuGet Gallery',
+        sublabel: 'نصب با دستور dotnet add package',
+        icon: <SiNuget className="w-5 h-5 text-blue-400" />,
+        btnClass: 'btn-primary text-white',
+      };
+    }
+
+    if (cat.includes('NPM') || direct.includes('npmjs.com')) {
+      return {
+        label: 'مشاهده در مخزن npm Registry',
+        sublabel: 'نصب با دستور npm i',
+        icon: <FaNpm className="w-5 h-5 text-red-500" />,
+        btnClass: 'btn-primary text-white',
+      };
+    }
+
+    if (
+      cat.includes('مرورگر') ||
+      direct.includes('microsoftedge.com') ||
+      direct.includes('chrome.google.com')
+    ) {
+      return {
+        label: 'نصب افزونه در مرورگر (اج / کروم)',
+        sublabel: 'نصب رایگان از فروشگاه افزونه‌ها',
+        icon: <FaPuzzlePiece className="w-5 h-5 text-teal-400" />,
+        btnClass: 'btn-primary text-white',
+      };
+    }
+
+    if (
+      type === 'bot' ||
+      direct.includes('t.me') ||
+      direct.includes('telegram.me')
+    ) {
+      return {
+        label: 'ورود به ربات در تلگرام',
+        sublabel: 'اجرا و استفاده رایگان در تلگرام',
+        icon: <FaTelegram className="w-5 h-5 text-sky-400" />,
+        btnClass: 'btn-info text-white',
+      };
+    }
+
+    if (type === 'website' || cat.includes('سایت') || cat.includes('وب')) {
+      return {
+        label: 'ورود به وب‌سایت رسمی',
+        sublabel: 'مشاهده آنلاین در مرورگر',
+        icon: <FaGlobe className="w-5 h-5 text-emerald-400" />,
+        btnClass: 'btn-primary text-white',
+      };
+    }
+
+    return {
+      label: 'مشاهده و استفاده از محصول',
+      sublabel: 'لینک مستقیم به صفحه محصول',
+      icon: <FaExternalLinkAlt className="w-4 h-4 text-white" />,
+      btnClass: 'btn-primary text-white',
+    };
+  };
+
   // Other related products
   const relatedProducts = PRODUCTS.filter(
     (p) =>
@@ -195,10 +289,10 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
         </Helmet>
 
         <div className="max-w-5xl mx-auto space-y-6">
-          {/* Top Bar / Navigation */}
+          {/* Top Bar / Navigation Redesigned */}
           <nav
             aria-label="Breadcrumb"
-            className="flex items-center justify-between gap-4 py-2"
+            className="card bg-base-100/90 backdrop-blur-md shadow-sm border border-base-300 rounded-2xl px-4 py-3 flex flex-row items-center justify-between gap-3"
           >
             <a
               href="/"
@@ -208,20 +302,18 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
                   onNavigateHome();
                 }
               }}
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-2xl bg-base-100 hover:bg-base-200 text-base-content border border-base-300 shadow-sm transition-all duration-200 hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs sm:text-sm font-semibold rounded-xl bg-primary/10 hover:bg-primary text-primary hover:text-white border border-primary/20 transition-all duration-200"
             >
               <FaArrowRight className="w-3.5 h-3.5" />
               <span>بازگشت به صفحه اصلی</span>
             </a>
 
-            <div className="hidden sm:flex items-center gap-2 text-xs text-base-content/60 font-medium">
-              <span>خانه</span>
-              <span>/</span>
-              <span className="badge badge-sm badge-ghost">
+            <div className="flex items-center gap-2 text-xs sm:text-sm font-medium text-base-content/70">
+              <span className="badge badge-sm badge-outline font-semibold border-primary/40 text-primary">
                 {product.category}
               </span>
-              <span>/</span>
-              <span className="text-base-content font-bold truncate max-w-xs">
+              <span className="opacity-40">/</span>
+              <span className="text-base-content font-bold truncate max-w-[150px] sm:max-w-xs">
                 {product.name}
               </span>
             </div>
@@ -247,16 +339,19 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
                 </div>
 
                 {/* Info & Details */}
-                <div className="flex-grow text-center md:text-right space-y-3">
+                <div className="flex-grow text-center md:text-right space-y-3 w-full">
                   <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
                     <span className="badge badge-primary badge-outline font-semibold px-3 py-1">
                       {product.category}
                     </span>
                     {product.type === 'app' && (
                       <span className="badge badge-secondary badge-outline px-3 py-1">
-                        PWA / Progressive Web App
+                        PWA / وب‌اپلیکیشن پیش‌رونده
                       </span>
                     )}
+                    <span className="badge badge-ghost px-2.5 py-1 text-xs text-base-content/70">
+                      رایگان
+                    </span>
                   </div>
 
                   <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-base-content tracking-tight leading-snug">
@@ -273,16 +368,25 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
                   <div className="pt-3 flex flex-wrap items-center justify-center md:justify-start gap-3">
                     {/* App Buttons (Android + iOS) */}
                     {product.type === 'app' && (
-                      <>
+                      <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 w-full sm:w-auto">
                         {product.links.android && (
                           <a
                             href={product.links.android}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn btn-primary rounded-2xl gap-2 shadow-md hover:shadow-lg transition-all"
+                            className="btn btn-primary rounded-2xl gap-3 shadow-md hover:shadow-xl transition-all duration-200 hover:-translate-y-0.5 px-5 py-2.5 h-auto"
                           >
-                            <FaAndroid className="w-5 h-5" />
-                            <span>دانلود برای اندروید (کافه بازار)</span>
+                            <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
+                              <FaAndroid className="w-5 h-5 text-white" />
+                            </div>
+                            <div className="text-right">
+                              <div className="text-[11px] opacity-80 font-normal">
+                                دریافت نسخه اندروید
+                              </div>
+                              <div className="text-sm font-bold">
+                                دانلود از کافه بازار
+                              </div>
+                            </div>
                           </a>
                         )}
                         {product.links.ios && (
@@ -290,61 +394,70 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
                             href={product.links.ios}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn btn-secondary rounded-2xl gap-2 shadow-md hover:shadow-lg transition-all"
+                            className="btn btn-secondary rounded-2xl gap-3 shadow-md hover:shadow-xl transition-all duration-200 hover:-translate-y-0.5 px-5 py-2.5 h-auto"
                           >
-                            <FaApple className="w-5 h-5" />
-                            <span>اجرا در وب و آیفون (iOS / PWA)</span>
+                            <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
+                              <FaApple className="w-5 h-5 text-white" />
+                            </div>
+                            <div className="text-right">
+                              <div className="text-[11px] opacity-80 font-normal">
+                                اجرا در وب، آیفون و دسکتاپ
+                              </div>
+                              <div className="text-sm font-bold">
+                                نسخه تحت وب (PWA)
+                              </div>
+                            </div>
                           </a>
                         )}
-                      </>
+                      </div>
                     )}
 
                     {/* Non-app Direct Buttons */}
-                    {product.type !== 'app' && product.links.direct && (
-                      <a
-                        href={product.links.direct}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-primary rounded-2xl gap-2 shadow-md hover:shadow-lg transition-all"
-                      >
-                        {product.type === 'extension' ? (
-                          <FaPuzzlePiece className="w-5 h-5" />
-                        ) : product.type === 'bot' ? (
-                          <FaTelegram className="w-5 h-5" />
-                        ) : product.type === 'package' ? (
-                          <FaCube className="w-5 h-5" />
-                        ) : (
-                          <FaGlobe className="w-5 h-5" />
-                        )}
-                        <span>
-                          {product.type === 'extension'
-                            ? 'مشاهده و نصب افزونه'
-                            : product.type === 'bot'
-                              ? 'ورود به ربات تلگرام'
-                              : product.type === 'package'
-                                ? 'مشاهده پکیج و مستندات'
-                                : 'ورود به وب‌سایت'}
-                        </span>
-                        <FaExternalLinkAlt className="w-3.5 h-3.5 opacity-70" />
-                      </a>
-                    )}
+                    {product.type !== 'app' &&
+                      product.links.direct &&
+                      (() => {
+                        const action = getActionInfo(product);
+                        return (
+                          <a
+                            href={product.links.direct}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`btn ${action.btnClass} rounded-2xl gap-3 shadow-md hover:shadow-xl transition-all duration-200 hover:-translate-y-0.5 px-5 py-2.5 h-auto`}
+                          >
+                            <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
+                              {action.icon}
+                            </div>
+                            <div className="text-right">
+                              <div className="text-[11px] opacity-80 font-normal">
+                                {action.sublabel}
+                              </div>
+                              <div className="text-sm font-bold">
+                                {action.label}
+                              </div>
+                            </div>
+                            <FaExternalLinkAlt className="w-3.5 h-3.5 opacity-60 mr-1" />
+                          </a>
+                        );
+                      })()}
 
                     {/* Share Button */}
                     <button
                       type="button"
                       onClick={handleShare}
-                      className="btn btn-outline rounded-2xl gap-2 border-base-300 hover:bg-base-200 hover:border-base-content/20 text-base-content"
+                      className="btn btn-outline rounded-2xl gap-2 border-base-300 hover:bg-base-200 hover:border-base-content/20 text-base-content px-4 py-2.5 h-auto"
                       title="اشتراک‌گذاری این صفحه"
                     >
-                      <FaShareAlt className="w-4 h-4" />
-                      <span>{copied ? 'لینک کپی شد!' : 'اشتراک‌گذاری'}</span>
+                      <FaShareAlt className="w-4 h-4 text-primary" />
+                      <span className="text-sm font-medium">
+                        {copied ? 'لینک کپی شد!' : 'اشتراک‌گذاری'}
+                      </span>
                     </button>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Screenshots Gallery */}
+            {/* Screenshots Gallery - CENTERED */}
             {hasScreenshots && (
               <div className="border-t border-base-300 bg-base-200/30 p-6 sm:p-8 space-y-4">
                 <div className="flex items-center justify-between">
@@ -368,7 +481,7 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
                       >
                         <FaChevronRight className="w-3 h-3" />
                       </button>
-                      <span className="text-xs font-mono text-base-content/60">
+                      <span className="text-xs font-mono text-base-content/60 px-1">
                         {activeImageIndex + 1} / {screenshots.length}
                       </span>
                       <button
@@ -387,19 +500,19 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
                   )}
                 </div>
 
-                {/* Large Preview */}
-                <div className="relative rounded-2xl overflow-hidden bg-base-300/40 border border-base-300 flex items-center justify-center p-2 sm:p-4 min-h-[300px] sm:min-h-[440px]">
+                {/* Large Preview - Center Aligned */}
+                <div className="relative rounded-2xl overflow-hidden bg-base-300/30 border border-base-300 flex items-center justify-center p-3 sm:p-6 min-h-[300px] sm:min-h-[460px] text-center">
                   <img
                     src={screenshots[activeImageIndex]}
                     alt={`${product.name} - تصویر ${activeImageIndex + 1}`}
-                    className="max-h-[500px] max-w-full rounded-xl object-contain shadow-md transition-all duration-300"
+                    className="max-h-[500px] max-w-full rounded-xl object-contain shadow-md mx-auto transition-all duration-300"
                     loading="lazy"
                   />
                 </div>
 
-                {/* Thumbnails Row */}
+                {/* Thumbnails Row - Center Aligned */}
                 {screenshots.length > 1 && (
-                  <div className="flex items-center gap-3 overflow-x-auto pb-2 pt-1 scrollbar-thin">
+                  <div className="flex items-center justify-center flex-wrap sm:flex-nowrap gap-3 overflow-x-auto pb-2 pt-2 scrollbar-thin">
                     {screenshots.map((shot, idx) => (
                       <button
                         key={idx}
@@ -425,21 +538,29 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
             )}
           </article>
 
-          {/* Features Section */}
+          {/* Features Section - Balanced 2x2 Grid */}
           {product.features && product.features.length > 0 && (
-            <section className="card bg-base-100 shadow-xl border border-base-300 rounded-3xl p-6 sm:p-8 space-y-4">
-              <h2 className="text-xl sm:text-2xl font-bold text-base-content flex items-center gap-2">
-                <FaCheckCircle className="text-primary w-5 h-5" />
-                <span>ویژگی‌ها و قابلیت‌های کلیدی</span>
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+            <section className="card bg-base-100 shadow-xl border border-base-300 rounded-3xl p-6 sm:p-8 space-y-5">
+              <div className="flex items-center justify-between border-b border-base-300/60 pb-4">
+                <h2 className="text-xl sm:text-2xl font-bold text-base-content flex items-center gap-2.5">
+                  <span className="w-8 h-8 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                    <FaCheckCircle className="w-4 h-4" />
+                  </span>
+                  <span>ویژگی‌ها و قابلیت‌های کلیدی</span>
+                </h2>
+                <span className="badge badge-neutral badge-sm font-mono">
+                  {product.features.length} ویژگی
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
                 {product.features.map((feature, idx) => (
                   <div
                     key={idx}
-                    className="flex items-start gap-3 p-3.5 rounded-2xl bg-base-200/50 border border-base-300/60 hover:bg-base-200 transition-colors"
+                    className="group flex items-start gap-3.5 p-4 rounded-2xl bg-base-200/40 hover:bg-base-200/80 border border-base-300/60 hover:border-primary/40 transition-all duration-200"
                   >
-                    <span className="flex items-center justify-center w-5 h-5 rounded-full bg-primary/15 text-primary text-xs font-bold mt-0.5 flex-shrink-0">
-                      ✓
+                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/15 text-primary text-xs font-bold mt-0.5 flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                      <FaCheck className="w-2.5 h-2.5" />
                     </span>
                     <span className="text-sm sm:text-base font-medium text-base-content/90 leading-relaxed">
                       {feature}
@@ -450,14 +571,107 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
             </section>
           )}
 
-          {/* Full Description Section */}
+          {/* Full Description Section - Redesigned UI/UX */}
           {product.fullDescription && (
-            <section className="card bg-base-100 shadow-xl border border-base-300 rounded-3xl p-6 sm:p-8 space-y-4">
-              <h2 className="text-xl sm:text-2xl font-bold text-base-content">
-                درباره {product.name}
-              </h2>
-              <div className="text-base-content/85 leading-loose text-base sm:text-lg space-y-4 whitespace-pre-line font-normal">
-                {product.fullDescription}
+            <section className="card bg-base-100 shadow-xl border border-base-300 rounded-3xl p-6 sm:p-8 space-y-6">
+              <div className="border-b border-base-300/60 pb-4 flex flex-wrap items-center justify-between gap-3">
+                <h2 className="text-xl sm:text-2xl font-bold text-base-content flex items-center gap-2.5">
+                  <span className="w-8 h-8 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                    <FaInfoCircle className="w-4 h-4" />
+                  </span>
+                  <span>درباره و معرفی کامل {product.name}</span>
+                </h2>
+
+                <div className="flex items-center gap-2 text-xs text-base-content/60">
+                  <span className="inline-flex items-center gap-1">
+                    <FaShieldAlt className="w-3 h-3 text-success" />
+                    تضمین اصالت و امنیت
+                  </span>
+                  <span>•</span>
+                  <span className="inline-flex items-center gap-1">
+                    <FaUserCheck className="w-3 h-3 text-info" />
+                    محمد حسین کرمی
+                  </span>
+                </div>
+              </div>
+
+              {/* Enhanced Typography & Spacing */}
+              <div className="space-y-4 text-base sm:text-lg leading-relaxed text-base-content/85 font-normal">
+                {product.fullDescription
+                  .split('\n\n')
+                  .map((paragraph, pIdx) => {
+                    const trimmed = paragraph.trim();
+                    if (!trimmed) return null;
+
+                    // Check if this paragraph contains bullet lines
+                    const lines = trimmed.split('\n');
+                    const isList =
+                      lines.length > 1 &&
+                      lines.every(
+                        (l) =>
+                          l.trim().startsWith('-') ||
+                          l.trim().startsWith('•') ||
+                          l.trim().startsWith('*') ||
+                          /^\d+\./.test(l.trim()),
+                      );
+
+                    if (isList) {
+                      return (
+                        <ul
+                          key={pIdx}
+                          className="space-y-2.5 my-4 p-4 rounded-2xl bg-base-200/50 border border-base-300/70"
+                        >
+                          {lines.map((line, lIdx) => (
+                            <li
+                              key={lIdx}
+                              className="flex items-start gap-2.5 text-sm sm:text-base leading-relaxed"
+                            >
+                              <span className="text-primary font-bold mt-1 text-xs">
+                                ◆
+                              </span>
+                              <span>
+                                {line.replace(/^[-•*]|\d+\./, '').trim()}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      );
+                    }
+
+                    return (
+                      <p
+                        key={pIdx}
+                        className="text-base sm:text-base leading-loose text-justify"
+                      >
+                        {trimmed}
+                      </p>
+                    );
+                  })}
+              </div>
+
+              {/* Highlights bar */}
+              <div className="p-4 rounded-2xl bg-base-200/50 border border-base-300/80 flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm text-base-content/70">
+                <div className="flex items-center gap-2">
+                  <span className="font-semibold text-base-content">
+                    دسته‌بندی:
+                  </span>
+                  <span>{product.category}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-semibold text-base-content">مجوز:</span>
+                  <span>کاملاً رایگان برای عموم کاربران</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-semibold text-base-content">
+                    توسعه‌دهنده:
+                  </span>
+                  <a
+                    href="https://mhkarami97.ir"
+                    className="text-primary hover:underline font-bold"
+                  >
+                    محمد حسین کرمی
+                  </a>
+                </div>
               </div>
             </section>
           )}
@@ -465,9 +679,9 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
           {/* Related Products */}
           {relatedProducts.length > 0 && (
             <section className="card bg-base-100 shadow-xl border border-base-300 rounded-3xl p-6 sm:p-8 space-y-5">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between border-b border-base-300/60 pb-4">
                 <h2 className="text-xl sm:text-2xl font-bold text-base-content">
-                  سایر محصولات و برنامه‌ها
+                  سایر محصولات و پروژه‌های مرتبط
                 </h2>
                 <a
                   href="/"
@@ -477,9 +691,9 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
                       onNavigateHome();
                     }
                   }}
-                  className="text-xs sm:text-sm text-primary hover:underline font-medium"
+                  className="text-xs sm:text-sm text-primary hover:underline font-bold"
                 >
-                  مشاهده همه &larr;
+                  مشاهده همه موارد &larr;
                 </a>
               </div>
 
@@ -489,7 +703,7 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
                     key={rel.id}
                     href={`/p/${rel.id}`}
                     onClick={(e) => handleNavProduct(rel.id, e)}
-                    className="group card bg-base-200/60 hover:bg-base-200 border border-base-300 p-4 rounded-2xl transition-all duration-200 hover:-translate-y-1 hover:shadow-md cursor-pointer flex flex-col justify-between"
+                    className="group card bg-base-200/50 hover:bg-base-200 border border-base-300 p-4 rounded-2xl transition-all duration-200 hover:-translate-y-1 hover:shadow-md cursor-pointer flex flex-col justify-between"
                   >
                     <div className="flex items-center gap-3 mb-2">
                       <div className="w-12 h-12 rounded-2xl overflow-hidden bg-base-100 shadow-sm ring-1 ring-base-300 group-hover:ring-primary flex-shrink-0">
@@ -518,19 +732,16 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
             </section>
           )}
 
-          {/* Footer Bar */}
-          <footer className="text-center text-xs text-base-content/60 py-6 space-y-2">
+          {/* Footer Bar - Address URL Removed */}
+          <footer className="text-center text-xs text-base-content/60 py-8">
             <p>
-              طراحی و توسعه توسط{' '}
+              طراحی و توسعه با ❤️ توسط{' '}
               <a
                 href="https://mhkarami97.ir"
-                className="text-primary hover:underline font-medium"
+                className="text-primary hover:underline font-bold"
               >
                 محمد حسین کرمی
               </a>
-            </p>
-            <p className="text-[11px] font-mono opacity-70">
-              mhkarami97.ir/p/{product.id}
             </p>
           </footer>
         </div>
