@@ -20,27 +20,50 @@ const ListItem: React.FC<{
   skeleton?: boolean;
 }> = ({ icon, title, value, link, skeleton = false }) => {
   const isInternal = link?.startsWith('/');
+
+  if (link && !skeleton) {
+    return (
+      <a
+        href={link}
+        target={isInternal ? undefined : '_blank'}
+        rel={isInternal ? undefined : 'noreferrer'}
+        className="flex justify-between items-center py-1.5 px-2 rounded-xl hover:bg-base-200/60 transition-colors group cursor-pointer"
+      >
+        <div className="flex-grow font-medium gap-2 flex items-center text-base-content group-hover:text-primary transition-colors">
+          <span className="text-primary group-hover:scale-110 transition-transform flex items-center justify-center">
+            {icon}
+          </span>
+          <span>{title}</span>
+        </div>
+        <div
+          className="text-sm font-normal text-right mr-2 ml-3 truncate opacity-70 group-hover:opacity-100 group-hover:text-primary transition-colors"
+          style={{
+            wordBreak: 'break-word',
+          }}
+        >
+          {value}
+        </div>
+      </a>
+    );
+  }
+
   return (
-    <div className="flex justify-start px-1 items-center">
-      <div className="flex-grow font-medium gap-2 flex items-center my-1">
-        {icon} {title}
+    <div className="flex justify-between items-center py-1.5 px-2">
+      <div className="flex-grow font-medium gap-2 flex items-center">
+        <span className="text-primary flex items-center justify-center">
+          {icon}
+        </span>
+        <span>{title}</span>
       </div>
       <div
         className={`${
           skeleton ? 'flex-grow' : ''
-        } text-sm font-normal text-right mr-2 ml-3 ${link ? 'truncate' : ''}`}
+        } text-sm font-normal text-right mr-2 ml-3`}
         style={{
           wordBreak: 'break-word',
         }}
       >
-        <a
-          href={link}
-          target={isInternal ? undefined : '_blank'}
-          rel={isInternal ? undefined : 'noreferrer'}
-          className="flex justify-start px-1 items-center hover:text-primary transition-colors"
-        >
-          {value}
-        </a>
+        {value}
       </div>
     </div>
   );

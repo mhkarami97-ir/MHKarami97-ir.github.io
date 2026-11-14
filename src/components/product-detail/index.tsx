@@ -4,7 +4,6 @@ import {
   FaAndroid,
   FaApple,
   FaExternalLinkAlt,
-  FaShareAlt,
   FaArrowRight,
   FaCheckCircle,
   FaChevronRight,
@@ -16,8 +15,6 @@ import {
   FaNpm,
   FaInfoCircle,
   FaCheck,
-  FaShieldAlt,
-  FaUserCheck,
 } from 'react-icons/fa';
 import { SiJetbrains, SiNuget } from 'react-icons/si';
 import { ProductConfig, PRODUCTS, getProductById } from '../../data/products';
@@ -33,7 +30,6 @@ interface Props {
 const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
   const product: ProductConfig | undefined = getProductById(slug);
   const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
-  const [copied, setCopied] = useState<boolean>(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -81,29 +77,6 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
 
   const screenshots = product.screenshots || [];
   const hasScreenshots = screenshots.length > 0;
-
-  const handleShare = async () => {
-    const url = window.location.href;
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: product.title,
-          text: product.shortDescription,
-          url,
-        });
-        return;
-      } catch (err) {
-        // user cancelled or share failed, fallback to copy
-      }
-    }
-    try {
-      await navigator.clipboard.writeText(url);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2500);
-    } catch (err) {
-      console.error(err);
-    }
-  };
 
   const handleNavProduct = (id: string, e: React.MouseEvent) => {
     if (onNavigateProduct) {
