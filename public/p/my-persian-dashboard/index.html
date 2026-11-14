@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="procyon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>داشبورد فارسی من | محمد حسین کرمی</title>
+
+    <meta name="title" content="داشبورد فارسی من | محمد حسین کرمی" />
+    <meta name="description" content="Make Microsoft Edge your own with extensions that help you personalize the browser and be more productive." />
+    <meta name="keywords" content="افزونه, اکستنشن, مرورگر, Edge, New Tab" />
+    <meta name="author" content="محمد حسین کرمی | Mohammad Hossein Karami" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://mhkarami97.ir/p/my-persian-dashboard" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mhkarami97.ir/p/my-persian-dashboard" />
+    <meta property="og:title" content="داشبورد فارسی من | محمد حسین کرمی" />
+    <meta property="og:description" content="Make Microsoft Edge your own with extensions that help you personalize the browser and be more productive." />
+    <meta property="og:image" content="https://mhkarami97.ir/icons/extension/01.png" />
+    <meta property="og:site_name" content="محمد حسین کرمی" />
+    <meta property="og:locale" content="fa_IR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://mhkarami97.ir/p/my-persian-dashboard" />
+    <meta name="twitter:title" content="داشبورد فارسی من | محمد حسین کرمی" />
+    <meta name="twitter:description" content="Make Microsoft Edge your own with extensions that help you personalize the browser and be more productive." />
+    <meta name="twitter:image" content="https://mhkarami97.ir/icons/extension/01.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="stylesheet" href="/fonts/Vazirmatn-font-face.css" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"WebApplication","name":"New Tab","headline":"داشبورد فارسی من","description":"Make Microsoft Edge your own with extensions that help you personalize the browser and be more productive.","image":"https://mhkarami97.ir/icons/extension/01.png","url":"https://mhkarami97.ir/p/my-persian-dashboard","applicationCategory":"افزونه مرورگر","operatingSystem":"Browser (Edge, Chrome)","author":{"@type":"Person","name":"Mohammad Hossein Karami","url":"https://mhkarami97.ir"},"offers":{"@type":"Offer","price":"0","priceCurrency":"IRR"}}
+    </script>
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"خانه","item":"https://mhkarami97.ir/"},{"@type":"ListItem","position":2,"name":"افزونه مرورگر","item":"https://mhkarami97.ir/"},{"@type":"ListItem","position":3,"name":"New Tab","item":"https://mhkarami97.ir/p/my-persian-dashboard"}]}
+    </script>
+
+    <style>
+      :root {
+        --primary: #6f48ff;
+        --secondary: #8d3bff;
+        --bg-page: #e3e3ed;
+        --bg-card: #ffffff;
+        --text: #2a2730;
+        --border: #d5d5e2;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background-color: var(--bg-page);
+        color: var(--text);
+        line-height: 1.6;
+        direction: rtl;
+        text-align: right;
+      }
+      .container { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+      .nav-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+      .btn-back {
+        display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px;
+        background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+        color: var(--text); text-decoration: none; font-size: 14px; font-weight: 500;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      }
+      .breadcrumb { font-size: 13px; color: #666; }
+      .hero-card {
+        background: var(--bg-card); border: 1px solid var(--border); border-radius: 24px;
+        padding: 32px 24px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+        display: flex; flex-direction: column; gap: 24px; margin-bottom: 24px;
+      }
+      @media (min-width: 640px) {
+        .hero-card { flex-direction: row; align-items: flex-start; }
+      }
+      .product-icon {
+        width: 120px; height: 120px; border-radius: 28px; object-fit: cover;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1); border: 3px solid rgba(111,72,255,0.2);
+        flex-shrink: 0; margin: 0 auto;
+      }
+      .hero-content { flex-grow: 1; }
+      .badge {
+        display: inline-block; padding: 4px 12px; border-radius: 9999px; font-size: 12px;
+        font-weight: 600; color: var(--primary); border: 1px solid var(--primary); margin-bottom: 12px;
+      }
+      h1 { font-size: 26px; font-weight: 800; margin-bottom: 8px; color: var(--text); }
+      .short-desc { font-size: 16px; color: #555; margin-bottom: 20px; line-height: 1.6; }
+      .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+      .btn-primary-action {
+        background: var(--primary); color: #fff; padding: 12px 24px; border-radius: 16px;
+        text-decoration: none; font-weight: 600; font-size: 14px; display: inline-flex;
+        align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(111,72,255,0.3);
+      }
+      .btn-secondary-action {
+        background: #2a2730; color: #fff; padding: 12px 24px; border-radius: 16px;
+        text-decoration: none; font-weight: 600; font-size: 14px; display: inline-flex;
+        align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      }
+      .section-card {
+        background: var(--bg-card); border: 1px solid var(--border); border-radius: 24px;
+        padding: 24px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); margin-bottom: 24px;
+      }
+      .section-title { font-size: 20px; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+      .features-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+      @media (min-width: 640px) { .features-grid { grid-template-columns: 1fr 1fr; } }
+      .feature-item {
+        display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px;
+        background: #f7f7fa; border: 1px solid var(--border); border-radius: 14px;
+        font-size: 14px; font-weight: 500;
+      }
+      .feature-item .check {
+        color: var(--primary); font-weight: bold; background: rgba(111,72,255,0.1);
+        width: 22px; height: 22px; display: flex; align-items: center; justify-content: center;
+        border-radius: 50%; flex-shrink: 0;
+      }
+      .screenshots-scroll {
+        display: flex; gap: 14px; overflow-x: auto; padding-bottom: 12px;
+      }
+      .screenshot-img {
+        max-height: 380px; width: auto; border-radius: 16px; border: 1px solid var(--border);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      }
+      .description-body { font-size: 15px; color: #444; line-height: 1.8; }
+      .description-body p { margin-bottom: 14px; }
+      footer { text-align: center; font-size: 13px; color: #777; margin-top: 36px; padding: 16px; }
+      footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="container">
+        <nav class="nav-top">
+          <a href="/" class="btn-back">&rarr; بازگشت به صفحه اصلی</a>
+          <div class="breadcrumb">خانه / افزونه مرورگر / New Tab</div>
+        </nav>
+
+        <article class="hero-card">
+          <img src="/icons/extension/01.png" alt="New Tab" class="product-icon" />
+          <div class="hero-content">
+            <span class="badge">افزونه مرورگر</span>
+            <h1>داشبورد فارسی من | محمد حسین کرمی</h1>
+            <p class="short-desc">Make Microsoft Edge your own with extensions that help you personalize the browser and be more productive.</p>
+            <div class="actions">
+              
+      <a href="https://microsoftedge.microsoft.com/addons/detail/my-persian-dashboard/mdnmgigpikijbhjenbjknhcnldebobpa" target="_blank" rel="noopener noreferrer" class="btn-primary-action">
+        <span>نصب افزونه در مرورگر</span>
+      </a>
+            </div>
+          </div>
+        </article>
+
+        
+        
+      <section class="section-card">
+        <h2 class="section-title">ویژگی‌ها و قابلیت‌های کلیدی</h2>
+        <div class="features-grid">
+          <div class="feature-item"><span class="check">✓</span><span>سازگار با مرورگرهای مبتنی بر کرومیوم (Edge, Chrome)</span></div><div class="feature-item"><span class="check">✓</span><span>عملکرد سریع و سبک بدون مصرف زیاد رم</span></div><div class="feature-item"><span class="check">✓</span><span>طراحی زیبا و هماهنگ با زبان فارسی</span></div>
+        </div>
+      </section>
+        
+      <section class="section-card">
+        <h2 class="section-title">درباره New Tab</h2>
+        <div class="description-body"><p>Make Microsoft Edge your own with extensions that help you personalize the browser and be more productive.</p></div>
+      </section>
+
+        <footer>
+          <p>طراحی و توسعه توسط <a href="https://mhkarami97.ir">محمد حسین کرمی</a></p>
+          <p style="margin-top: 4px; font-size: 11px; opacity: 0.7;">mhkarami97.ir/p/my-persian-dashboard</p>
+        </footer>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

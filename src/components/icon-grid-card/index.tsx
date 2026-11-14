@@ -26,30 +26,33 @@ const IconGridCard = ({ items, loading }: Props) => {
     ));
 
   const renderItems = () =>
-    items.map((item, index) => (
-      <a
-        className="flex flex-col items-center gap-2 group cursor-pointer"
-        key={`${item.link}-${index}`}
-        href={item.link}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div className="w-16 h-16 rounded-full overflow-hidden shadow-md ring-2 ring-base-300 ring-offset-2 ring-offset-base-100 group-hover:ring-primary group-hover:shadow-lg transition-all duration-300 group-hover:scale-110">
-          <LazyImage
-            src={item.imageUrl}
-            alt={item.name}
-            placeholder={skeleton({
-              widthCls: 'w-full',
-              heightCls: 'h-full',
-              shape: '',
-            })}
-          />
-        </div>
-        <span className="text-xs text-base-content text-opacity-70 group-hover:text-primary transition-colors duration-300 text-center leading-tight max-w-[4.5rem] truncate">
-          {item.name}
-        </span>
-      </a>
-    ));
+    items.map((item, index) => {
+      const isInternal = item.link.startsWith('/');
+      return (
+        <a
+          className="flex flex-col items-center gap-2 group cursor-pointer"
+          key={`${item.link}-${index}`}
+          href={item.link}
+          target={isInternal ? undefined : '_blank'}
+          rel={isInternal ? undefined : 'noopener noreferrer'}
+        >
+          <div className="w-16 h-16 rounded-full overflow-hidden shadow-md ring-2 ring-base-300 ring-offset-2 ring-offset-base-100 group-hover:ring-primary group-hover:shadow-lg transition-all duration-300 group-hover:scale-110">
+            <LazyImage
+              src={item.imageUrl}
+              alt={item.name}
+              placeholder={skeleton({
+                widthCls: 'w-full',
+                heightCls: 'h-full',
+                shape: '',
+              })}
+            />
+          </div>
+          <span className="text-xs text-base-content text-opacity-70 group-hover:text-primary transition-colors duration-300 text-center leading-tight max-w-[4.5rem] truncate">
+            {item.name}
+          </span>
+        </a>
+      );
+    });
 
   return (
     <div className="min-w-0 h-full">

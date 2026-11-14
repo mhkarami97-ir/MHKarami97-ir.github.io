@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { FaTelegram } from 'react-icons/fa';
 import { skeleton, normalizeTelegramIdentifier } from '../../utils';
+import { getProductById } from '../../data/products';
 
 type Props = {
   header: string;
@@ -18,6 +19,7 @@ const ListItem: React.FC<{
   link?: string;
   skeleton?: boolean;
 }> = ({ icon, title, value, link, skeleton = false }) => {
+  const isInternal = link?.startsWith('/');
   return (
     <div className="flex justify-start px-1 items-center">
       <div className="flex-grow font-medium gap-2 flex items-center my-1">
@@ -33,9 +35,9 @@ const ListItem: React.FC<{
       >
         <a
           href={link}
-          target="_blank"
-          rel="noreferrer"
-          className="flex justify-start px-1 items-center"
+          target={isInternal ? undefined : '_blank'}
+          rel={isInternal ? undefined : 'noreferrer'}
+          className="flex justify-start px-1 items-center hover:text-primary transition-colors"
         >
           {value}
         </a>
@@ -60,6 +62,8 @@ const TelegramListCard = ({ header, items, loading }: Props) => {
   const renderItems = () => {
     return items.map((item, index) => {
       const telegramId = normalizeTelegramIdentifier(item.id);
+      const product = getProductById(telegramId);
+      const link = product ? `/p/${telegramId}` : `https://t.me/${telegramId}`;
 
       return (
         <ListItem
@@ -67,7 +71,7 @@ const TelegramListCard = ({ header, items, loading }: Props) => {
           icon={<FaTelegram />}
           title={item.name}
           value={`@${telegramId}`}
-          link={`https://t.me/${telegramId}`}
+          link={link}
         />
       );
     });

@@ -66,60 +66,66 @@ const ExternalProjectCard = ({
   };
 
   const renderExternalProjects = () => {
-    return externalProjects.map((item, index) => (
-      <a
-        className="card shadow-lg compact bg-base-100 cursor-pointer"
-        key={index}
-        href={item.link}
-        onClick={(e) => {
-          e.preventDefault();
-
-          try {
-            if (googleAnalyticId) {
-              ga.event('Click External Project', {
-                post: item.title,
-              });
+    return externalProjects.map((item, index) => {
+      const isInternal = item.link.startsWith('/');
+      return (
+        <a
+          className="card shadow-lg compact bg-base-100 cursor-pointer"
+          key={index}
+          href={item.link}
+          target={isInternal ? undefined : '_blank'}
+          rel={isInternal ? undefined : 'noreferrer'}
+          onClick={(e) => {
+            try {
+              if (googleAnalyticId) {
+                ga.event('Click External Project', {
+                  post: item.title,
+                });
+              }
+            } catch (error) {
+              console.error(error);
             }
-          } catch (error) {
-            console.error(error);
-          }
 
-          window?.open(item.link, '_blank');
-        }}
-      >
-        <div className="p-3 h-full w-full">
-          <div className="flex items-center flex-col">
-            <div className="w-full">
-              <div className="px-4">
-                <div className="text-center w-full">
-                  <h2 className="font-medium text-center opacity-60 mb-2">
-                    {item.title}
-                  </h2>
-                  {item.imageUrl && (
-                    <div className="avatar opacity-90">
-                      <div className="w-24 h-24 mask mask-squircle">
-                        <LazyImage
-                          src={item.imageUrl}
-                          alt={'thumbnail'}
-                          placeholder={skeleton({
-                            widthCls: 'w-full',
-                            heightCls: 'h-full',
-                            shape: '',
-                          })}
-                        />
+            if (!isInternal) {
+              e.preventDefault();
+              window?.open(item.link, '_blank');
+            }
+          }}
+        >
+          <div className="p-3 h-full w-full">
+            <div className="flex items-center flex-col">
+              <div className="w-full">
+                <div className="px-4">
+                  <div className="text-center w-full">
+                    <h2 className="font-medium text-center opacity-60 mb-2">
+                      {item.title}
+                    </h2>
+                    {item.imageUrl && (
+                      <div className="avatar opacity-90">
+                        <div className="w-24 h-24 mask mask-squircle">
+                          <LazyImage
+                            src={item.imageUrl}
+                            alt={'thumbnail'}
+                            placeholder={skeleton({
+                              widthCls: 'w-full',
+                              heightCls: 'h-full',
+                              shape: '',
+                            })}
+                          />
+                        </div>
                       </div>
-                    </div>
-                  )}
-                  <p className="mt-2 text-base-content text-opacity-60 text-sm text-center">
-                    {item.description}
-                  </p>
+                    )}
+                    <p className="mt-2 text-base-content text-opacity-60 text-sm text-center">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </a>
-    ));
+        </a>
+      );
+    });
   };
 
   return (
