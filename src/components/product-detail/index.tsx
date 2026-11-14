@@ -505,9 +505,6 @@ const ProductDetail = ({ slug, onNavigateHome, onNavigateProduct }: Props) => {
                   </span>
                   <span>ویژگی‌ها و قابلیت‌های کلیدی</span>
                 </h2>
-                <span className="badge badge-neutral badge-sm font-mono">
-                  {product.features.length} ویژگی
-                </span>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
