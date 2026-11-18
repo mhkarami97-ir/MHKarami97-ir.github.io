@@ -20,6 +20,7 @@ import {
   FaVideo,
   FaCode,
   FaEdge,
+  FaWhatsapp,
 } from 'react-icons/fa';
 import { FaSquareThreads, FaBagShopping } from 'react-icons/fa6';
 import { RiMailFill, RiPhoneFill } from 'react-icons/ri';
@@ -67,6 +68,49 @@ const getFormattedEdgeAddons = (
     link: `https://microsoftedge.microsoft.com/addons/search?developer=${encodeURIComponent(
       edgeValue,
     )}`,
+  };
+};
+
+const getFormattedWhatsApp = (
+  whatsappValue: string,
+): { value: string; link: string } => {
+  if (whatsappValue.includes('|')) {
+    const [val, link] = whatsappValue.split('|');
+    return {
+      value: val.trim(),
+      link: link.trim().startsWith('http')
+        ? link.trim()
+        : `https://${link.trim()}`,
+    };
+  }
+
+  if (whatsappValue.includes('whatsapp.com/channel/')) {
+    return {
+      value: 'mhkarami_97',
+      link: whatsappValue.startsWith('http')
+        ? whatsappValue
+        : `https://${whatsappValue}`,
+    };
+  }
+
+  if (whatsappValue.startsWith('0029')) {
+    return {
+      value: 'mhkarami_97',
+      link: `https://whatsapp.com/channel/${whatsappValue}`,
+    };
+  }
+
+  const clean = whatsappValue.replace(/^@/, '').replace(/\s+/g, '');
+  if (/^\+?\d+$/.test(clean)) {
+    return {
+      value: whatsappValue,
+      link: `https://wa.me/${clean.replace(/^\+/, '')}`,
+    };
+  }
+
+  return {
+    value: whatsappValue,
+    link: `https://whatsapp.com/channel/${whatsappValue}`,
   };
 };
 
@@ -315,6 +359,14 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   title="Telegram"
                   value={social.telegram}
                   link={`https://t.me/${social.telegram.replace(/^@/, '')}`}
+                />
+              )}
+              {social?.whatsapp && (
+                <ListItem
+                  icon={<FaWhatsapp />}
+                  title="WhatsApp"
+                  value={getFormattedWhatsApp(social.whatsapp).value}
+                  link={getFormattedWhatsApp(social.whatsapp).link}
                 />
               )}
               {social?.eitaa && (

@@ -341,6 +341,11 @@ interface Social {
   soroush?: string;
 
   /**
+   * WhatsApp channel, phone number, or link
+   */
+  whatsapp?: string;
+
+  /**
    * Microsoft Edge Add-ons developer username or link
    */
   edgeAddons?: string;

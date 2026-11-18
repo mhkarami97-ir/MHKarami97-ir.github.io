@@ -135,6 +135,7 @@ export interface SanitizedSocial {
   bale?: string;
   gap?: string;
   soroush?: string;
+  whatsapp?: string;
   edgeAddons?: string;
   microsoftEdge?: string;
   phone?: string;

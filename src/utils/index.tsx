@@ -115,6 +115,7 @@ export const getSanitizedConfig = (
         bale: config?.social?.bale,
         gap: config?.social?.gap,
         soroush: config?.social?.soroush,
+        whatsapp: config?.social?.whatsapp,
         edgeAddons: config?.social?.edgeAddons,
         microsoftEdge: config?.social?.microsoftEdge,
       },

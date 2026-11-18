@@ -478,6 +478,7 @@ const CONFIG = {
     youtube: 'mhkarami97',
     aparat: 'mhkarami97',
     telegram: 'mhkarami_97',
+    whatsapp: 'https://whatsapp.com/channel/0029VbES0TrCHDyjuMiXn81I',
     eitaa: 'mhkarami_97',
     rubika: 'mhkarami_97',
     bale: 'mhkarami_97',
