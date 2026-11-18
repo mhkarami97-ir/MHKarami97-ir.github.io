@@ -486,6 +486,7 @@ const CONFIG = {
     email: 'mhkarami97@gmail.com',
     leetCode: 'mhkarami97',
     cafebazaar: 'mhkarami97',
+    edgeAddons: 'mhkarami97',
     medium: 'mhkarami97',
     dev: 'mhkarami97',
     stackoverflow: 'mhkarami97',

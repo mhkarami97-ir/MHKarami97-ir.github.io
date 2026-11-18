@@ -19,6 +19,7 @@ import {
   FaYoutube,
   FaVideo,
   FaCode,
+  FaEdge,
 } from 'react-icons/fa';
 import { FaSquareThreads, FaBagShopping } from 'react-icons/fa6';
 import { RiMailFill, RiPhoneFill } from 'react-icons/ri';
@@ -49,6 +50,24 @@ const getFormattedMastodonValue = (
   } else {
     return `${username}@${server}`;
   }
+};
+
+const getFormattedEdgeAddons = (
+  edgeValue: string,
+): { value: string; link: string } => {
+  if (edgeValue.includes('developer=')) {
+    const dev = edgeValue.split('developer=')[1]?.split('&')[0];
+    return {
+      value: dev ? decodeURIComponent(dev) : edgeValue,
+      link: edgeValue.startsWith('http') ? edgeValue : `https://${edgeValue}`,
+    };
+  }
+  return {
+    value: edgeValue,
+    link: `https://microsoftedge.microsoft.com/addons/search?developer=${encodeURIComponent(
+      edgeValue,
+    )}`,
+  };
 };
 
 const ListItem: React.FC<{
@@ -368,6 +387,22 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   title="CafeBazaar"
                   value={social.cafebazaar}
                   link={`https://cafebazaar.ir/developer/${social.cafebazaar}`}
+                />
+              )}
+              {(social?.edgeAddons || social?.microsoftEdge) && (
+                <ListItem
+                  icon={<FaEdge />}
+                  title="Edge Add-ons"
+                  value={
+                    getFormattedEdgeAddons(
+                      (social.edgeAddons || social.microsoftEdge)!,
+                    ).value
+                  }
+                  link={
+                    getFormattedEdgeAddons(
+                      (social.edgeAddons || social.microsoftEdge)!,
+                    ).link
+                  }
                 />
               )}
               {social?.email && (

@@ -339,6 +339,16 @@ interface Social {
    * Soroush Plus username / channel
    */
   soroush?: string;
+
+  /**
+   * Microsoft Edge Add-ons developer username or link
+   */
+  edgeAddons?: string;
+
+  /**
+   * Microsoft Edge Add-ons developer username or link
+   */
+  microsoftEdge?: string;
 }
 
 interface Resume {
