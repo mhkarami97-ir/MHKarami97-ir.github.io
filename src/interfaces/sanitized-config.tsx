@@ -130,6 +130,11 @@ export interface SanitizedSocial {
   telegram?: string;
   leetCode?: string;
   cafebazaar?: string;
+  eitaa?: string;
+  rubika?: string;
+  bale?: string;
+  gap?: string;
+  soroush?: string;
   phone?: string;
   email?: string;
 }

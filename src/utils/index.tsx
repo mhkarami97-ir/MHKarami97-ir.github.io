@@ -110,6 +110,11 @@ export const getSanitizedConfig = (
         leetCode: config?.social?.leetCode,
         cafebazaar: config?.social?.cafebazaar,
         researchGate: config?.social?.researchGate,
+        eitaa: config?.social?.eitaa,
+        rubika: config?.social?.rubika,
+        bale: config?.social?.bale,
+        gap: config?.social?.gap,
+        soroush: config?.social?.soroush,
       },
       resume: {
         fileUrl: config?.resume?.fileUrl || '',

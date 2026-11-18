@@ -23,6 +23,7 @@ import {
 import { FaSquareThreads, FaBagShopping } from 'react-icons/fa6';
 import { RiMailFill, RiPhoneFill } from 'react-icons/ri';
 import { SiResearchgate, SiX, SiUdemy } from 'react-icons/si';
+import { SiEitaa, SiBale, SiGap, SiSoroush, SiRubika } from './icons';
 import { Profile } from '../../interfaces/profile';
 import {
   SanitizedGithub,
@@ -294,7 +295,47 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   icon={<FaTelegram />}
                   title="Telegram"
                   value={social.telegram}
-                  link={`https://t.me/${social.telegram}`}
+                  link={`https://t.me/${social.telegram.replace(/^@/, '')}`}
+                />
+              )}
+              {social?.eitaa && (
+                <ListItem
+                  icon={<SiEitaa />}
+                  title="Eitaa"
+                  value={social.eitaa}
+                  link={`https://eitaa.com/${social.eitaa.replace(/^@/, '')}`}
+                />
+              )}
+              {social?.rubika && (
+                <ListItem
+                  icon={<SiRubika />}
+                  title="Rubika"
+                  value={social.rubika}
+                  link={`https://rubika.ir/${social.rubika.replace(/^@/, '')}`}
+                />
+              )}
+              {social?.bale && (
+                <ListItem
+                  icon={<SiBale />}
+                  title="Bale"
+                  value={social.bale}
+                  link={`https://ble.ir/${social.bale.replace(/^@/, '')}`}
+                />
+              )}
+              {social?.gap && (
+                <ListItem
+                  icon={<SiGap />}
+                  title="Gap"
+                  value={social.gap}
+                  link={`https://gap.im/${social.gap.replace(/^@/, '')}`}
+                />
+              )}
+              {social?.soroush && (
+                <ListItem
+                  icon={<SiSoroush />}
+                  title="Soroush Plus"
+                  value={social.soroush}
+                  link={`https://splus.ir/${social.soroush.replace(/^@/, '')}`}
                 />
               )}
               {social?.phone && (

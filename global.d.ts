@@ -314,6 +314,31 @@ interface Social {
    * Cafebazaar
    */
   cafebazaar?: string;
+
+  /**
+   * Eitaa username / channel
+   */
+  eitaa?: string;
+
+  /**
+   * Rubika username / channel
+   */
+  rubika?: string;
+
+  /**
+   * Bale username / channel
+   */
+  bale?: string;
+
+  /**
+   * Gap username / channel
+   */
+  gap?: string;
+
+  /**
+   * Soroush Plus username / channel
+   */
+  soroush?: string;
 }
 
 interface Resume {
